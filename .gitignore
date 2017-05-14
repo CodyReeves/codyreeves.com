@@ -1,15 +1,21 @@
-vendor/
-node_modules/
+ee http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
+# dependencies
+node_modules
 
-# Laravel 5 & Lumen specific
-bootstrap/cache/
-.env.*.php
-.env.php
+# testing
+coverage
+
+# production
+build
+
+#CSS
+public/*.css
+
+# misc
+.DS_Store
 .env
 
-# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
-.rocketeer/
+npm-debug.log
+.idea
+

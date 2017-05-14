@@ -1,18 +1,41 @@
 {
-  "private": true,
-  "scripts": {
-    "prod": "gulp --production",
-    "dev": "gulp watch"
-  },
+  "name": "codyreeves.com",
+  "version": "0.1.0",
+  "homepage": "",
   "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
+    "babel-polyfill": "^6.16.0",
+    "expect": "^1.20.2",
+    "fetch-jsonp": "^1.0.2",
+    "gh-pages": "^0.11.0",
+    "isomorphic-fetch": "^2.2.1",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "react-router-redux": "^4.0.6",
+    "react-scripts": "0.6.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
     "gulp": "^3.9.1",
-    "jquery": "^3.1.0",
-    "laravel-elixir": "^6.0.0-14",
-    "laravel-elixir-vue-2": "^0.2.0",
-    "laravel-elixir-webpack-official": "^1.0.2",
-    "lodash": "^4.16.2",
-    "vue": "^2.0.1",
-    "vue-resource": "^1.0.3"
+    "gulp-clean-css": "^2.0.8",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify": "0.0.11",
+    "gulp-plumber": "^1.1.0",
+    "gulp-plumber-notifier": "0.0.3",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-strip-css-comments": "^1.2.0",
+    "gulp-uglify": "^2.0.0",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "scripts": {
+    "start": "gulp live && react-scripts start",
+    "build": "react-scripts build && gulp live",
+    "build-scss": "gulp live",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   }
 }

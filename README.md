@@ -1,40 +1,116 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img width="150"src="https://laravel.com/laravel.png"></a></p>
+This project was bootstrapped with Create React App and Redux Structure.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Dependencies
 
-## About Laravel
+* React
+    * react
+    * react-dom
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+* Create React App
+    * react-scripts
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* Redux
+    * redux
+    * react-redux
+    * react-router
+    * react-router-redux
+    * redux-thunk
+    
+* Fetch
+    * babel-polyfill
+    * isomorphic-fetch
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+* Github Deployment Tool
+    * gh-pages
 
-## Learning Laravel
+## Getting Started
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+### Installation
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+It will create a directory called **create-react-redux-app** inside the current folder.
+Inside that directory, it will generate the initial project structure and install the transitive dependencies:
 
-## Contributing
+```
+create-react-redux-app/
+  src/
+    actions/
+        index.js
+    components/
+        HomePage.js
+        Card.js
+        TodoFooter.js
+        Link.js
+        Todo.js
+        TodoList.js
+    constants/
+        ActionTypes.js
+    containers/
+        AddTodo.js
+        HomePage.js
+        FilterLink.js
+        VisibleTodoList.js
+    images/
+        logo.svg
+    reducers/
+        index.js
+        todos.js
+        visibilityFilter.js
+    styles/
+        App.css
+        index.css
+    index.js
+  test/
+    App.spec.js
+    
+  --
+  README.md
+  node_modules/
+  package.json
+  .gitignore
+  public/
+    favicon.ico
+    index.html
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### Runs the app in development mode:
 
-## Security Vulnerabilities
+```
+npm start
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Open http://localhost:3000 to view it in the browser.
 
-## License
+### Runs the test watcher in an interactive mode:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+```
+npm test
+```
+
+By default, runs tests related to files changes since the last commit.
+
+### Builds the app for production to the build folder:
+
+```
+npm run build
+```
+
+It correctly bundles React in production mode and optimizes the build for the best performance.
+The build is minified and the filenames include the hashes.
+Your app is ready to be deployed!
+
+Reference: https://github.com/facebookincubator/create-react-app
+
+### Deploys the production to github.io page:
+
+Changes package.json
+ 
+```
+"homepage": "http://{account_name}.github.io/{project_name}",
+```
+
+And runs
+
+```
+npm run build
+npm run deploy
+```
