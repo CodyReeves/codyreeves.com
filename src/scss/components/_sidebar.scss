@@ -1,0 +1,193 @@
+.sidebar {
+  position: fixed;
+  z-index: 100000;
+  max-width: 50px;
+  min-width: 50px;
+  width: 50px;
+  height: 100vh;
+  max-height: 100vh;
+  border: 2px solid rgba(color(greyscale, white), 0); 
+  mix-blend-mode: difference;
+  @extend .transition;
+
+  &:hover {
+    border-right: 2px solid color(greyscale, white); 
+
+    .sidebar-toggle-label {
+      color: color(greyscale, black);
+
+      &:before {
+         @include transform(translateX(0%));
+      }
+    }
+  }
+}
+
+  .logo {
+    width: 100%;
+    position: relative;
+    z-index: 1000000000;
+  }
+
+  .header-email {
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    font-family: font-family(brand);
+    text-transform: uppercase;
+    color: rgba(color(greyscale, white), 1);
+    text-decoration: none;
+    z-index: 10000;
+    @include font-size(14px);
+  }
+
+  .sidebar-toggle-label {
+    position: absolute;
+    padding: 3px 8px 0;
+    top: 47%;
+    left: -10px;
+    font-family: font-family(brand);
+    text-transform: uppercase;
+    line-height: 1.5;
+    border-bottom: 2px solid color(greyscale, white);
+    border-top: 2px solid color(greyscale, white);
+    cursor: pointer;
+    color: color(greyscale, white);
+    font-weight: 700;
+    letter-spacing: 2px;
+    overflow: hidden;
+    z-index: 1000000;
+    mix-blend-mode: difference;
+
+    @include font-size(16px);
+    @include transform(rotate(90deg));
+    @include transition(all 1s ease-in-out);
+
+     &:before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      background-color: color(greyscale, white);
+      @include transform(translateX(-101%));
+      @include transition(all 0.5s ease-in-out);
+    }
+  }
+
+  .sidebar-toggle-input {
+    opacity: 0;
+    z-index: 100000;
+    width: 50px;
+    height: 100%;
+    position: absolute;
+  }
+
+  .sidebar-content {
+    position: absolute;
+    top: -2px;
+    z-index: 100000000;
+    height: 100vh;
+    max-height: 100vh; 
+    width: 100vw;
+    background-color: color(brand, danger); // darken(color(greyscale, dark-grey), 5%);
+    @include gridlines(150px, 150px, 2px, 0px);
+    &:before,
+    &:after {
+      opacity: 0.2;
+      @include filter(britness(.9))
+    }
+  }
+
+  .sidebar-close {
+    position: absolute;
+    right: 15px;
+    height: 40px;
+    width: 40px; 
+    cursor: pointer;
+
+    @include filter(invert(100));
+    @include calc(top, 50%, '50% - 25px');
+
+    @extend .transition, %x;
+    
+    &:hover {
+      animation: spin .7s forwards;
+      @include filter(invert(0));
+    }
+  }
+
+  @include create-keyframe(spin);
+
+  .social {
+    position: fixed;
+    bottom: 10px;
+    text-align: right;
+    display: inline;
+    right: 20px;
+    z-index: 1000000000;
+
+    @extend .transition;
+    @include font-size(14px);
+
+     li {
+       margin: 0 10px;
+     }
+
+     a {
+       font-family: font-family(brand);
+       text-transform: uppercase;
+       color: rgba(color(greyscale, white), 1);
+       text-decoration: none;
+     }
+  }
+
+
+.copyright {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 10px;
+  color: rgba(color(greyscale, white), 0.3);
+
+  @include font-size(14px);
+}
+
+$animation: slideInLeft;
+
+#sidebarToggle {
+  & ~ span {
+    display: none;
+  }
+
+  & + label + .sidebar .sidebar-content {
+    display: none;
+  }
+
+  &:checked {
+    & ~ span {
+      display: block;
+    }
+
+    & + label {
+      display: none;
+
+      & + .sidebar {
+        mix-blend-mode: unset;
+
+        .sidebar-content {
+          display: block;
+          animation: $animation .5s forwards;
+        }
+      }
+    }
+  }
+}
+
+@include create-keyframe($animation);
+
+%x {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTAwIDEwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGQ9Ik04Ny44LDEyLjhjLTEtMS0yLjYtMS0zLjUsMEw1MC41LDQ2LjVMMTUuOCwxMS43Yy0xLTEtMi42LTEtMy41LDBjLTEsMS0xLDIuNiwwLDMuNUw0Nyw1MEwxMi4yLDg0LjhjLTEsMS0xLDIuNiwwLDMuNSAgIGMwLjUsMC41LDEuMSwwLjcsMS44LDAuN3MxLjMtMC4yLDEuOC0wLjdsMzQuOC0zNC44bDMzLjcsMzMuN2MwLjUsMC41LDEuMSwwLjcsMS44LDAuN3MxLjMtMC4yLDEuOC0wLjdjMS0xLDEtMi42LDAtMy41TDU0LjEsNTAgICBsMzMuNy0zMy43Qzg4LjcsMTUuMyw4OC43LDEzLjcsODcuOCwxMi44eiIvPjwvZz48L3N2Zz4=");
+}

@@ -1,0 +1,43 @@
+.nav {
+  padding-top: 125px;
+  padding-left: 20%;
+
+  li {
+    margin-bottom: 50px;
+  }
+
+  a {
+    padding: 20px 10px 11px;
+    font-family: font-family(heading);
+    text-decoration: none;
+    color: color(greyscale, white);
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    @include transition(all 0.5s ease-in-out)
+    @include font-size(55px);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      background-color: color(greyscale, white);
+      @include transform(translateX(-101%));
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    &:hover {
+      color: color(greyscale, black);
+
+      &:before {
+         @include transform(translateX(0%));
+      }
+    }
+  }
+}

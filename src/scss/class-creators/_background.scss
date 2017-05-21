@@ -1,0 +1,78 @@
+$gl-vendor-prefix: 'webkit' !default;
+
+// Colors
+
+$gl-color-light-pink: rgba(color(greyscale, dark-grey), 0);
+$gl-color-pink: rgba(color(greyscale, dark-grey), 0.2);
+$gl-color-red: rgba(color(greyscale, dark-grey), 0.6);
+
+@function gl-linear-gradient($values...) {
+  @if $gl-vendor-prefix {
+    @return unquote("-#{$gl-vendor-prefix}-linear-gradient(#{$values})");
+  } @else {
+    @return unquote("linear-gradient(#{$values})");
+  }
+}
+
+@mixin gridlines($width-column: 0px, $width-gutter: 0px, $width-padding: 0px, $line-height: 0px) {
+  @each $measure in ($width-column, $width-gutter, $width-padding, $line-height) {
+    @if unit($measure) != 'px' {
+      @error 'All arguments need to be pixel values.';
+    }
+  }
+
+  @if ($width-column + $width-gutter + $width-padding + $line-height) == 0px {
+    @error 'You need to pass at least one of $width-column or $line-height in order to see a result.';
+  }
+
+  // Warnings
+
+  @if $width-padding > 0px and $width-padding >= ($width-column / 2) {
+    @warn "The column padding shouldn't be greater than half the width of the column.";
+  }
+
+  @if $line-height > 0px and $line-height < 4px {
+    @warn "The baseline grid won't be visible unless the line-height is greater than 3px.";
+  }
+
+  // Widths
+
+  $width-total: $width-column + $width-gutter;
+
+  // Percentages
+
+  $percentage-column: percentage($width-column / $width-total);
+  $percentage-inner-column: percentage(($width-column - $width-padding) / $width-total);
+  $percentage-padding: percentage($width-padding / $width-total);
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  @if $width-column > 0px {
+    &:before {
+      @if $width-gutter == 0px {
+        background-image: gl-linear-gradient(left, $gl-color-pink 50%, $gl-color-light-pink 50%);
+        background-size: ($width-total * 2);
+      } @else {
+        background-image: gl-linear-gradient(left, $gl-color-pink $percentage-padding, $gl-color-light-pink $percentage-padding, $gl-color-light-pink $percentage-inner-column, $gl-color-pink $percentage-inner-column, $gl-color-pink $percentage-column, transparent $percentage-column);
+        background-size: $width-total;
+        background-repeat: infinite;
+      }
+    }
+  }
+
+  @if $line-height > 2px {
+    &:after {
+      background-image: gl-linear-gradient(bottom, $gl-color-red percentage(1px / $line-height), transparent percentage(1px / $line-height));
+      background-size: $line-height $line-height;
+    }
+  }
+}

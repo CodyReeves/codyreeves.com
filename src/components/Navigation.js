@@ -2,17 +2,20 @@ import React from 'react'
 import { Link } from 'react-router'
 
 const Navigation = ({ className, buttonClassName }) => (
-	<nav className={className}>
+	<nav className={`nav ${className}`}>
 		<ul className="list-plain no-pad no-mar">
 			<li><Link className={buttonClassName} to="/">Home</Link></li>
 			<li><Link className={buttonClassName} to="portfolio">Portfolio</Link></li>
+			<li><Link className={buttonClassName} to="cases">Cases</Link></li>
+			<li><Link className={buttonClassName} to="services">Services</Link></li>
+			<li><Link className={buttonClassName} to="contact">Contact</Link></li>
 		</ul>
 	</nav>
 )
 
 Navigation.defaultProps = {
 	className: '',
-	buttonClassName: 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'
+	buttonClassName: ''
 }
 
 export default Navigation

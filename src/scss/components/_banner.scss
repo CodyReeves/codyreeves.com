@@ -1,0 +1,170 @@
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  &.full {
+    height: 100vh;
+  }
+
+  &.half {
+    height: 50vh;
+  }
+
+  &.banner-center {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .title {
+      position: relative;
+      margin: 0;
+      text-align: center;
+      font-family: font-family(primary);
+      font-weight: 400;
+      z-index: 1;
+      @include font-size(80px);
+      @include calc(top, 50%, '50% - 25px');
+    }
+
+    &.overlay {
+       position: relative;
+      -webkit-filter: contrast(110%) brightness(110%) saturate(130%);
+      filter: contrast(110%) brightness(110%) saturate(130%);
+      &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        pointer-events: none;
+        mix-blend-mode: exclusion;
+        background: rgba(243, 106, 188, 0.3);
+      }
+    }
+
+    .more {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 15px;
+      color: rgba(color(greyscale, grey), 0.6);
+      font-weight: 600;
+      @include font-size(14px);
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 40px;
+        background-color: color(brand, danger);
+        bottom: 25px;
+        animation: moreButton 2s infinite ease-in-out;
+        @include calc(left, 50%, '50%');
+      }
+    }
+
+    @include keyframes(moreButton) {
+      0% {
+        height: 0;
+        background-color: color(greyscale, grey);
+      }
+      100% {
+        height: 40px;
+        background-color: color(brand, danger);
+      }
+    }
+
+      @include keyframes(videoStart) {
+        0% {
+          @include transform(rotate(360deg));
+          @include filter(blur(100px) contrast(110%) brightness(110%) saturate(130%));
+        }
+        100% {
+          @include transform(rotate(0deg));
+          @include filter(blur(1px) contrast(110%) brightness(110%) saturate(130%));
+        }
+      }
+
+       @include keyframes(videoHover) {
+        0% {
+          @include transform(rotate(360deg));
+          @include filter(blur(100px) contrast(110%) brightness(110%) saturate(130%));
+        }
+        100% {
+          @include transform(rotate(0deg));
+          @include filter(blur(100px) contrast(110%) brightness(110%) saturate(130%));
+        }
+      }
+
+    .video {
+      position: absolute;
+      border-radius: 50%;
+      width: 100%;
+      max-width: 440px;
+      max-height: 440px;
+      overflow: hidden;
+      @extend .transition;
+     
+      @include shadow(1, light);
+     
+      @include filter(blur(1px) contrast(110%) brightness(110%) saturate(130%));
+      @include calc(left, 50%, '50% - 225px');
+      @include calc(top, 50%, '50% - 225px');
+
+      &:hover {
+        filter: blur(100px) contrast(110%) brightness(110%) saturate(130%) !important;
+
+        video {
+          animation: videoHover 2s infinite !important;
+          perspective: 250px;
+          transform-style: preserve-3d;
+        }
+      }
+
+       &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        pointer-events: none;
+        mix-blend-mode: exclusion;
+        background: rgba(243, 106, 188, 0.3);
+        z-index: 1;
+      }
+
+      video {
+        position: relative;
+        top: -68px;
+        right: 223px;
+         animation: videoStart 2s forwards;
+         @extend .transition;
+      }
+    }
+
+    .heading-special {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      opacity: 0.8;
+      font-weight: 700;
+      color: color(greyscale, white);
+      mix-blend-mode: overlay;
+      @include font-size(84px);
+      
+      & + .heading-top {
+        font-weight: 700;
+        font-family: font-family(brand);
+        @include calc(top, 50%, '50% + 2px');
+        @include font-size(28px);
+      }
+    }
+  }
+}

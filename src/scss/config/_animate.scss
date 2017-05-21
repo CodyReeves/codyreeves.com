@@ -49,7 +49,7 @@ $animate: (
       ),
       rotating-entrances-animate:  (
         active: true,
-        animations: (rotateIn, rotateInDownLeft, rotateInDownRight, rotateInUpLeft, rotateInUpRight)
+        animations: (spin, rotateIn, rotateInDownLeft, rotateInDownRight, rotateInUpLeft, rotateInUpRight)
       ),
       rotating-exits-animate:  (
         active: true,
