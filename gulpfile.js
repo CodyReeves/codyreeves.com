@@ -46,11 +46,11 @@ gulp.task('watch', () => {
 gulp.task('sass', () => {
   return gulp.src(paths.scss.file)
     .pipe(plumberNotifier())
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
     .pipe(sass({ errLogToConsole: true }))
     .pipe(concat(paths.css.file))
     .pipe(plumber.stop())
-    .pipe(sourcemaps.write('./maps'))
+    //.pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(paths.scss.dest));
 });
 

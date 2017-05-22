@@ -31,6 +31,7 @@
   "dependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-escape-html": "^1.0.5",
     "react-router-transitions": "^2.2.1",
     "react-transition-group": "^1.1.3"
   },

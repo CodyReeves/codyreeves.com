@@ -1,12 +1,16 @@
 .contact {
   position: relative;
   background: color(greyscale, white);
-  height: 100vh;
+  min-height: 100vh;
   @include gridlines(150px, 150px, 2px, 0px);
 
   &:before, 
   &:after {
     opacity: 0.2;
     z-index: 3;
+  }
+
+  .back {
+    top: 150px !important;
   }
 }

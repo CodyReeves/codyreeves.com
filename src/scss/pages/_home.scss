@@ -239,6 +239,7 @@ $padding: 200px;
   .cta {
     margin-top: 100px;
     text-align: center;
+    width: 100%;
   }
 
   .bump-up {
@@ -436,5 +437,51 @@ $padding: 200px;
     color: color(greyscale, white);
     @include transform(translateY(3px));
      @include box-shadow(1px 0px 50px -20px rgba(color(brand, danger), 0.2)); 
+  }
+}
+
+form {
+  button[type="submit"] {
+    @extend .clear-button, .btn-cta, .pull-right;
+  }
+}
+
+.input-wrapper {
+  margin: 0 0 30px;
+
+  label {
+    display: block;
+    position: relative;
+    font-weight: 700;
+    top: 7px;
+    color: color(greyscale, dark-grey);
+    z-index: 1;
+    @include font-size(20px);
+  }
+
+  input[type="text"], 
+  textarea {
+    display: block;
+    position: relative;
+    border: 3px solid rgba(color(greyscale, grey), 0.5);
+    color: rgba(color(brand, danger), 0.7);
+    background: transparent;
+    @include shadow((
+      type: light,
+      level: 2,
+      text: text,
+    )...);
+    @include font-size(24px);
+    padding: 10px 10px;
+    margin-left: 15px;
+    width: 100%;
+    @extend .transition;
+    
+    &:focus {
+      z-index: 5;
+      border: 3px solid rgba(color(brand, danger), 0.4);
+      outline: rgba(color(brand, danger), 0.7);
+      background: transparent;
+    }
   }
 }

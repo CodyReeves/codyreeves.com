@@ -1,29 +1,16 @@
-export function getPortfolio() {
+export function getSideProject() {
   return [
     {
       link: 'http://www.goldmansachs.com',
-      github: '',
       title: 'Goldman Sachs',
       classname: 'goldmans',
-      tags: ['tag', 'tag', 'tag'],
       roles: [
         {
           title: 'Front End Developer',
           skills: 'React, Backbone, D3'
         }
       ],
-      content: [
-        {
-          image: 'Front End Developer',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
-        },
-        {
-          image: 'Front End Developer',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
-        },
-      ],
+      content: 'hellooo'
     },
     {
       link: 'http://www.libon.com/',
