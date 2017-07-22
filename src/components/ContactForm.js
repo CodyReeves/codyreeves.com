@@ -1,26 +1,23 @@
 import React from 'react'
 
 const ContactForm = () => {
-  const content = {
-    title: 'Material Design Lite',
-    article: 'lets you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible. Get started now.'
-  }
 
   return (
     <div>
       <form action="">
         <div className="input-wrapper">
-          <label>Input text here</label>
+          <label>Name</label>
           <input type="text" value="" name="" />
         </div>
         <div className="input-wrapper">
-          <label>Input text here</label>
+          <label>Email</label>
           <input type="text" value="" name="" />
         </div>
         <div className="input-wrapper">
-          <label>Input text here</label>
+          <label>Start the Conversation</label>
           <textarea value="" name="" />
         </div>
+        <small>Please Note: It may take a up to two days to recieve a reply.</small>
         <button id="submit" className="btn-submit" type="submit">Submit</button>
       </form>
     </div>
