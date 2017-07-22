@@ -77,10 +77,54 @@
   background: rgba(color(greyscale, grey), 0.8); 
 }
 
+
+* {
+  @include breakpoint(max-width breakpoint-value(sm)) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  // Styles scrollbar if one appears
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+  }
+
+  ::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 0 {
+      right: 1px solid color(greyscale, white);
+      left: 1px solid color(greyscale, white);
+    }
+    border-radius: 0;
+    background: transparent ;
+    mix-blend-mode: difference;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: color(brand, grey);
+  }
+
+  ::-webkit-scrollbar-track {
+    border: 0 none color(greyscale, white);
+    border-radius: 50;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
 body {
-  max-height: 100vh;
+  min-height: 100vh;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: scroll;
   color: color(greyscale, dark-grey);
   background-color: darken(color(greyscale, dark-grey), 5%);
   font-family: font-family(primary);
@@ -91,9 +135,9 @@ body {
 }
 
 main {
-  max-height: 100vh;
-  height: 100vh;
-  overflow: scroll;
+  // max-height: 100vh;
+  // height: 100vh;
+  // overflow-y: scroll;
 }
 
 hr {
@@ -187,4 +231,12 @@ $grid-columns: get('grid, grid-columns');
 .main-content {
   padding-left: 0;
   padding-right: 0;
+}
+
+div[style^="opacity"] {
+  @include transition(transform .2s ease-in-out);
+}
+
+.bg-white {
+  background-color: color(greyscale, white);
 }

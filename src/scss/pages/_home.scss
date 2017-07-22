@@ -3,6 +3,7 @@ $padding: 200px;
 .special {
   position: relative;
   background: color(greyscale, white);
+  min-height: 100vh;
   @include gridlines(150px, 150px, 2px, 0px);
 
   &:before, 
@@ -35,10 +36,10 @@ $padding: 200px;
   }
 
   .section-title {
-    position: sticky;
+    position: fixed;
     top: 15px;
+    right: 0;
     z-index: 10000;
-    right: 15px;
     padding: 15px 10px 0;
     font-weight: 700;
 
@@ -138,6 +139,11 @@ $padding: 200px;
 }
 
 .services {
+
+  .sub {
+    top: -50px;
+  }
+
   .design,
   .develop {
     @extend .transition;
@@ -234,7 +240,15 @@ $padding: 200px;
 }
 
 .sample-portfolio {
-  background: transparent;
+  background-color: darken(color(greyscale, dark-grey), 5%);
+  @include gridlines(150px, 150px, 2px, 0px);
+
+  .section-title {
+    span {
+      color: color(greyscale, grey);
+      background-color: darken(color(greyscale, dark-grey), 5%);
+    }
+  }
 
   .cta {
     margin-top: 100px;
@@ -242,11 +256,8 @@ $padding: 200px;
     width: 100%;
   }
 
-  .bump-up {
-    top: -100px !important
-  }
-
   .sub {
+    top: -100px !important;
     color: darken(color(greyscale, grey), 35%);
   }
 
@@ -270,6 +281,12 @@ $padding: 200px;
       }
     }
 
+    &.left {
+      .details {
+        @include grid-reorder(first);
+      }
+    }
+
     .row {
       position: relative;
     }
@@ -281,8 +298,17 @@ $padding: 200px;
 
     p {
       letter-spacing: 1px;
+      display: -webkit-box;
+      overflow: hidden;
+      width: 100%;
+      margin-top: 5px;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 7;
+      -webkit-box-orient: vertical;
+
       @include font-size(11px);
     }
+
     span, 
     strong {
       font-family: font-family(brand);
@@ -453,7 +479,7 @@ form {
     display: block;
     position: relative;
     font-weight: 700;
-    top: 7px;
+    //top: 7px;
     color: color(greyscale, dark-grey);
     z-index: 1;
     @include font-size(20px);
@@ -473,14 +499,14 @@ form {
     )...);
     @include font-size(24px);
     padding: 10px 10px;
-    margin-left: 15px;
+    // margin-left: 15px;
     width: 100%;
     @extend .transition;
     
     &:focus {
       z-index: 5;
-      border: 3px solid rgba(color(brand, danger), 0.4);
-      outline: rgba(color(brand, danger), 0.7);
+      border: 3px solid rgba(color(brand, success), 0.4);
+      outline: rgba(color(brand, success), 0.7);
       background: transparent;
     }
   }

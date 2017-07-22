@@ -42,7 +42,7 @@
   }
 
   .sidebar-toggle-label {
-    position: absolute;
+    position: fixed;
     padding: 3px 8px 0;
     top: 47%;
     left: -10px;
@@ -82,7 +82,7 @@
     z-index: 100000;
     width: 50px;
     height: 100%;
-    position: absolute;
+    position: fixed;
   }
 
   .sidebar-content {

@@ -47,38 +47,6 @@
       }
     }
 
-    .more {
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      bottom: 15px;
-      color: rgba(color(greyscale, grey), 0.6);
-      font-weight: 600;
-      @include font-size(14px);
-
-      &:before {
-        content: '';
-        position: absolute;
-        width: 1px;
-        height: 40px;
-        background-color: color(brand, danger);
-        bottom: 25px;
-        animation: moreButton 2s infinite ease-in-out;
-        @include calc(left, 50%, '50%');
-      }
-    }
-
-    @include keyframes(moreButton) {
-      0% {
-        height: 0;
-        background-color: color(greyscale, grey);
-      }
-      100% {
-        height: 40px;
-        background-color: color(brand, danger);
-      }
-    }
-
       @include keyframes(videoStart) {
         0% {
           @include transform(rotate(360deg));
@@ -106,6 +74,7 @@
       border-radius: 50%;
       width: 100%;
       max-width: 440px;
+      height: 440px;
       max-height: 440px;
       overflow: hidden;
       @extend .transition;
@@ -150,13 +119,13 @@
     }
 
     .heading-special {
-      position: absolute;
+      // position: absolute;
       width: 100%;
       text-align: center;
-      opacity: 0.8;
+      // opacity: 0.8;
       font-weight: 700;
       color: color(greyscale, white);
-      mix-blend-mode: overlay;
+      // mix-blend-mode: overlay;
       @include font-size(84px);
       
       & + .heading-top {
@@ -166,5 +135,37 @@
         @include font-size(28px);
       }
     }
+  }
+}
+
+.more {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 15px;
+  color: rgba(color(greyscale, grey), 0.6);
+  font-weight: 600;
+  @include font-size(14px);
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    background-color: color(brand, danger);
+    bottom: 25px;
+    animation: moreButton 2s infinite ease-in-out;
+    @include calc(left, 50%, '50%');
+  }
+}
+
+@include keyframes(moreButton) {
+  0% {
+    height: 0;
+    background-color: color(greyscale, grey);
+  }
+  100% {
+    height: 40px;
+    background-color: color(brand, danger);
   }
 }
