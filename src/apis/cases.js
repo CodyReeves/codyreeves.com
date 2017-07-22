@@ -1,11 +1,24 @@
+export function getCaseIntro() {
+  return {
+    key: 'cases',
+    titleLarge: 'Cases',
+    titleSmall: 'add a Material Design look and feel to your and feel to your websites.',
+    titleSmallClass: 'bump-up',
+    followText: 'What We Have Done',
+    classname: 'sample-portfolio'
+  }
+}
+
 export function getCases() {
   return [
     {
+      align: '1',
       link: 'http://www.goldmansachs.com',
-      github: '',
-      title: 'Goldman Sachs',
-      classname: 'goldmans',
-      tags: ['tag', 'tag', 'tag'],
+      github: 'http://www.goldmansachs.com',
+      title: 'Goldman 1Sachs',
+      classname: 'goldmans bg-white',
+      tags: ['tag ', 'tag ', 'tag'],
+      bannerImg: '../img/example.jpg',
       roles: [
         {
           title: 'Front End Developer',
@@ -16,7 +29,6 @@ export function getCases() {
         {
           align: '1',
           classname: '',
-          image: 'Front End Developer',
           heading: 'Example',
           text: 'React, Backbone, D3'
         },
@@ -30,6 +42,7 @@ export function getCases() {
       ]
     },
     {
+      align: '2',
       link: 'http://www.libon.com/',
       title: 'Orange (Libon)',
       classname: 'orange',
@@ -58,6 +71,7 @@ export function getCases() {
       ]
     },
     {
+      align: '3',
       link: 'http://www.pwul.net',
       title: 'Pay What You Like',
       classname: 'pwul',
@@ -90,6 +104,7 @@ export function getCases() {
       ]
     },
     {
+      align: '4',
       link: 'http://www.timeout.com/london/card',
       title: 'Timeout',
       classname: 'timeout',
@@ -118,6 +133,7 @@ export function getCases() {
       ]
     },
     {
+      align: '5',
       link: 'http://www.tesco.com/direct',
       title: 'Tesco Entertainment',
       classname: 'tesco',

@@ -1,0 +1,65 @@
+.case-wrapper {
+
+}
+
+.case-item {
+  .set-background {
+     color: color(greyscale, white);
+  }
+
+  &.bg-white {
+    .set-background {
+      background-color: color(greyscale, white);
+      color: color(greyscale, dark-grey);
+    }
+  }
+
+  .contents-wrapper {
+    position: relative;
+    @include gridlines(150px, 150px, 2px, 0px);
+
+    &:before, 
+    &:after {
+      opacity: 0.2;
+      z-index: 3;
+    }
+  }
+
+  .banner {
+    h2 {
+      
+    }
+
+    .details {
+      position: absolute;
+      bottom: 50px;
+      width: 150px;
+      margin: 0 auto;
+      @include calc(left, 50%, '50% - 75px');
+
+      .tags {
+        font-weight: 600;
+        line-height: 3;
+        text-transform: uppercase;
+        color: color(brand, danger);
+        word-spacing: 10px;
+        font-family: font-family(heading);
+        @include font-size(12px);
+      }
+
+      .github {
+        padding: 7.5px 10px;
+        float: right;
+        margin-left: 5px;
+        @include font-size(24px);
+      }
+
+      .btn {
+        max-width: 100px;
+        display: inline-block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
