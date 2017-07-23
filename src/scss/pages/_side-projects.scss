@@ -1,0 +1,104 @@
+.sideproject-page {
+  min-height: 600px;
+}
+
+.posts {
+  .container {
+    padding-top: 100px;
+  }
+}
+
+.project {
+  position: relative;
+  max-height: 400px;
+  overflow: hidden;
+  padding: 0 30px;
+  margin-bottom: 80px;
+
+  &:hover {
+    img {
+      margin: 0;
+    }
+
+    .wrapper {
+      top: 20px;
+      margin-left: 0;
+    }
+  }
+
+  .image {
+    background: {
+      size: cover;
+    }
+     @include shadow(4, dark);
+  }
+
+  .title {
+    margin: 5px;
+
+    .skills {
+      display: block;
+      margin-top: 3px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: font-family(heading);
+      @include font-size(11px);
+    }
+  }
+
+  h2, 
+  a,
+  .wrapper,
+  .over-right {
+    position: relative;
+    z-index: 1;
+  } 
+
+  h2 {
+    padding-top: 75px;
+    padding-left: 35px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+    color: color(greyscale, white);
+    @include font-size(26px);
+    @include shadow((
+      type: dark,
+      level: 2,
+      text: text,
+    )...);
+  }
+
+  a,
+  .over-right {
+    margin-left: 35px;
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    margin-left: 25px;
+    padding-left: 5px;
+    background: rgba(color(greyscale, white), 0.8);
+    color: color(greyscale, dark-grey);
+    @extend .transition;
+    @include shadow((
+      type: light,
+      level: 4,
+      text: text,
+    )...);
+  }
+
+  a {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+  }
+
+  img {
+    position: absolute;
+    margin: 25px;
+    @include shadow(4, dark);
+    @extend .transition;
+  }
+}

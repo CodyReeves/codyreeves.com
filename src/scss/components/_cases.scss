@@ -1,5 +1,11 @@
-.case-wrapper {
+.cases-wrapper {
+  .more {
+    bottom: -17vh;
+  }
 
+  .special {
+    min-height: 600px;
+  }
 }
 
 .case-item {
@@ -16,12 +22,17 @@
 
   .contents-wrapper {
     position: relative;
+    padding-bottom: 75px;
     @include gridlines(150px, 150px, 2px, 0px);
 
     &:before, 
     &:after {
       opacity: 0.2;
       z-index: 3;
+    }
+
+    &.container {
+      max-width: 960px;
     }
   }
 
@@ -61,5 +72,39 @@
       }
     }
   }
+
+  .case-detail-wrapper {
+    padding-top: 75px;
+
+    .task {
+      h3 {
+        margin-top: 0;
+      }
+
+      p {
+
+      }
+    }
+
+    .about {
+      padding-top: 58px;
+      text-align: right;
+      .title {
+
+      }
+
+      .skills {
+
+      }
+
+      .completed {
+
+      }
+
+    }
+
+  }
 }
+
+
 

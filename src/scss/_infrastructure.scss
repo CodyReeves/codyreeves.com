@@ -240,3 +240,9 @@ div[style^="opacity"] {
 .bg-white {
   background-color: color(greyscale, white);
 }
+
+blockquote {
+  margin: 0;
+  padding-left: 30px;
+  border-left: 4px solid color(brand, danger);
+}
