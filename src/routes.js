@@ -8,7 +8,7 @@ import CasesPage from './components/Cases'
 import ServicesPage from './components/Services'
 
 const routes = (
-	<Route path="/" component={App}>
+	<Route onUpdate={() => window.scrollTo(0, 0)} path="/" component={App}>
 		<IndexRoute component={HomePage}/>
 		<Route path="home" component={HomePage}/>
 		<Route path="contact" component={ContactPage} />
