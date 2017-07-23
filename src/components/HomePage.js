@@ -11,6 +11,9 @@ import ListServices from './ListServices'
 import CaseSample from './CaseSample'
 
 class HomePage extends Component {
+	componentDidMount () {
+		window.scrollTo(0, 0)
+	}
 
 	render() {
 		

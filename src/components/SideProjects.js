@@ -1,37 +1,81 @@
 import React, { Component } from 'react';
-import { getSideProject } from '../apis/sideProjects';
+import { getSideProject, getSideProjectPage } from '../apis/sideProjects';
+import PageSection from './PageSection.js';
 
 class SideProject extends Component {
+  componentDidMount () {
+		window.scrollTo(0, 0)
+	}
 
   render() {
 
     const SideProject = getSideProject();
+    const Intro = getSideProjectPage();
+    const classname = Intro.classname;
+    const titleLarge = Intro.titleLarge;
+    const titleSmall = Intro.titleSmall;
+    const titleLargeClass = Intro.titleLargeClass;
+    const titleSmallClass = Intro.titleSmallClass;
+    const text2 = Intro.text;
+
     const RoleRows = (roles) => {
       return roles.map((role) => {
         return (
-          <div key={role.title} className="role_wrapper clearfix">
-            <p className="role">Role</p>
-            <p className="role_title">{role.title}<br />
-              <span className="role_skills">{role.skills}</span></p>
+          <div key={role.title} className="wrapper clearfix">
+            <p className="title">{role.title}
+              <span className="skills">{role.skills}</span></p>
           </div>
         )
       });
     }
 
     const SideProjectRows = SideProject.map((row) => {
-      const classname = 'portfolio_item clearfix';
+      const classname = 'project clearfix col-xs-12 col-sm-4';
+      const imageUrl = row.imageUrl;
+      const title = row.title;
+      const roles = row.roles;
+      const content = row.content;
+      const link = row. link;
+
       return (
-        <div key={row.title} className={classname}>
-          <h2><a href={row.link} target="_blank">(visit site)</a> {row.title}</h2>
-          {RoleRows(row.roles)}
-          <p>{row.content}</p>
+        <div key={title} className={classname}>
+          <div className="main-wrapper">
+             <div className="image" style={{ backgroundImage: 'url(' + imageUrl + ')' }}>
+              <img 
+                src={imageUrl} 
+                className="img-responsive" 
+                alt={titleLarge} 
+              />
+              <h2>{title}</h2>
+              <a className="btn btn-cta" href={link} target="_blank">View Project</a> 
+              {RoleRows(roles)}
+              <p className="over-right">{content}</p>
+            </div>
+          </div>
         </div>
       )
     });
 
-    return (
+    return ( 
       <div className="posts">
-        {SideProjectRows}
+        <PageSection
+          type="special"
+          container="true"
+          className={classname}
+          titleLarge={titleLarge}
+          titleSmall={titleSmall}
+          titleLargeClass={titleLargeClass}
+          titleSmallClass={titleSmallClass}
+        >
+        <div className="text col-xs-12 col-sm-12">
+					<p className="text">{text2}</p>
+				</div>
+        </PageSection>
+        <div className="container">
+         <div className="row">
+            {SideProjectRows}
+         </div>
+        </div>
       </div>
     );
 

@@ -3,6 +3,9 @@ import Banner from './Banner';
 import { getCases, getCaseIntro } from '../apis/cases';
 import PageSection from './PageSection.js';
 class Case extends Component {
+	componentDidMount () {
+		window.scrollTo(0, 0)
+	}
 
   render() {
 
@@ -25,16 +28,16 @@ class Case extends Component {
 			const complete = role.complete;
 
 			return (
-				<div key={title} className="role-wrapper clearfix row">
+				<div key={title} className="case-detail-wrapper clearfix row">
 					<div className="task col-xs-12 col-sm 6">
 						<h3>The Task</h3>
 						<p>{task}</p>
 					</div>
 					<div className="about col-xs-12 col-sm 6">
-						<p className="role-title"><strong>Role:</strong> {title}</p>
-						<p><strong>Skills & Tools:</strong> {tech}</p>
-						<p className="role-skills">{skills}</p>
-						<p><strong>Completed:</strong>{complete}</p>
+						<p className="title"><strong>Role:</strong> {title}</p>
+						<p><strong>Skills & Tools:</strong> {tech}
+						<span className="skills">{skills}</span></p>
+						<p className="completed"><strong>Completed:</strong> {complete}</p>
 					</div>
 				</div>
 			)

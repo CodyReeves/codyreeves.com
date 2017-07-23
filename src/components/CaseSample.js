@@ -15,8 +15,7 @@ const CaseSample = ({ imageUrl, imagePlacement, titleLarge, titleSmall, children
                   className="img-responsive" 
                   alt={titleLarge} 
                 />
-                <div className="image" style={{ backgroundImage: 'url(' + imageUrl + ')' }}>
-                </div>
+                <div className="image" style={{ backgroundImage: 'url(' + imageUrl + ')' }} />
               </div>
             </Link>
             <h3 className="title-lg">{titleLarge}</h3>
