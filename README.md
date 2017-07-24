@@ -1,28 +1,5 @@
 A portfoilo site created with React/Redux
 
-## Dependencies
-
-* React
-    * react
-    * react-dom
-
-* Create React App
-    * react-scripts
-
-* Redux
-    * redux
-    * react-redux
-    * react-router
-    * react-router-redux
-    * redux-thunk
-    
-* Fetch
-    * babel-polyfill
-    * isomorphic-fetch
-
-* Github Deployment Tool
-    * gh-pages
-
 ### Runs the app in development mode:
 
 ```
