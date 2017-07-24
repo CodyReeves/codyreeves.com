@@ -85,6 +85,28 @@
       @include calc(left, 50%, '50% - 225px');
       @include calc(top, 50%, '50% - 225px');
 
+      @include breakpoint(max-width breakpoint-value(sm)) {
+        border-radius: 0;
+        left: 0;
+        height: 440px;
+        max-height: 440px;
+        max-width: 100%;
+        opacity: 0.5;
+        
+        video {
+          top: -50px !important;
+          right: 0 !important;
+        }
+      }
+
+      @include breakpoint(min-width breakpoint-value(sm) max-width breakpoint-value(md)) {
+        video {
+          top: 0 !important;
+          right: 0 !important;
+          width: 150% !important;
+        }
+      }
+
       &:hover {
         filter: blur(100px) contrast(110%) brightness(110%) saturate(130%) !important;
 

@@ -12,5 +12,13 @@
 
   .back {
     top: 150px !important;
+
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      top: 115px !important;
+    }
+  }
+
+  .row {
+    padding-top: 50px;
   }
 }

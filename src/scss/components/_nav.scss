@@ -2,8 +2,16 @@
   padding-top: 125px;
   padding-left: 20%;
 
+  @include breakpoint(max-width breakpoint-value(sm)) {
+    padding-top: 50px;
+  }
+
   li {
     margin-bottom: 50px;
+
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      margin-bottom: 25px;
+    }
   }
 
   a {
@@ -18,6 +26,11 @@
     z-index: 1;
     @include transition(all 0.5s ease-in-out)
     @include font-size(55px);
+
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      padding: 10px 10px 11px;
+      @include font-size(25px);
+    }
 
     &:before {
       content: '';

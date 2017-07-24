@@ -1,7 +1,11 @@
 .services-page-wrapper {
-
-  .special {
+  .services-page {
     min-height: 600px;
+
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      padding-top: 50px;
+      min-height: 500px;
+    }
   }
 
   .text-content {

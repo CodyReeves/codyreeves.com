@@ -1,3 +1,31 @@
+.home-page {
+  .banner {
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      max-height: 430px;
+
+      h1 {
+        top: 70px;
+        line-height: 1;
+      }
+
+      h4 {
+        top: 85px !important;
+      }
+    }
+  }
+
+  .about {
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      min-height: 750px;
+    }
+    
+    .text {
+      @include breakpoint(max-width breakpoint-value(sm)) {
+        margin-top: 25px;
+      }
+    }
+  }
+}
 
 $padding: 200px;
 .special {
@@ -17,6 +45,10 @@ $padding: 200px;
     padding: $padding 0 ($padding - 100px);
     position: relative;
     z-index: 10;
+
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      padding: 50px 50px 50px 70px;
+    }
   }
 
   blockquote {
@@ -67,6 +99,11 @@ $padding: 200px;
     color: #ebebeb;
     //mix-blend-mode: difference;
     @include font-size(150px);
+
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      top: 100px;
+      @include font-size(70px);
+    }
   }
 
   .sub {
@@ -77,8 +114,16 @@ $padding: 200px;
     max-width: 800px;
     left: -15px;
 
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      @include font-size(26px);
+    }
+
     &.bump-up {
       top: -50px;
+
+      // @include breakpoint(max-width breakpoint-value(sm)) {
+      //   top: -35px;
+      // }
     }
   }
 
@@ -91,6 +136,11 @@ $padding: 200px;
     line-height: 1.6;
 
     @include font-size(16px);
+
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      padding-right: 0;
+      padding-left: 15px;
+    }
   }
 
   ul {
@@ -107,6 +157,10 @@ $padding: 200px;
       line-height: 1;
 
       @include font-size(20px);
+
+      @include breakpoint(max-width breakpoint-value(sm)) {
+        width: 100%;
+      }
 
       &:after {
         content: '';
@@ -142,6 +196,10 @@ $padding: 200px;
 
   .sub {
     top: -50px;
+
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      top: -30px;
+    }
   }
 
   .design,
@@ -175,6 +233,10 @@ $padding: 200px;
     position: absolute;
     z-index: 1000;
     top: 0;
+
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      display: none !important;
+    }
 
     &.btn {
       display: inline-block;
@@ -243,6 +305,10 @@ $padding: 200px;
   background-color: darken(color(greyscale, dark-grey), 5%);
   @include gridlines(150px, 150px, 2px, 0px);
 
+  @include breakpoint(max-width breakpoint-value(sm)) {
+    padding-top: 100px;
+  }
+
   .section-title {
     span {
       color: color(greyscale, grey);
@@ -264,6 +330,10 @@ $padding: 200px;
   .sample {
     padding-top: 225px;
 
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      padding-top: 100px;
+    }
+
     &.right {
       .details {
         text-align: left !important;
@@ -273,6 +343,10 @@ $padding: 200px;
         h3 {
           left: -30px;
           right: initial;
+
+          @include breakpoint(max-width breakpoint-value(sm)) {
+            left: 0;
+          }
         }
       }
 
@@ -283,7 +357,9 @@ $padding: 200px;
 
     &.left {
       .details {
-        @include grid-reorder(first);
+        @include breakpoint(sm) {
+          @include grid-reorder(first);
+        }
       }
     }
 
@@ -295,6 +371,10 @@ $padding: 200px;
   .details {
     color: color(greyscale, white); 
     text-align: right;
+
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      padding-top: 55px;
+    }
 
     p {
       letter-spacing: 1px;
@@ -330,6 +410,10 @@ $padding: 200px;
         & + .title-lg {
           mix-blend-mode: difference;
 
+          @include breakpoint(max-width breakpoint-value(sm)) {
+            mix-blend-mode: unset;
+          }
+
           &:before {
             @include transform(translateX(0%));
             color: color(greyscale, black);
@@ -350,13 +434,11 @@ $padding: 200px;
             }
           }
         }
-      
-    
     
     h3 {
         position: absolute;
         margin: 0;
-        top: -10px;
+        top: -20px;
         right: -30px;
         text-decoration: none;
         text-transform: uppercase;
@@ -364,6 +446,11 @@ $padding: 200px;
         color: color(greyscale, white);
         z-index: 2;
         @include font-size(50px);
+
+        @include breakpoint(max-width breakpoint-value(sm)) {
+          right: 0;
+          @include font-size(25px);
+        }
       }
     }
     .image-wrapper{
@@ -377,14 +464,18 @@ $padding: 200px;
       @include transition(all .7s ease-in-out);
       @include shadow(4, dark);
 
+      @include breakpoint(max-width breakpoint-value(sm)) {
+         height: 225px;
+      }
+
       .image {
         position: absolute;
         width: 100%;
-      height: 300px;
-       background-position: center;
-      background-size: cover;
-      @include transition(all .7s ease-in-out);
-      @include filter(blur(0px));
+        height: 300px;
+        background-position: center;
+        background-size: cover;
+        @include transition(all .7s ease-in-out);
+        @include filter(blur(0px));
       }
 
       img {
@@ -429,6 +520,12 @@ $padding: 200px;
       @include transition(all 0.5s ease-in-out);
       overflow: hidden;
 
+      @include breakpoint(max-width breakpoint-value(sm)) {
+        top: 100px;
+        mix-blend-mode: unset;
+        @include font-size(50px);
+      }
+
       &:before {
         content: '';
         position: absolute;
@@ -467,7 +564,8 @@ $padding: 200px;
 }
 
 form {
-  button[type="submit"] {
+  button[type="submit"],
+  input[type="submit"] {
     @extend .clear-button, .btn-cta, .pull-right;
   }
 }
@@ -479,32 +577,30 @@ form {
     display: block;
     position: relative;
     font-weight: 700;
-    //top: 7px;
+    margin-bottom: 5px;
     color: color(greyscale, dark-grey);
     z-index: 1;
     @include font-size(20px);
   }
 
-  input[type="text"], 
+  input[type="text"],
+  input[type="email"],
   textarea {
     display: block;
     position: relative;
     border: 3px solid rgba(color(greyscale, grey), 0.5);
-    color: rgba(color(brand, danger), 0.7);
+    color: rgba(color(greyscale, dark-grey), 0.9);
     background: transparent;
-    @include shadow((
-      type: light,
-      level: 2,
-      text: text,
-    )...);
-    @include font-size(24px);
+    @include font-size(18px);
     padding: 10px 10px;
     // margin-left: 15px;
     width: 100%;
+    letter-spacing: .75px;
     @extend .transition;
     
     &:focus {
       z-index: 5;
+      color: rgba(color(brand, success), 0.7);
       border: 3px solid rgba(color(brand, success), 0.4);
       outline: rgba(color(brand, success), 0.7);
       background: transparent;
