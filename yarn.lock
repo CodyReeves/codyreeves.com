@@ -272,7 +272,7 @@ babel-code-frame@^6.11.0, babel-code-frame@^6.22.0, babel-code-frame@^6.8.0:
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-babel-core@6.14.0, babel-core@^6.0.0, babel-core@^6.14.0:
+babel-core@6.14.0, babel-core@^6.0.0:
   version "6.14.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.14.0.tgz#c9e13ed4e2f97329215496fd9fb48f2b3bcb9b42"
   dependencies:
@@ -298,7 +298,7 @@ babel-core@6.14.0, babel-core@^6.0.0, babel-core@^6.14.0:
     slash "^1.0.0"
     source-map "^0.5.0"
 
-babel-core@^6.11.4, babel-core@^6.24.1:
+babel-core@^6.11.4, babel-core@^6.14.0, babel-core@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.24.1.tgz#8c428564dce1e1f41fb337ec34f4c3b022b5ad83"
   dependencies:
@@ -979,10 +979,6 @@ big.js@^3.1.3:
 binary-extensions@^1.0.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.8.0.tgz#48ec8d16df4377eae5fa5884682480af4d95c774"
-
-bindall-standalone@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/bindall-standalone/-/bindall-standalone-1.0.5.tgz#f7430388f1c7f9a9ade0fc75a400e710f6692a1d"
 
 block-stream@*:
   version "0.0.9"
@@ -1683,7 +1679,7 @@ debug@2.6.7:
   dependencies:
     ms "2.0.0"
 
-debug@2.X, debug@^2.1.0, debug@^2.1.1, debug@^2.2.0, debug@^2.6.3, debug@^2.6.6:
+debug@2.X, debug@^2.1.0, debug@^2.1.1, debug@^2.2.0, debug@^2.6.3:
   version "2.6.8"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
   dependencies:
@@ -2187,7 +2183,7 @@ events@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
 
-eventsource@0.1.6, eventsource@^0.1.3:
+eventsource@^0.1.3:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-0.1.6.tgz#0acede849ed7dd1ccc32c811bb11b944d4f29232"
   dependencies:
@@ -2306,12 +2302,6 @@ fastparse@^1.1.1:
 faye-websocket@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.10.0.tgz#4e492f8d04dfb6f89003507f6edbf2d501e7c6f4"
-  dependencies:
-    websocket-driver ">=0.5.1"
-
-faye-websocket@~0.11.0:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.11.1.tgz#f0efe18c4f56e4f40afc7e06c719fd5ee6188f38"
   dependencies:
     websocket-driver ">=0.5.1"
 
@@ -3768,6 +3758,10 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
+jquery@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
+
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
@@ -3909,10 +3903,6 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-lethargy@^1.0.2:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/lethargy/-/lethargy-1.0.4.tgz#459dfc5aa49a10ef9056300b90ec03a88e3b98af"
-
 levn@^0.3.0, levn@~0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/levn/-/levn-0.3.0.tgz#3b09924edf9f083c0490fdd4c0bc4421e04764ee"
@@ -3952,6 +3942,14 @@ loader-utils@0.2.x, loader-utils@^0.2.11, loader-utils@^0.2.15, loader-utils@^0.
     emojis-list "^2.0.0"
     json5 "^0.5.0"
     object-assign "^4.0.1"
+
+loader-utils@^1.0.2:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
+  dependencies:
+    big.js "^3.1.3"
+    emojis-list "^2.0.0"
+    json5 "^0.5.0"
 
 lodash-es@^4.2.1:
   version "4.17.4"
@@ -4267,7 +4265,7 @@ lodash.words@^3.0.0:
   dependencies:
     lodash._root "^3.0.0"
 
-lodash@^4.0.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.14.2, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.14.2, lodash@^4.15.0, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -4448,7 +4446,7 @@ mime@1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.3.4.tgz#115f9e3b6b3daf2959983cb38f149a2d40eb5d53"
 
-mime@^1.2.11, mime@^1.3.4:
+mime@1.3.x, mime@^1.2.11, mime@^1.3.4:
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.3.6.tgz#591d84d3653a6b0b4a3b9df8de5aa8108e72e5e0"
 
@@ -4997,6 +4995,10 @@ performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
 
+performance-now@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
+
 pify@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
@@ -5329,7 +5331,7 @@ promise@7.1.1, promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@~15.5.7:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@~15.5.7:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -5411,9 +5413,11 @@ querystringify@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-1.0.0.tgz#6286242112c5b712fa654e526652bf6a13ff05cb"
 
-"raf@github:pqml/raf":
-  version "0.1.0"
-  resolved "https://codeload.github.com/pqml/raf/tar.gz/18d6d69134aedd2d33f065f40c761f460bd17d09"
+raf@^3.1.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/raf/-/raf-3.3.2.tgz#0c13be0b5b49b46f76d6669248d527cf2b02fe27"
+  dependencies:
+    performance-now "^2.1.0"
 
 randomatic@^1.1.3:
   version "1.1.6"
@@ -5447,7 +5451,7 @@ react-dev-utils@^0.2.1:
     sockjs-client "1.0.3"
     strip-ansi "3.0.1"
 
-react-dom@^15.3.2, react-dom@^15.4.1:
+react-dom@^15.3.2:
   version "15.5.4"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.5.4.tgz#ba0c28786fd52ed7e4f2135fe0288d462aef93da"
   dependencies:
@@ -5461,6 +5465,12 @@ react-escape-html@^1.0.5:
   resolved "https://registry.yarnpkg.com/react-escape-html/-/react-escape-html-1.0.5.tgz#efd2c0dbac72e79ad68b93dca34d43e8dc89c56c"
   dependencies:
     eskape "^1.2.0"
+
+react-imation@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/react-imation/-/react-imation-0.5.3.tgz#61478ae167812849ae3bf91ed72e24d4970e0c15"
+  dependencies:
+    raf "^3.1.0"
 
 react-redux@^4.4.5:
   version "4.4.8"
@@ -5543,22 +5553,11 @@ react-scripts@0.6.1:
   optionalDependencies:
     fsevents "1.0.14"
 
-react-scroll@^1.5.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.5.2.tgz#f10f14840d3138a121d2c0f04933bbfee4193975"
+react-track@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/react-track/-/react-track-0.4.4.tgz#84e59ed27643b7e61f5d36894e8e2263fa74fb50"
   dependencies:
-    object-assign "^4.1.1"
-    prop-types "^15.5.8"
-
-"react-smooth-scroll@github:antoninlanglade/react-smooth-scroll":
-  version "0.0.10"
-  resolved "https://codeload.github.com/antoninlanglade/react-smooth-scroll/tar.gz/15cc33f8968757a51b1f9423b913a62a03a4c662"
-  dependencies:
-    lodash "^4.17.2"
-    raf "github:pqml/raf"
-    react "^15.4.1"
-    react-dom "^15.4.1"
-    virtual-scroll "^1.1.1"
+    raf "^3.1.0"
 
 react-transition-group@^1.1.3:
   version "1.1.3"
@@ -5569,7 +5568,7 @@ react-transition-group@^1.1.3:
     prop-types "^15.5.6"
     warning "^3.0.0"
 
-react@^15.3.2, react@^15.4.1:
+react@^15.3.2:
   version "15.5.4"
   resolved "https://registry.yarnpkg.com/react/-/react-15.5.4.tgz#fa83eb01506ab237cdc1c8c3b1cea8de012bf047"
   dependencies:
@@ -6059,7 +6058,7 @@ sntp@1.x.x:
   dependencies:
     hoek "2.x.x"
 
-sockjs-client@1.0.3:
+sockjs-client@1.0.3, sockjs-client@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sockjs-client/-/sockjs-client-1.0.3.tgz#b0d8280998460eb2564c5d79d7e3d7cfd8a353ad"
   dependencies:
@@ -6069,17 +6068,6 @@ sockjs-client@1.0.3:
     inherits "^2.0.1"
     json3 "^3.3.2"
     url-parse "^1.0.1"
-
-sockjs-client@^1.0.3:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/sockjs-client/-/sockjs-client-1.1.4.tgz#5babe386b775e4cf14e7520911452654016c8b12"
-  dependencies:
-    debug "^2.6.6"
-    eventsource "0.1.6"
-    faye-websocket "~0.11.0"
-    inherits "^2.0.1"
-    json3 "^3.3.2"
-    url-parse "^1.1.8"
 
 sockjs@^0.3.15:
   version "0.3.18"
@@ -6436,10 +6424,6 @@ timers-browserify@^1.0.1:
   dependencies:
     process "~0.11.0"
 
-tiny-emitter@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-1.2.0.tgz#6dc845052cb08ebefc1874723b58f24a648c3b6f"
-
 title-case@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/title-case/-/title-case-2.1.1.tgz#3e127216da58d2bc5becf137ab91dae3a7cd8faa"
@@ -6597,6 +6581,13 @@ url-loader@0.5.7:
     loader-utils "0.2.x"
     mime "1.2.x"
 
+url-loader@^0.5.9:
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-0.5.9.tgz#cc8fea82c7b906e7777019250869e569e995c295"
+  dependencies:
+    loader-utils "^1.0.2"
+    mime "1.3.x"
+
 url-parse@1.0.x:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.0.5.tgz#0854860422afdcfefeb6c965c662d4800169927b"
@@ -6604,7 +6595,7 @@ url-parse@1.0.x:
     querystringify "0.0.x"
     requires-port "1.0.x"
 
-url-parse@^1.0.1, url-parse@^1.1.8:
+url-parse@^1.0.1:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.1.9.tgz#c67f1d775d51f0a18911dd7b3ffad27bb9e5bd19"
   dependencies:
@@ -6748,15 +6739,6 @@ vinyl@^2.0.0:
     is-stream "^1.1.0"
     remove-trailing-separator "^1.0.1"
     replace-ext "^1.0.0"
-
-virtual-scroll@^1.1.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/virtual-scroll/-/virtual-scroll-1.2.1.tgz#d54c37fdb9c499843889bfd69b8b96571d97ffac"
-  dependencies:
-    bindall-standalone "^1.0.5"
-    lethargy "^1.0.2"
-    object-assign "^4.0.1"
-    tiny-emitter "^1.0.0"
 
 vm-browserify@0.0.4:
   version "0.0.4"
