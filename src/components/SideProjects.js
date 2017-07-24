@@ -8,7 +8,6 @@ class SideProject extends Component {
 	}
 
   render() {
-
     const SideProject = getSideProject();
     const Intro = getSideProjectPage();
     const classname = Intro.classname;
@@ -35,7 +34,7 @@ class SideProject extends Component {
       const title = row.title;
       const roles = row.roles;
       const content = row.content;
-      const link = row. link;
+      const link = row.link;
 
       return (
         <div key={title} className={classname}>
@@ -67,9 +66,12 @@ class SideProject extends Component {
           titleLargeClass={titleLargeClass}
           titleSmallClass={titleSmallClass}
         >
-        <div className="text col-xs-12 col-sm-12">
-					<p className="text">{text2}</p>
-				</div>
+          <div className="text col-xs-12 col-sm-12">
+            <p className="text">{text2}</p>
+          </div>
+          <div className="more">
+            Scroll Down
+          </div>
         </PageSection>
         <div className="container">
          <div className="row">
@@ -78,7 +80,6 @@ class SideProject extends Component {
         </div>
       </div>
     );
-
   }
 }
 

@@ -89,54 +89,54 @@ class Case extends Component {
 		const content = row.contents;
 
         return (
-            <div key={align} className={`${classNameSet} ${classname}`}>
-				<div>
-					<Banner imageSize="full" imageUrl={bannerImage} 
-					>
-						<h2>{title}</h2>
-						<div className="details text-center">
-							{link &&
-								<a className="btn btn-cta" ref={link} target="_blank">Visit site</a>}
-							{github && 
-								<a className="btn-cta github" href={github} target="_blank"><i className="fa fa-github"></i></a>}
-							<span className="tags">{tags}</span>
-							{/*<button 
-								className="center btn btn-primary"
-								onClick=""
+          <div key={align} id={align} className={`${classNameSet} ${classname}`}>
+						<div>
+							<Banner imageSize="full" imageUrl={bannerImage} 
 							>
-								Show More
-							</button>*/}
-						</div>
-					</Banner>
-					<div className="container contents-wrapper">
-						<div className="set-background">
-							{RoleRows(roles)}
-							{ContentRows(content)}
+								<h2>{title}</h2>
+								<div className="details text-center">
+									{link &&
+										<a className="btn btn-cta" ref={link} target="_blank">Visit site</a>}
+									{github && 
+										<a className="btn-cta github" href={github} target="_blank"><i className="fa fa-github"></i></a>}
+									<span className="tags">{tags}</span>
+									{/*<button 
+										className="center btn btn-primary"
+										onClick=""
+									>
+										Show More
+									</button>*/}
+								</div>
+							</Banner>
+							<div className="container contents-wrapper">
+								<div className="set-background">
+									{RoleRows(roles)}
+									{ContentRows(content)}
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
         )
     });
 
     return (
-        <div className="cases-wrapper">
-			<PageSection
-				type="special"
-				container="true"
-				className={classname}
-				titleLarge={titleLarge}
-				titleSmall={titleSmall}
-				titleLargeClass={titleLargeClass}
-				titleSmallClass={titleSmallClass}
-				textFollow={followText}
-			>
-			<div className="more">
+      <div className="cases-wrapper">
+				<PageSection
+					type="special"
+					container="true"
+					className={classname}
+					titleLarge={titleLarge}
+					titleSmall={titleSmall}
+					titleLargeClass={titleLargeClass}
+					titleSmallClass={titleSmallClass}
+					textFollow={followText}
+				>
+					<div className="more">
 						Scroll Down
-				</div>
-			</PageSection>
-			{CaseRows}
-        </div>
+					</div>
+				</PageSection>
+				{CaseRows}
+      </div>
     );
 
   }

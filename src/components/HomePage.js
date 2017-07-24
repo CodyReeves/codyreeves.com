@@ -116,7 +116,7 @@ class HomePage extends Component {
 		});
 
 		return (
-			<div>
+			<div className="home-page">
 				<Banner imageUrl={BannerImageUrl}>
 					<h1 className="heading-special"><span className="">{bannerTitle}</span></h1>
 					<h4 className="heading-top"><span className="">{bannerSub}</span></h4>
