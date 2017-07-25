@@ -78,7 +78,7 @@
       max-height: 440px;
       overflow: hidden;
       @extend .transition;
-     
+      animation: videoStart 2s forwards;
       @include shadow(1, light);
      
       @include filter(blur(1px) contrast(110%) brightness(110%) saturate(130%));
@@ -108,10 +108,10 @@
       }
 
       &:hover {
-        filter: blur(100px) contrast(110%) brightness(110%) saturate(130%) !important;
+        animation: videoHover 2s infinite !important;
 
         video {
-          animation: videoHover 2s infinite !important;
+         // animation: videoHover 2s infinite !important;
           perspective: 250px;
           transform-style: preserve-3d;
         }
@@ -135,8 +135,8 @@
         position: relative;
         top: -68px;
         right: 223px;
-         animation: videoStart 2s forwards;
-         @extend .transition;
+        animation: videoStart 2s forwards;
+        @extend .transition;
       }
     }
 

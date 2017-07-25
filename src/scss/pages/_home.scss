@@ -1,3 +1,19 @@
+%text-shadow {
+  @include shadow((
+    type: light,
+    level: 1,
+    text: text,
+  )...);
+}
+
+@mixin text-shadow-3 {
+  @include shadow((
+    type: light,
+    level: 4,
+    text: text,
+  )...);
+}
+
 .home-page {
   .banner {
     @include breakpoint(max-width breakpoint-value(sm)) {
@@ -15,16 +31,28 @@
   }
 
   .about {
+
     @include breakpoint(max-width breakpoint-value(sm)) {
       min-height: 750px;
     }
     
     .text {
+      max-width: 265px;
       @include breakpoint(max-width breakpoint-value(sm)) {
         margin-top: 25px;
       }
     }
   }
+}
+
+.contact {
+   @include breakpoint(sm){
+      &:hover {
+        .sub {
+          transform: translateY(35px) !important;
+        }
+      }
+   }
 }
 
 $padding: 200px;
@@ -38,6 +66,28 @@ $padding: 200px;
   &:after {
     opacity: 0.2;
     z-index: 3;
+  }
+
+  &:hover {
+    @include breakpoint(sm){
+      .sub {
+        @include transform(translateY(-25px));
+        @include text-shadow-3;  
+      }
+
+      .text,
+      blockquote {
+        margin-top: 100px;  
+        @include text-shadow-3;          
+      }
+    }
+  }
+
+  .sub, 
+  .text, 
+  blockquote {
+    @extend .transition,
+            %text-shadow;
   }
   
   .container {
@@ -197,6 +247,14 @@ $padding: 200px;
 }
 
 .services {
+  @include breakpoint(sm) {
+    &:hover {
+      .row {
+        padding-top: 100px;
+        @include text-shadow-3;  
+      }
+    }
+  }
 
   .sub {
     top: -50px;
@@ -412,7 +470,7 @@ $padding: 200px;
       width: 100%;
       &:hover {
         & + .title-lg {
-          mix-blend-mode: difference;
+          mix-blend-mode: darken;
 
           @include breakpoint(max-width breakpoint-value(sm)) {
             mix-blend-mode: unset;

@@ -1,5 +1,13 @@
 .sideproject-page {
   min-height: 600px;
+
+  &:hover {
+    @include breakpoint(sm) {
+     .text {
+        margin-top: 50px !important;
+     }
+    }
+  }
   
   .text {
     @include breakpoint(max-width breakpoint-value(sm)) {

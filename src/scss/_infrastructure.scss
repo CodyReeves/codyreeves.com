@@ -159,7 +159,7 @@ hr {
 
 // Helpers
 .transition {
-  @include transition(all 0.3s ease);
+  @include transition(all 0.3s ease-in-out);
 }
 
 .faded {
@@ -245,4 +245,8 @@ blockquote {
   margin: 0;
   padding-left: 30px;
   border-left: 4px solid color(brand, danger);
+}
+
+.row {
+  @extend .transition;
 }
