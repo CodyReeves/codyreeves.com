@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import PageSection from './PageSection'
-import ContactForm from './ContactForm'
+import PageSection from '../components/PageSection'
+import ContactForm from '../components/ContactForm'
 import { getContact } from '../apis/siteContent'
 
 class ContactPage extends Component {

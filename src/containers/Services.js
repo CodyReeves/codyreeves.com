@@ -1,6 +1,6 @@
 import React from 'react'
-import Banner from './Banner'
-import PageSection from './PageSection'
+import Banner from '../components/Banner'
+import PageSection from '../components/PageSection'
 import BannerImageUrl from '../images/example.jpg'
 
 const ServicesPage = () => {

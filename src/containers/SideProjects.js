@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getSideProject, getSideProjectPage } from '../apis/sideProjects';
-import PageSection from './PageSection.js';
+import PageSection from '../components/PageSection.js';
 
 class SideProject extends Component {
   componentDidMount () {

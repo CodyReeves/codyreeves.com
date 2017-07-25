@@ -45,7 +45,7 @@ $padding: 200px;
     padding: $padding 0 ($padding - 100px);
     position: relative;
     z-index: 10;
-
+  
     @include breakpoint(max-width breakpoint-value(sm)) {
       padding: 50px 50px 50px 70px;
     }
@@ -76,6 +76,10 @@ $padding: 200px;
     font-weight: 700;
 
     @include font-size(13px);
+
+     @include breakpoint(max-width breakpoint-value(sm)) {
+       display: none;
+     }
 
     span {
       display: block;

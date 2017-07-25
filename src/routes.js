@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
-import App from './components/App'
-import HomePage from './components/HomePage'
-import SideProject from './components/SideProjects'
-import ContactPage from './components/Contact'
-import CasesPage from './components/Cases'
-import ServicesPage from './components/Services'
+import App from './containers/App'
+import HomePage from './containers/HomePage'
+import SideProject from './containers/SideProjects'
+import ContactPage from './containers/Contact'
+import CasesPage from './containers/Cases'
+import ServicesPage from './containers/Services'
 
 const routes = (
 	<Route onUpdate={() => window.scrollTo(0, 0)} path="/" component={App}>

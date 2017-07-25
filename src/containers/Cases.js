@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Banner from './Banner';
+import Banner from '../components/Banner';
 import { getCases, getCaseIntro } from '../apis/cases';
-import PageSection from './PageSection.js';
+import PageSection from '../components/PageSection.js';
 class Case extends Component {
 	componentDidMount () {
 		window.scrollTo(0, 0)
@@ -9,7 +9,7 @@ class Case extends Component {
 
   render() {
 
-  	const cases = getCases();
+  const cases = getCases();
 	const intro = getCaseIntro();
 
 	const classname = intro.classname;

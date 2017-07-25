@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import Banner from './Banner'
+import Banner from '../components/Banner'
 import ContactPage from './Contact'
 import BannerImageUrl from '../images/bg.jpg'
 import BannerVidMp from '../images/home.mp4'
 import BannerVidWeb from '../images/home.webm'
 import { getHome } from '../apis/siteContent.js'
 import { Link } from 'react-router'
-import PageSection from './PageSection'
-import ListServices from './ListServices'
-import CaseSample from './CaseSample'
+import PageSection from '../components/PageSection'
+import ListServices from '../components/ListServices'
+import CaseSample from '../components/CaseSample'
 
 class HomePage extends Component {
 	componentDidMount () {
