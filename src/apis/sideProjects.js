@@ -12,105 +12,105 @@ export function getSideProjectPage() {
 export function getSideProject() {
   return [
     {
-      link: 'http://www.goldmansachs.com',
-      title: 'Goldman Sachs',
-      classname: 'goldmans',
-      imageUrl: '../img/example.jpg',
+      link: 'https://github.com/CodyReeves/flexible-breakpoints',
+      title: 'Flexible Breakpoints',
+      classname: 'sp-flextible-breakpoin',
+      imageUrl: '../img/bg.jpg',
       roles: [
         {
           title: '',
-          skills: 'React, Backbone, D3'
+          skills: 'Development - CSS, SCSS, JS'
         }
       ],
       content: ''
     },
     {
-      link: 'http://www.libon.com/',
-      title: 'Orange (Libon)',
-      classname: 'orange',
-      imageUrl: '../img/example.jpg',
+      link: 'https://github.com/CodyReeves/mixin-it/',
+      title: 'Mixin It Scss Framework',
+      classname: 'sp-mixin-it',
+      imageUrl: '../img/bg.jpg',
       roles: [
         {
           title: '',
-          skills: 'Backbone, WebRTC, FireFoxOS'
+          skills: 'Development - CSS, SCSS, JS'
         },
       ],
       content: ''
     },
     {
-      link: 'http://www.pwul.net',
-      title: 'Pay What You Like',
-      classname: 'pwul',
-      imageUrl: '../img/example.jpg',
+      link: 'https://github.com/CodyReeves/css-grid-system-library',
+      title: 'CSS Grid System Library',
+      classname: 'sp-system-library',
+      imageUrl: '../img/bg.jpg',
       roles: [
         {
           title: '',
-          skills: 'React, Backbone, D3'
+          skills: 'Development - CSS, SCSS, JS'
         }
       ],
       content: ''
     },
     {
-      link: 'http://www.timeout.com/london/card',
-      title: 'Timeout',
-      classname: 'timeout',
-      imageUrl: '../img/example.jpg',
+      link: 'https://github.com/CodyReeves/codyreeves.com',
+      title: 'Cody Reeves Personal Site',
+      classname: 'sp-personal-site',
+      imageUrl: '../img/codyreeves-site.png',
       roles: [
         {
           title: '',
-          skills: 'Backbone, CSS3, HTML5'
+          skills: 'React, Redux, Scss'
         }
       ],
       content: ''
     },
     {
-      link: 'http://www.tesco.com/direct',
-      title: 'Tesco Entertainment',
+      link: 'https://github.com/CodyReeves/codyreeves.com',
+      title: 'Codepen',
       classname: 'tesco',
       imageUrl: '../img/example.jpg',
       roles: [
         {
           title: '',
-          skills: 'Backbone, CSS3, HTML5'
+          skills: 'Development - JS, Scss, Html'
         }
       ],
       content: ''
     },
     {
-      link: 'http://onlinelibrary.wiley.com',
-      title: 'John Wiley and Sons',
-      classname: 'wiley',
+      link: 'https://ux.stackexchange.com/users/102413/cody-reeves?tab=profile',
+      title: 'UX Stackexchange',
+      classname: 'sp-exchange',
       imageUrl: '../img/example.jpg',
       roles: [
         {
           title: '',
-          skills: 'Backbone, CSS3, HTML5'
+          skills: 'Design - Ui, Ux'
         }
       ],
       content: ''
     },
     {
-      link: 'http://www.covestor.com',
-      title: 'Covestor',
-      classname: 'covestor',
+      link: 'https://www.behance.net/codyreeves',
+      title: 'Behance Portfolio',
+      classname: 'sp-portfolio',
       imageUrl: '../img/example.jpg',
       roles: [
         {
           title: '',
-          skills: 'OO Javascript, CSS3, HTML5'
+          skills: 'Design - Ui, Ux, Graphic Design, Branding'
         }
       ],
       content: ''
     },
     {
-      link: 'http://www.shipserv.com',
-      title: 'ShipServ',
+      link: 'http://withdesign.ca',
+      title: 'With Design',
       classname: 'shipserv',
       imageUrl: '../img/example.jpg',
       roles: [
         {
           title: '',
-          skills: 'OO Javascript, CSS3, HTML5'
+          skills: 'Freelance & Consulting - Personal Business'
         }
       ],
       content: ''

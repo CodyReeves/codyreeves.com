@@ -35,6 +35,7 @@ class SideProject extends Component {
       const roles = row.roles;
       const content = row.content;
       const link = row.link;
+      const icon = row.icon;
 
       return (
         <div key={title} className={classname}>
@@ -45,8 +46,11 @@ class SideProject extends Component {
                 className="img-responsive" 
                 alt={titleLarge} 
               />
+              {icon &&
+                <i className={`fa fa-${icon}`} />
+              }
               <h2>{title}</h2>
-              <a className="btn btn-cta" href={link} target="_blank">View Project</a> 
+              <a className="btn btn-cta" href={link} target="_blank" rel="noopener">View Project</a> 
               {RoleRows(roles)}
               <p className="over-right">{content}</p>
             </div>

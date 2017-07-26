@@ -83,11 +83,14 @@ $padding: 200px;
     }
   }
 
-  .sub, 
-  .text, 
+  .sub {
+    @include transition(all .5s ease-in-out);
+    @extend %text-shadow;
+  }
+  .text,
   blockquote {
-    @extend .transition,
-            %text-shadow;
+    @extend %text-shadow;
+    @include transition(all .5s ease-in-out);
   }
   
   .container {
@@ -251,6 +254,7 @@ $padding: 200px;
     &:hover {
       .row {
         padding-top: 100px;
+        @include transition(all .5s ease-in-out);
         @include text-shadow-3;  
       }
     }

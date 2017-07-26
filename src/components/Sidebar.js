@@ -25,7 +25,7 @@ const Sidebar = ({ className }) => (
       Menu
     </label>
   <header className={`sidebar ${className}`}>
-    <a className="header-email" href="maltio:">Email@email.com</a>
+      <a className="header-email" href="maltio:codreev@gmail.com">codreev@gmail.com</a>
     <Link className="logo" to="/">
       <img
         src={logo}
@@ -42,9 +42,9 @@ const Sidebar = ({ className }) => (
       </div>
       <div className="social">
         <ul className="list-inline">
-          <li><a href="#" target="_blank">Behance</a></li>
-          <li><a href="#" target="_blank">Linkdin</a></li>
-          <li><a href="#" target="_blank">Github</a></li>
+          <li><a href="https://www.behance.net/codyreeves" target="_blank" rel="noopener">Behance</a></li>
+          <li><a href="https://www.linkedin.com/in/cody-reeves-5a805459/" target="_blank" rel="noopener">Linkdin</a></li>
+          <li><a href="https://github.com/CodyReeves/" target="_blank" rel="noopener">Github</a></li>
       </ul>
       </div>
     </header>

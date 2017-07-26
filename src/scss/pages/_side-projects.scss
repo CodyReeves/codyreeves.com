@@ -58,6 +58,7 @@
   .image {
     background: {
       size: cover;
+      position: center;
     }
      @include shadow(4, dark);
   }
@@ -92,7 +93,7 @@
     @include font-size(26px);
     @include shadow((
       type: dark,
-      level: 2,
+      level: 3,
       text: text,
     )...);
   }

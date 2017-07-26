@@ -97,19 +97,19 @@ export function getHome() {
       sections: [
         {
           key: 'about',
-          titleLarge: 'About Us',
+          titleLarge: 'About Me',
           titleSmall: 'add a Material Design look and feel to your',
-          followText: 'What We Are About',
+          followText: 'What I am all about',
           classname: 'about',
           aboutText: 'ts you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible. Get started now',
           aboutQuote: 'ts you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use'
         },
         {
           key: 'services',
-          titleLarge: 'Services',
+          titleLarge: 'Skills',
           titleSmall: 'add a Material Design look and feel to your',
           titleSmallClass: 'bump-up',
-          followText: ' Service\'s We Provide ',
+          followText: ' Skills\'s I Provide ',
           classname: 'services'
         },
         {
@@ -117,7 +117,7 @@ export function getHome() {
           titleLarge: 'Cases',
           titleSmall: 'add a Material Design look and feel to your and feel to your websites.',
           titleSmallClass: 'bump-up',
-          followText: 'What We Have Done',
+          followText: 'What I Have Done',
           classname: 'sample-portfolio'
         },
       ],

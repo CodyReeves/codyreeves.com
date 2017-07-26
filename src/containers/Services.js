@@ -7,11 +7,9 @@ const ServicesPage = () => {
 
   const services = {
     classname: 'services-page',
-    titleLarge: 'Services',
+    titleLarge: 'Skills',
     titleSmall: 'Design & Development',
-    titleLargeClass: 'Service',
-    titleSmallClass: 'Service',
-    followText: 'Service',
+    followText: 'Skills',
     title: 'Material Design Lite',
     article: 'lets you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible. Get started now.',
     article1: 'lets you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible. Get started now.',
@@ -44,7 +42,7 @@ const ServicesPage = () => {
         </div>
         </PageSection>
       </div>
-       <div className="row">
+       <div className="row no-margin">
          <div className="col-xs-12 col-sm-6">
           <Banner imageSize="half" imageUrl={BannerImageUrl}>
             <h1><span className="">text</span></h1>
