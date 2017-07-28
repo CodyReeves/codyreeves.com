@@ -72,7 +72,7 @@ export function getContact() {
       type: 'chat',
       titleSmall: 'contact contact contact contact contact contact',
       titleLarge: 'Contact',
-      followText: 'Let\'s Work Together! ',
+      followText: 'Let\'s Work Together, Start A Conversation!',
       heading: '',
       subHeading: '',
       email: 'email@email.com',
@@ -99,7 +99,7 @@ export function getHome() {
           key: 'about',
           titleLarge: 'About Me',
           titleSmall: 'add a Material Design look and feel to your',
-          followText: 'What I am all about',
+          followText: 'Adout Cody Reeves',
           classname: 'about',
           aboutText: 'ts you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible. Get started now',
           aboutQuote: 'ts you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use'
@@ -109,7 +109,7 @@ export function getHome() {
           titleLarge: 'Skills',
           titleSmall: 'add a Material Design look and feel to your',
           titleSmallClass: 'bump-up',
-          followText: ' Skills\'s I Provide ',
+          followText: ' Skills I Can Provide',
           classname: 'services'
         },
         {
@@ -117,7 +117,7 @@ export function getHome() {
           titleLarge: 'Cases',
           titleSmall: 'add a Material Design look and feel to your and feel to your websites.',
           titleSmallClass: 'bump-up',
-          followText: 'What I Have Done',
+          followText: 'Projects I Have Worked On',
           classname: 'sample-portfolio'
         },
       ],
