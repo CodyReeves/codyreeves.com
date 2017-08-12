@@ -3,15 +3,6 @@ import Navigation from './Navigation'
 import logo from '../images/logo.svg'
 import { Link } from 'react-router'
 
-function toggle() {
-  function clickOut() {
-    const element = document.getElementById('sidebarToggle');
-    if (element) element.checked = false;
-    delete document.onclick;
-  }
-  document.onclick = clickOut;
-}
-
 const defaultProps = {
   className: '',
 }
@@ -19,6 +10,14 @@ const defaultProps = {
 class Sidebar extends Component {
   render() {
     const { className } = this.props;
+    function toggle() {
+      function clickOut() {
+        const element = document.getElementById('sidebarToggle');
+        if (element) element.checked = false;
+        delete document.onclick;
+      }
+      document.onclick = clickOut;
+    }
 
     return (
       <div>
