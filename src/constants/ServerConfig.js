@@ -2,9 +2,9 @@ const mode = "dev"
 
 const config = {
 	url: {
-		dev: 'https://query.yahooapis.com/v1/public/',
-		stg: 'https://query.yahooapis.com/v1/public/',
-		prod: 'https://query.yahooapis.com/v1/public/'
+		dev: '',
+		stg: '',
+		prod: ''
 	},
 	key: {
 		dev: 'AbcdEfg',

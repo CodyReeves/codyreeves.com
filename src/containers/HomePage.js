@@ -9,17 +9,17 @@ import { Link } from 'react-router'
 import PageSection from '../components/PageSection'
 import ListServices from '../components/ListServices'
 import CaseSample from '../components/CaseSample'
-
+import SideProjectButton from '../components/SideProjectButton'
 class HomePage extends Component {
 	componentDidMount () {
 		window.scrollTo(0, 0)
 	}
 
 	render() {
-		
+
 		//Get data for page
 		const HomePage = getHome();
-		
+
 		// Set up for banner content
 		const bannerSub = HomePage.banner.subHeading;
 		const bannerTitle = HomePage.banner.heading;
@@ -60,9 +60,9 @@ class HomePage extends Component {
 				)
 			});
 		}
-		
+
 		const homeSections = HomePage.sections.map((row) => {
-			
+
 			const key = row.key;
 			const classname = row.classname;
 			const titleLarge = row.titleLarge;
@@ -90,7 +90,7 @@ class HomePage extends Component {
 							<p className="text">{aboutText}</p>
 						</div>}
 
-					{key === 'about' && 
+					{key === 'about' &&
 						<div className="right extra col-xs-12 col-sm-6">
 							<blockquote>{aboutQuote}</blockquote>
 						</div>}
@@ -100,7 +100,7 @@ class HomePage extends Component {
 							<span className="btn view-design">Design</span>
 							<span className="btn view-develop">Development</span>
 							<ListServices />
-							<Link className="btn-cta pull-right mar-top-15" to="/services">More Detials</Link>
+							{/* <Link className="btn-cta pull-right mar-top-15" to="/skills">Find Out More Skills</Link> */}
 						</div>}
 
 					{key === 'cases' &&
@@ -131,6 +131,7 @@ class HomePage extends Component {
 				</div>
 				</Banner>
 				{homeSections}
+				<SideProjectButton />
 				<ContactPage />
 			</div>
 		);

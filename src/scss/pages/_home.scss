@@ -35,7 +35,7 @@
     @include breakpoint(max-width breakpoint-value(sm)) {
       min-height: 750px;
     }
-    
+
     .text {
       max-width: 265px;
       @include breakpoint(max-width breakpoint-value(sm)) {
@@ -60,9 +60,10 @@ $padding: 200px;
   position: relative;
   background: color(greyscale, white);
   min-height: 100vh;
+  max-height: 900px;
   @include gridlines(150px, 150px, 2px, 0px);
 
-  &:before, 
+  &:before,
   &:after {
     opacity: 0.2;
     z-index: 3;
@@ -72,13 +73,13 @@ $padding: 200px;
     @include breakpoint(sm){
       .sub {
         @include transform(translateY(-25px));
-        @include text-shadow-3;  
+        @include text-shadow-3;
       }
 
       .text,
       blockquote {
-        margin-top: 100px;  
-        @include text-shadow-3;          
+        margin-top: 100px;
+        @include text-shadow-3;
       }
     }
   }
@@ -92,13 +93,13 @@ $padding: 200px;
     @extend %text-shadow;
     @include transition(all .5s ease-in-out);
   }
-  
+
   .container {
     max-width: 800px;
     padding: $padding 0 ($padding - 100px);
     position: relative;
     z-index: 10;
-  
+
     @include breakpoint(max-width breakpoint-value(sm)) {
       padding: 50px 50px 50px 70px;
     }
@@ -188,7 +189,7 @@ $padding: 200px;
     position: relative;
     padding-left: 100px;
     padding-right: 20px;
-    margin-top: 3px; 
+    margin-top: 3px;
     z-index: 2;
     line-height: 1.6;
 
@@ -208,7 +209,7 @@ $padding: 200px;
       font-weight: 400;
       font-family: font-family(brand);
       z-index: 2;
-      width: 50%; 
+      width: 50%;
       overflow: hidden;
       display: inline-block;
       line-height: 1;
@@ -235,7 +236,7 @@ $padding: 200px;
   .extra {
     position: relative;
     padding-left: 40px;
-    padding-right: 40px; 
+    padding-right: 40px;
     z-index: 2;
     font-weight: 600;
     font-family: font-family(brand);
@@ -255,7 +256,7 @@ $padding: 200px;
       .row {
         padding-top: 100px;
         @include transition(all .5s ease-in-out);
-        @include text-shadow-3;  
+        @include text-shadow-3;
       }
     }
   }
@@ -435,7 +436,7 @@ $padding: 200px;
   }
 
   .details {
-    color: color(greyscale, white); 
+    color: color(greyscale, white);
     text-align: right;
 
     @include breakpoint(max-width breakpoint-value(sm)) {
@@ -455,7 +456,7 @@ $padding: 200px;
       @include font-size(11px);
     }
 
-    span, 
+    span,
     strong {
       font-family: font-family(brand);
     }
@@ -474,8 +475,6 @@ $padding: 200px;
       width: 100%;
       &:hover {
         & + .title-lg {
-          mix-blend-mode: darken;
-
           @include breakpoint(max-width breakpoint-value(sm)) {
             mix-blend-mode: unset;
           }
@@ -487,20 +486,19 @@ $padding: 200px;
         }
       }
 
-      &:focus {
+      &:hover {
         .image-wrapper {
-          @include transform(scale(0.9));
-        
+
             .image {
               @include filter(blur(10px));
             }
 
             img {
-              @include transform(scale(1.1));
+              @include transform(scale(1.0));
             }
           }
         }
-    
+
     h3 {
         position: absolute;
         margin: 0;
@@ -510,8 +508,13 @@ $padding: 200px;
         text-transform: uppercase;
         font-weight: 700;
         color: color(greyscale, white);
-        z-index: 2;
-        @include font-size(50px);
+        z-index: 10000;
+        @include font-size(30px);
+        @include shadow((
+          type: dark,
+          level: 1,
+          text: text,
+        )...);
 
         @include breakpoint(max-width breakpoint-value(sm)) {
           right: 0;
@@ -527,8 +530,8 @@ $padding: 200px;
       overflow: hidden;
       position: relative;
       cursor: pointer;
+      border-radius: 4px;
       @include transition(all .7s ease-in-out);
-      @include shadow(4, dark);
 
       @include breakpoint(max-width breakpoint-value(sm)) {
          height: 225px;
@@ -536,37 +539,44 @@ $padding: 200px;
 
       .image {
         position: absolute;
-        width: 100%;
+        width: 350px;
         height: 300px;
         background-position: center;
         background-size: cover;
+        border-radius: 4px;
         @include transition(all .7s ease-in-out);
-        @include filter(blur(0px));
+        @include filter(blur(35px) hue-rotate(180deg) brightness(110%) opacity(100%));
+        @include shadow(4, dark);
       }
 
       img {
         position: absolute;
+        left: 30px;
+        top: 30px;
         width: 100%;
         opacity: 1;
         z-index: 3;
-        @include transform(scale(0.9));
+        border-radius: 4px;
+        @include transform(scale(1));
         transform-origin: center 180px;
         @include transition(all .75s ease-in-out);
-        @include shadow(3, dark);
+        @include shadow(4, dark);
       }
 
       &:hover {
-        transform-origin: right right;
-        @include transform(scale(1));
-        
+        // transform-origin: right right;
+        // @include transform(scale(1));
+
         .image {
-          @include filter(blur(10px));
+          @include filter(blur(0px));
         }
 
         img {
           opacity: 1;
-          transform-origin: center 75px;
-          @include transform(scale(0.7));
+          left: 0px;
+          top: 0px;
+          //transform-origin: center 75px;
+          //@include transform(scale(0.7));
           @include shadow(1, light);
         }
       }
@@ -580,11 +590,16 @@ $padding: 200px;
       z-index: 3;
       font-family: font-family(primary);
       line-height: 1.3;
-      color: color(greyscale, grey);
-      mix-blend-mode: color-dodge;
+      color: color(greyscale, white);
+      //mix-blend-mode: color-dodge;
       @include font-size(70px);
       @include transition(all 0.5s ease-in-out);
       overflow: hidden;
+      @include shadow((
+        type: dark,
+        level: 2,
+        text: text,
+      )...);
 
       @include breakpoint(max-width breakpoint-value(sm)) {
         top: 100px;
@@ -600,7 +615,7 @@ $padding: 200px;
         bottom: 0;
         left: 0;
         z-index: -1;
-        background-color: color(brand, danger);
+        background-color: rgba(color(brand, danger), 0.7);
         @include transform(translateX(-101%));
         @include transition(all 0.5s ease-in-out);
       }
@@ -625,7 +640,7 @@ $padding: 200px;
   &:hover {
     color: color(greyscale, white);
     @include transform(translateY(3px));
-     @include box-shadow(1px 0px 50px -20px rgba(color(brand, danger), 0.2)); 
+     @include box-shadow(1px 0px 50px -20px rgba(color(brand, danger), 0.2));
   }
 }
 
@@ -663,7 +678,7 @@ form {
     width: 100%;
     letter-spacing: .75px;
     @extend .transition;
-    
+
     &:focus {
       z-index: 5;
       color: rgba(color(brand, success), 0.7);

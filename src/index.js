@@ -2,7 +2,6 @@ import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-// If your server supports server rendering, use browserHistory replace with hashHistory.
 import { Router, hashHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 import { configureStore } from './store'

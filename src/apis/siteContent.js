@@ -19,42 +19,56 @@ export function getServices() {
         image: '',
         title: '',
         type: 'develop',
-        content: 'this is a srevice'
+        content: 'HTML, PHP, JS, CSS, SCSS'
       },
       {
         key: 2,
         image: '',
         title: '',
-        type: 'develop',
-        content: 'this is a srevice'
+        type: 'design',
+        content: 'Brand Development'
       },
       {
         key: 3,
         image: '',
         title: '',
         type: 'design',
-        content: 'this is a srevice'
+        content: 'Print Design'
       },
       {
         key: 4,
         image: '',
         title: '',
-        type: 'develop',
-        content: 'this is a srevice'
+        type: 'design',
+        content: 'Wireframing and Prototyping '
       },
       {
         key: 5,
         image: '',
         title: '',
-        type: 'develop',
-        content: 'this is a srevice'
+        type: 'design develop',
+        content: 'Project Managment'
       },
       {
         key: 6,
         image: '',
         title: '',
+        type: 'develop',
+        content: 'Usability/User Testing'
+      },
+      {
+        key: 7,
+        image: '',
+        title: '',
         type: 'design',
-        content: 'this is a srevice'
+        content: 'High-level UX & UI design'
+      },
+      {
+        key: 8,
+        image: '',
+        title: '',
+        type: 'develop',
+        content: 'Basic DevOps'
       }
     ],
     content: [
@@ -62,7 +76,7 @@ export function getServices() {
         heading: '',
         text: ''
       }
-    ], 
+    ],
   }
 }
 
@@ -70,22 +84,18 @@ export function getContact() {
   return [
     {
       type: 'chat',
-      titleSmall: 'contact contact contact contact contact contact',
+      titleSmall: 'Start A Conversation',
       titleLarge: 'Contact',
-      followText: 'Let\'s Work Together, Start A Conversation!',
+      followText: 'Let\'s Work Together',
       heading: '',
       subHeading: '',
-      email: 'email@email.com',
-      location: 'location here',
+      email: 'codreev@gmail.com',
+      location: 'Kelowna, BC, Canada',
       content:[
         {
           key: 1,
-          heading: 'Want To Chat?',
-          text: 'text text text text text text text text text text text text text text text'
-        },
-        {
-          key: 2,
-          text: 'text text text text text text text text text text text text text text text'
+          heading: 'Get In Touch!',
+          text: 'Feel free reach out to me to arrange a time to talk and see more of my work.'
         }
       ],
     },
@@ -97,17 +107,17 @@ export function getHome() {
       sections: [
         {
           key: 'about',
-          titleLarge: 'About Me',
-          titleSmall: 'add a Material Design look and feel to your',
+          titleLarge: 'About',
+          titleSmall: 'Designer, Developer, Entrepreneur',
           followText: 'Adout Cody Reeves',
           classname: 'about',
-          aboutText: 'ts you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible. Get started now',
-          aboutQuote: 'ts you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use'
+          aboutText: 'I design and build digital products—from high-level UX & Interaction flows to crafting the nitty-gritty UI details and writing code to bring the styles and interactions to life. Currently lead design at Strawhouse, and Owner of With Design in Kelowna, Canada.',
+          aboutQuote: 'I have 4+ years of experience, working on wide variety of projects from designing company brands to developing enterprise software.'
         },
         {
           key: 'services',
           titleLarge: 'Skills',
-          titleSmall: 'add a Material Design look and feel to your',
+          titleSmall: 'From high-level UX to print and everything inbetween.',
           titleSmallClass: 'bump-up',
           followText: ' Skills I Can Provide',
           classname: 'services'
@@ -115,42 +125,42 @@ export function getHome() {
         {
           key: 'cases',
           titleLarge: 'Cases',
-          titleSmall: 'add a Material Design look and feel to your and feel to your websites.',
+          titleSmall: 'Opportunities I have had to positively impact people on a broad scale.',
           titleSmallClass: 'bump-up',
-          followText: 'Projects I Have Worked On',
+          followText: 'Project worked on.',
           classname: 'sample-portfolio'
         },
       ],
       samples: [
         {
           key: '1',
-          imageUrl: 'example.jpg',
+          imageUrl: 'tasties/tasties-cover.png',
           imagePlacement: 'left',
-          titleLarge: 'This is a title',
-          titleSmall: 'Smaller Info Title',
-          strong: 'Strong text',
-          span: 'span text',
-          text: 'ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ',
+          titleLarge: 'Tasties Kitchen',
+          titleSmall: 'Branding & Web Dev.',
+          strong: 'Tools:',
+          span: 'Adobe CC, SCSS, PHP, JS, Wordpress, Woocommerce',
+          text: 'THE PROJECT DETAILS: Branding & web development for Tasties Kitchen. Tasties is a food service that creates seasonally inspired meals using locally sourced ingredients and devivers the meal to your door.',
         },
         {
           key: '2',
-          imageUrl: 'example.jpg',
+          imageUrl: './hmv/cover.png',
           imagePlacement: 'right',
-          titleLarge: 'This is a title',
-          titleSmall: 'Smaller Info Title',
-          strong: 'Strong text',
-          span: 'span text',
-          text: 'ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ',
+          titleLarge: 'H.M.V. Snow Removal',
+          titleSmall: 'Web Design',
+          strong: 'Tools:',
+          span: 'Adobe CC, CSS, JS, HTML',
+          text: 'THE PROJECT DETAILS: Branding & web development for High Mountain Vantures Snow Rmoval.',
         },
         {
           key: '3',
-          imageUrl: 'example.jpg',
+          imageUrl: 'probiotic/cover-2.png',
           imagePlacement: 'left',
-          titleLarge: 'This is a title',
-          titleSmall: 'Smaller Info Title',
-          strong: 'Strong text',
-          span: 'span text',
-          text: 'ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to ts you add a Material Design look and feel to '
+          titleLarge: 'Probiotic MD',
+          titleSmall: 'Branding & Web Dev.',
+          strong: 'Tools:',
+          span: 'Adobe CC, SCSS, PHP, JS',
+          text: 'THE PROJECT DETAILS: Branding & web development for Probiotic MD. Work including logo, stationary, labels for the product, and to create a sales funnel.',
         },
       ],
       banner: {
@@ -163,4 +173,3 @@ export function getHome() {
       },
     }
   }
-  

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Banner from '../components/Banner';
 import { getCases, getCaseIntro } from '../apis/cases';
 import PageSection from '../components/PageSection.js';
+
 class Case extends Component {
 	componentDidMount () {
 		window.scrollTo(0, 0)
@@ -29,11 +30,11 @@ class Case extends Component {
 
 			return (
 				<div key={title} className="case-detail-wrapper clearfix row">
-					<div className="task col-xs-12 col-sm 6">
+					<div className="task col-xs-12 col-sm-7">
 						<h3>The Task</h3>
 						<p>{task}</p>
 					</div>
-					<div className="about col-xs-12 col-sm 6">
+					<div className="about col-xs-12 col-sm-5">
 						<p className="title"><strong>Role:</strong> {title}</p>
 						<p><strong>Skills & Tools:</strong> {tech}
 						<span className="skills">{skills}</span></p>
@@ -91,16 +92,16 @@ class Case extends Component {
         return (
           <div key={align} id={align} className={`${classNameSet} ${classname}`}>
 						<div>
-							<Banner imageSize="full" imageUrl={bannerImage} 
+							<Banner imageSize="full" imageUrl={bannerImage}
 							>
 								<h2>{title}</h2>
 								<div className="details text-center">
 									{link &&
-										<a className="btn btn-cta" ref={link} target="_blank">Visit site</a>}
-									{github && 
+										<a className="btn btn-cta" href={link} target="_blank">Visit site</a>}
+									{github &&
 										<a className="btn-cta github" href={github} target="_blank"><i className="fa fa-github"></i></a>}
 									<span className="tags">{tags}</span>
-									{/*<button 
+									{/*<button
 										className="center btn btn-primary"
 										onClick=""
 									>
@@ -138,7 +139,6 @@ class Case extends Component {
 				{CaseRows}
       </div>
     );
-
   }
 }
 

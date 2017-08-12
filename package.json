@@ -35,6 +35,7 @@
     "react-escape-html": "^1.0.5",
     "react-imation": "^0.5.3",
     "react-router-link": "^2.0.2",
+    "react-router-transition": "^0.1.1",
     "react-router-transitions": "^2.2.1",
     "react-track": "^0.4.4",
     "react-transition-group": "^1.1.3"

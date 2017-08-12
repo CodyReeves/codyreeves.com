@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getServices } from '../apis/siteContent.js'
+import { getServices } from '../apis/siteContent'
 
 
 class ListServices extends Component {
@@ -23,6 +23,5 @@ class ListServices extends Component {
     );
   }
 }
-
 
 export default ListServices
