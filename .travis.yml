@@ -10,7 +10,6 @@ branches:
   - master
   - gh-pages
 before_install:
-  - npm install -g yarn
-  - yarn
+  - npm install
 script:
-  - yarn start
+  - npm start
