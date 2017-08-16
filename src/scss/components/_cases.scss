@@ -1,7 +1,7 @@
 .cases-wrapper {
   .more {
     bottom: -17vh;
-    
+
     @include breakpoint(max-width breakpoint-value(sm)) {
       left: 0;
     }
@@ -14,9 +14,16 @@
       min-height: 400px;
     }
   }
+
+  .case-item {
+    .image {
+      margin-bottom: 60px;
+    }
+  }
 }
 
 .case-item {
+
   .set-background {
      color: color(greyscale, white);
   }
@@ -37,7 +44,7 @@
       padding-left: 45px;
     }
 
-    &:before, 
+    &:before,
     &:after {
       opacity: 0.2;
       z-index: 3;
@@ -50,6 +57,12 @@
 
   .banner {
     h2 {
+      color: color(greyscale, white);
+      @include shadow((
+        type: dark,
+        level: 3,
+        text: text,
+      )...);
       @include breakpoint(max-width breakpoint-value(sm)) {
         line-height: .9;
         @include font-size(34px);
@@ -126,5 +139,47 @@
   }
 }
 
+.image-shadow {
+  img {
+    border-radius: 7px;
+    @include filter(drop-shadow(0px 7px 14px rgba(14, 14, 14, 0.1)));
+  }
+}
 
+.image-invert {
+  img {
+    @include filter(invert(100%));
+  }
+}
 
+.image-shadow-d {
+  img {
+    border-radius: 7px;
+    @include filter(drop-shadow(0px 7px 14px rgba(14, 14, 14, 0.7)));
+  }
+}
+
+.image-center {
+  img {
+    margin: 0 auto;
+  }
+}
+
+.image-300 {
+  img {
+    max-width: 300px;
+  }
+}
+
+.image-500 {
+  img {
+    max-width: 500px;
+  }
+}
+
+.image-uli {
+  img {
+    border-radius: 4px;
+    width: 100%;
+  }
+}

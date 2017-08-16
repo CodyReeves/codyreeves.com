@@ -1,7 +1,7 @@
 .banner {
   position: relative;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 
   &.full {
     height: 100vh;
@@ -80,7 +80,7 @@
       @extend .transition;
       animation: videoStart 2s forwards;
       @include shadow(1, light);
-     
+
       @include filter(blur(1px) contrast(110%) brightness(110%) saturate(130%));
       @include calc(left, 50%, '50% - 225px');
       @include calc(top, 50%, '50% - 225px');
@@ -92,7 +92,7 @@
         max-height: 440px;
         max-width: 100%;
         opacity: 0.5;
-        
+
         video {
           top: -50px !important;
           right: 0 !important;
@@ -149,7 +149,7 @@
       color: color(greyscale, white);
       // mix-blend-mode: overlay;
       @include font-size(84px);
-      
+
       & + .heading-top {
         font-weight: 700;
         font-family: font-family(brand);

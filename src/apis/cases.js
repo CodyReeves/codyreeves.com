@@ -2,7 +2,7 @@ export function getCaseIntro() {
   return {
     key: 'cases',
     titleLarge: 'Cases',
-    titleSmall: 'add a Material Design look and feel to your and feel to your websites.',
+    titleSmall: 'Opportunities I have had to positively impact people on a broad scale.',
     titleSmallClass: 'bump-up',
     classname: 'sample-portfolio'
   }
@@ -22,7 +22,7 @@ export function getCases() {
         {
           title: 'Designer & Front End Developer',
           skills: 'Adobe CC, SCSS, PHP, JS, Wordpress, Woocommerce',
-          task: 'Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs',
+          task: 'This project was split into two parts. Part One: design of the company brand which included a logo, label, and stationary. Part Two: Design and develop a site for Tasties Kitchen"s new brand, there products and a portal for customers to pay and sign up for a monthly food subscription.',
           complete: 'Early 2017'
         }
       ],
@@ -30,64 +30,55 @@ export function getCases() {
         {
           align: '1',
           classname: '',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
+          heading: 'Branding',
+          text: 'Client requested the perfered colors green. Ideally in a shape of a badge that colud be used on a variety of products. The feeling of organic, healthy living, treat body right, rustic/roots forming.'
         },
         {
           align: '2',
           classname: 'tasties-type',
           image: '../img/tasties/tasties-type.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
         },
         {
           align: '3',
           classname: 'tasties-colors',
           image: '../img/tasties/tasties-colors.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
         },
         {
           align: '4',
-          classname: 'tasties-logo',
+          classname: 'tasties-logo image-center image-300',
           image: '../img/tasties/tasties-logo.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
         },
         {
           align: '5',
-          classname: 'tasties-stati',
+          classname: 'tasties-stati image-shadow image-right',
           image: '../img/tasties/tasties-stati.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
         },
         {
           align: '6',
-          classname: 'tasties-jars',
+          classname: 'tasties-jars image-shadow',
           image: '../img/tasties/tasties-jars.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
+          heading: 'Label usage on product.'
         },
         {
           align: '7',
-          classname: 'tasties-home',
-          image: '../img/tasties/tasties-home.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
+          classname: 'tasties-web',
+          text: 'nmjjj',
+          heading: 'Web Development',
         },
         {
           align: '8',
-          classname: 'tasties-products',
-          image: '../img/tasties/tasties-products.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
+          classname: 'tasties-home image-shadow',
+          image: '../img/tasties/tasties-home.png',
         },
         {
           align: '9',
-          classname: 'tasties-product-single',
-          image: '../img/tasties/tasties-product-single.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
+          classname: 'tasties-products image-shadow',
+          image: '../img/tasties/tasties-products.png',
+        },
+        {
+          align: '10',
+          classname: 'tasties-product-single image-shadow',
+          image: '../img/tasties/tasties-product-single.png'
         }
       ]
     },
@@ -101,9 +92,9 @@ export function getCases() {
       bannerImg: '../img/probiotic/cover-1.png',
       roles: [
         {
-          title: 'Front End Developer',
-          skills: 'React, Backbone, D3',
-          task: 'Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs',
+          title: 'Designer & Front End Developer',
+          skills: 'Adobe CC, SCSS, PHP, JS',
+          task: 'This project was split into two parts. Part One: design of the company brand which included a logo, label, and stationary. Part Two: Design and develop a sales funnel that had the ability to take payments. Te criteria included: Pages be complient with ad networks (facebook, adwords), Pages meed to showcase the product.',
           complete: 'Early 2017'
         }
       ],
@@ -111,64 +102,53 @@ export function getCases() {
         {
           align: '1',
           classname: '',
-          image: 'Front End Developer',
-          heading: 'Example',
+          heading: 'Branding',
           text: 'React, Backbone, D3'
         },
         {
           align: '2',
-          classname: 'probiotic-type',
+          classname: 'probiotic-type image-invert',
           image: '../img/probiotic/type.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
         },
         {
           align: '3',
-          classname: 'probiotic-colors',
+          classname: 'probiotic-colors image-shadow-d',
           image: '../img/probiotic/colors.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
         },
         {
           align: '4',
-          classname: 'probiotic-logo',
+          classname: 'probiotic-logo image-shadow-d image-center image-500',
           image: '../img/probiotic/logo.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
         },
         {
           align: '5',
-          classname: 'probiotic-bottle',
+          classname: 'probiotic-bottle image-shadow-d image-center image-500 text-center',
           image: '../img/probiotic/3btl.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
+          heading: 'Product Usage & Label Development',
         },
         {
           align: '6',
           classname: 'probiotic-webinfo',
-          heading: 'Example',
+          heading: 'Web Development',
           text: 'React, Backbone, D3'
         },
         {
           align: '7',
-          classname: 'probiotic-vsl',
+          classname: 'probiotic-vsl image-shadow-d',
           image: '../img/probiotic/vsl.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
+          text: 'VSL: Video Sales Landing Page'
         },
         {
           align: '8',
-          classname: 'probiotic-presell',
+          classname: 'probiotic-presell image-shadow-d',
           image: '../img/probiotic/presell.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
+          text: 'Presell: A information page about a product.'
         },
         {
           align: '9',
-          classname: 'probiotic-cart',
+          classname: 'probiotic-cart image-shadow-d',
           image: '../img/probiotic/cart.png',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
+          text: 'Cart'
         }
       ]
     },
@@ -183,8 +163,8 @@ export function getCases() {
       roles: [
         {
           title: 'Front End Developer',
-          skills: 'React, Backbone, D3',
-          task: 'Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs',
+          skills: 'Adobe CC, SCSS, HTML, JS',
+          task: 'To design and develop a new company website for High Mountain Ventures. The websites criteria included a service area map widget, a contact form, package list and a home page.',
           complete: 'Early 2016'
         }
       ],
@@ -192,37 +172,28 @@ export function getCases() {
         {
           align: '1',
           classname: '',
-          image: 'Front End Developer',
-          heading: 'Example',
+          heading: 'Project Overview',
           text: 'React, Backbone, D3'
         },
         {
           align: '2',
-          classname: '',
-          heading: 'Example',
+          classname: 'image-shadow',
           image: '../img/hmv/home-mac.png',
-          text: 'React, Backbone, D3'
         },
         {
           align: '3',
-          classname: '',
-          heading: 'Example',
+          classname: 'image-shadow',
           image: '../img/hmv/ventures-home.png',
-          text: 'React, Backbone, D3'
         },
         {
           align: '4',
-          classname: '',
-          heading: 'Example',
+          classname: 'image-shadow',
           image: '../img/hmv/ventures-blog.png',
-          text: 'React, Backbone, D3'
         },
         {
           align: '5',
-          classname: '',
-          heading: 'Example',
+          classname: 'image-shadow',
           image: '../img/hmv/ventures-area.png',
-          text: 'React, Backbone, D3'
         }
       ]
     },
@@ -233,29 +204,22 @@ export function getCases() {
       title: 'WatchIt',
       classname: 'watchit',
       tags: ['UI ', 'UX ', 'Concept'],
-      bannerImg: '../img/watchit-cover-lg.png',
+      bannerImg: '../img/rolex-bg.jpg',
       roles: [
         {
-          title: 'Front End Developer',
-          skills: 'React, Backbone, D3',
-          task: 'Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs Goldman 1Sachs',
+          title: 'UI/UX Designer',
+          skills: 'Adobe CC',
+          task: 'To design a concept application for iPhone and Android devices.',
           complete: 'Late 2016'
         }
       ],
       contents: [
         {
           align: '1',
-          classname: '',
+          classname: 'image-shadow-d',
           image: '../img/watchit-case.png',
           heading: '',
           text: ''
-        },
-        {
-          align: '2',
-          classname: '',
-          image: 'Front End Developer',
-          heading: 'Example',
-          text: 'React, Backbone, D3'
         }
       ]
     },
@@ -271,7 +235,7 @@ export function getCases() {
         {
           title: 'Graphic Designer',
           skills: 'Design, Print Pre-process',
-          task: 'Mutiple Pieces of Print work that I have created for a variety of clients.',
+          task: 'Mutiple pieces of print work that I have created for a variety of clients.',
           complete: '2014 - Early 2017'
         }
       ],
@@ -279,12 +243,12 @@ export function getCases() {
         {
           align: '1',
           classname: '',
-          heading: 'Human Rights Activist Posters',
-          text: 'React, Backbone, D3'
+          heading: 'Human Rights Activist Series',
+          text: 'This series was created to help spread awarness of human rights in our society today. The approch that was taken in creating this poster was to use a very minimalistic theme. The design is suppose to be understood by all from the very iconic images used in the design.'
         },
         {
           align: '2',
-          classname: '',
+          classname: 'image-shadow image-uli',
           image: '../img/Human-Rights/Human-Rights-Spread.jpg',
           heading: '',
           text: ''
@@ -293,18 +257,18 @@ export function getCases() {
           align: '3',
           classname: '',
           heading: 'Bauhaus Design Case Study',
-          text: 'React, Backbone, D3'
+          text: 'The case studies the main task was to research and create a two panel design incorporating a design style or era and type specimen poster. The posters display the beginnings of typographic design of the font “Futura”, its development and its relationship to the Bauhaus design era. The posters were created utilizing the design style of Bauhaus and the font “Futura” as the type specimen for the poster.'
         },
         {
           align: '4',
-          classname: '',
+          classname: 'image-shadow image-uli',
           image: '../img/Bauhaus/Bauhaus-double.jpg',
           heading: '',
           text: ''
         },
         {
           align: '5',
-          classname: '',
+          classname: 'image-shadow image-uli',
           heading: 'Audatious Album Design',
           image: '../img/Audatious/Audatious-spread.jpg',
           text: ''

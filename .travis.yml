@@ -10,6 +10,7 @@ branches:
   - master
   - gh-pages
 before_install:
-  - npm install -g coveralls
+  - npm install -g yarn
+  - yarn
 script:
-  - npm test -- --coverage && cat ./coverage/lcov.info | coveralls
+  - yarn start

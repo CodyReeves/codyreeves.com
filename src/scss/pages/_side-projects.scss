@@ -8,7 +8,7 @@
      }
     }
   }
-  
+
   .text {
     @include breakpoint(max-width breakpoint-value(sm)) {
       margin-top: 15px;
@@ -21,7 +21,7 @@
     padding-top: 100px;
   }
 
-  .more { 
+  .more {
     bottom: -50px;
     @include breakpoint(max-width breakpoint-value(sm)) {
       left: 0;
@@ -55,6 +55,10 @@
     }
   }
 
+  .main-wrapper {
+    overflow: hidden;
+  }
+
   .image {
     background: {
       size: cover;
@@ -76,13 +80,13 @@
     }
   }
 
-  h2, 
+  h2,
   a,
   .wrapper,
   .over-right {
     position: relative;
     z-index: 1;
-  } 
+  }
 
   h2 {
     padding-top: 75px;
@@ -105,7 +109,7 @@
 
   .wrapper {
     position: absolute;
-    top: 40px;
+    top: 47px;
     width: 100%;
     margin-left: 25px;
     padding-left: 5px;
@@ -128,6 +132,7 @@
   img {
     position: absolute;
     margin: 25px;
+    max-height: 250px;
     @include shadow(4, dark);
     @extend .transition;
   }

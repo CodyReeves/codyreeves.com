@@ -2,9 +2,9 @@ export function getSideProjectPage() {
   return {
     classname: 'sideproject-page',
     titleLarge: 'Projects',
-    titleSmall: 'Side projects covering development, design to everything else!',
+    titleSmall: 'Side projects covering web development, design and everything else!',
     titleSmallClass: 'bump-up',
-    text: 'lets you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible. Get started now.',
+    text: 'A small collection of side projects that Cody is actively working on.',
   }
 }
 
@@ -66,8 +66,8 @@ export function getSideProject() {
     {
       link: 'https://github.com/CodyReeves/codyreeves.com',
       title: 'Codepen',
-      classname: 'tesco',
-      imageUrl: '../img/example.jpg',
+      classname: 'sp-codepen',
+      imageUrl: '../img/side-projects/codepen.png',
       roles: [
         {
           title: '',
@@ -80,7 +80,7 @@ export function getSideProject() {
       link: 'https://ux.stackexchange.com/users/102413/cody-reeves?tab=profile',
       title: 'UX Stackexchange',
       classname: 'sp-exchange',
-      imageUrl: '../img/example.jpg',
+      imageUrl: '../img/side-projects/ux-exchange.png',
       roles: [
         {
           title: '',
@@ -91,9 +91,9 @@ export function getSideProject() {
     },
     {
       link: 'https://www.behance.net/codyreeves',
-      title: 'Behance Portfolio',
+      title: 'Behance Design Portfolio',
       classname: 'sp-portfolio',
-      imageUrl: '../img/example.jpg',
+      imageUrl: '../img/side-projects/behance.png',
       roles: [
         {
           title: '',
@@ -105,8 +105,8 @@ export function getSideProject() {
     {
       link: 'http://withdesign.ca',
       title: 'With Design',
-      classname: 'shipserv',
-      imageUrl: '../img/example.jpg',
+      classname: 'sp-withdesign',
+      imageUrl: '../img/bg.jpg',
       roles: [
         {
           title: '',
