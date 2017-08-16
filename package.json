@@ -1,7 +1,7 @@
 {
   "name": "codyreeves.com",
   "version": "0.1.0",
-  "homepage": "",
+  "homepage": "http://codyreeves.com",
   "devDependencies": {
     "babel-polyfill": "^6.16.0",
     "expect": "^1.20.2",
@@ -47,6 +47,7 @@
     "build-scss": "gulp live",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   }
 }
