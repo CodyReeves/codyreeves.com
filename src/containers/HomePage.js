@@ -10,6 +10,8 @@ import PageSection from '../components/PageSection'
 import ListServices from '../components/ListServices'
 import CaseSample from '../components/CaseSample'
 import SideProjectButton from '../components/SideProjectButton'
+import { Helmet } from 'react-helmet';
+
 class HomePage extends Component {
 	componentDidMount () {
 		window.scrollTo(0, 0)
@@ -117,6 +119,10 @@ class HomePage extends Component {
 
 		return (
 			<div className="home-page">
+				<Helmet>
+					<title>Cody Reeves | Digital Design & Development</title>
+					<meta name="description" content="I'm Cody Reeves, a full time designer/developer and a part time entrepreneur. I have 4+ years of experience, working on wide variety of projects from designing company brands to developing enterprise software." />
+				</Helmet>
 				<Banner imageUrl={BannerImageUrl}>
 					<h1 className="heading-special"><span className="">{bannerTitle}</span></h1>
 					<h4 className="heading-top"><span className="">{bannerSub}</span></h4>

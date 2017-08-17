@@ -30,7 +30,7 @@ export function getCases() {
         {
           align: '1',
           classname: '',
-          heading: 'Branding',
+          heading: 'Part One: Branding',
           text: 'Client requested the perfered colors green. Ideally in a shape of a badge that colud be used on a variety of products. The feeling of organic, healthy living, treat body right, rustic/roots forming.'
         },
         {
@@ -62,8 +62,8 @@ export function getCases() {
         {
           align: '7',
           classname: 'tasties-web',
-          text: 'nmjjj',
-          heading: 'Web Development',
+          text: 'Built on wordpress with Woocommerce and Stripe Initgration. Client Wanted a landing style home page for the service they provide, a way for users to create orders for the biweekly or monthly food subscription, a weekly updated page for the menu, A mission page, blog page, and a contact page. Clean look easy to read.',
+          heading: 'Part Two: Web Development',
         },
         {
           align: '8',
@@ -94,7 +94,7 @@ export function getCases() {
         {
           title: 'Designer & Front End Developer',
           skills: 'Adobe CC, SCSS, PHP, JS',
-          task: 'This project was split into two parts. Part One: design of the company brand which included a logo, label, and stationary. Part Two: Design and develop a sales funnel that had the ability to take payments. Te criteria included: Pages be complient with ad networks (facebook, adwords), Pages meed to showcase the product.',
+          task: 'This project was split into two parts. Part One: design of the company brand which included a logo, label, and stationary. Part Two: Design and develop a sales funnel that had the ability to take payments. The criteria included: Pages be complient with ad networks (facebook, adwords), Pages meed to showcase the product.',
           complete: 'Early 2017'
         }
       ],

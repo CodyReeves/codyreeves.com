@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Banner from '../components/Banner'
 import PageSection from '../components/PageSection'
 import BannerImageUrl from '../images/example.jpg'
+import { Helmet } from 'react-helmet';
 
 // TODO:: Remove/move this
 const services = {
@@ -30,6 +31,10 @@ class ServicesPage extends Component {
 
     return (
       <div>
+        <Helmet>
+          <title>{titleLarge} | Cody Reeves</title>
+        <meta name="description" content={`${followText} - ${titleSmall}`} />
+        </Helmet>
         <div className="services-page-wrapper">
           <PageSection
           	type="special"

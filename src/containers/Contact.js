@@ -13,7 +13,7 @@ class ContactPage extends Component {
     // Render proper textareas
     const contactTextContent = (ContactMap) => {
       return ContactMap.map((textContent) => {
-        
+
         // Setting up data
         const key = textContent.key;
         const heading = textContent.heading;
@@ -23,17 +23,17 @@ class ContactPage extends Component {
           <span key={key}>
             {heading &&
             <h3 className="font-400 mar-10-bottom">{heading}</h3>}
-            
-            {text && 
+
+            {text &&
               <p>{text}</p>}
           </span>
         )
       });
     }
-    
+
     const Contact = ContactPageMap.map((row) => {
 
-    // Setting up data  
+    // Setting up data
     const type = row.type;
     const titleSmall = row.titleSmall;
     const titleLarge = row.titleLarge;

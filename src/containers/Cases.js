@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Banner from '../components/Banner';
 import { getCases, getCaseIntro } from '../apis/cases';
 import PageSection from '../components/PageSection.js';
+import { Helmet } from 'react-helmet';
 
 class Case extends Component {
 	componentDidMount () {
@@ -122,6 +123,10 @@ class Case extends Component {
 
     return (
       <div className="cases-wrapper">
+				<Helmet>
+					<title>{titleLarge} | Cody Reeves</title>
+				<meta name="description" content={`${titleLarge} - ${titleSmall}`} />
+				</Helmet>
 				<PageSection
 					type="special"
 					container="true"

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getSideProject, getSideProjectPage } from '../apis/sideProjects';
 import PageSection from '../components/PageSection.js';
+import { Helmet } from 'react-helmet';
 
 class SideProject extends Component {
   componentDidMount () {
@@ -41,16 +42,16 @@ class SideProject extends Component {
         <div key={title} className={classname}>
           <div className="main-wrapper">
              <div className="image" style={{ backgroundImage: 'url(' + imageUrl + ')' }}>
-              <img 
-                src={imageUrl} 
-                className="img-responsive" 
-                alt={titleLarge} 
+              <img
+                src={imageUrl}
+                className="img-responsive"
+                alt={titleLarge}
               />
               {icon &&
                 <i className={`fa fa-${icon}`} />
               }
               <h2>{title}</h2>
-              <a className="btn btn-cta" href={link} target="_blank" rel="noopener">View Project</a> 
+              <a className="btn btn-cta" href={link} target="_blank" rel="noopener">View Project</a>
               {RoleRows(roles)}
               <p className="over-right">{content}</p>
             </div>
@@ -59,8 +60,12 @@ class SideProject extends Component {
       )
     });
 
-    return ( 
+    return (
       <div className="posts">
+        <Helmet>
+          <title>Side Projects | Cody Reeves</title>
+          <meta name="description" content={`A small collection of side projects that Cody is actively working on. ${titleSmall}`} />
+          </Helmet>
         <PageSection
           type="special"
           container="true"
