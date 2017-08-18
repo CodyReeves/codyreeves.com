@@ -610,6 +610,12 @@ $padding: 200px;
       )...);
 
       @include breakpoint(max-width breakpoint-value(sm)) {
+        top: 160px;
+        mix-blend-mode: unset;
+        @include font-size(40px);
+      }
+
+      @include breakpoint(width breakpoint-value(sm) breakpoint-value(md)) {
         top: 100px;
         mix-blend-mode: unset;
         @include font-size(50px);

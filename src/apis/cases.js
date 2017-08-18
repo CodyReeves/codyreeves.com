@@ -159,7 +159,7 @@ export function getCases() {
       title: 'High Mountain Ventures',
       classname: 'hmv bg-white',
       tags: ['Branding ', 'Wed Design'],
-      bannerImg: '../img/hmv/bg.jpg',
+      bannerImg: '../img/hmv/hmv-bg.jpg',
       roles: [
         {
           title: 'Front End Developer',
