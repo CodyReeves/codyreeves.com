@@ -58,7 +58,7 @@ class ContactForm extends Component {
         console.log(err);
         this.setState({
           contactEmail: 'Uh Oh!',
-          contactMessage: 'Sorry something went wrong!\nPlease send you message to:\n\ncodreev@gmail.com\n'
+          contactMessage: 'Sorry something went wrong!\nPlease send you message to:\n\nhello@codyreeves.design\n'
         });
         console.log(this.state.contactEmail + this.state.contactMessage + 'fail');
       }.bind(this)
