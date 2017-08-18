@@ -3091,7 +3091,7 @@ blockquote {
     background-size: 300px;
     background-repeat: infinite; }
   .special:before, .special:after {
-    opacity: 0.4;
+    opacity: 0.35;
     z-index: 1; }
   @media all and (min-width: 768px) {
     .special:hover .sub {
