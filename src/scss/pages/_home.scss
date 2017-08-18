@@ -26,6 +26,7 @@
 
       h4 {
         top: 85px !important;
+        color: color(greyscale, grey);
       }
     }
   }
@@ -229,6 +230,10 @@ $padding: 200px;
         margin-left: 5px;
         z-index: 1;
         background-color: rgba(color(brand, danger), 0.7);
+
+        @include breakpoint(max-width breakpoint-value(sm)) {
+          display: none;
+        }
       }
     }
   }
@@ -283,17 +288,17 @@ $padding: 200px;
     }
   }
 
-  .design {
-    &:after {
-      content: 'Design Service';
-    }
-  }
-
-  .develop {
-    &:after {
-      content: 'Development Service';
-    }
-  }
+  // .design {
+  //   &:after {
+  //     content: 'Design Service';
+  //   }
+  // }
+  //
+  // .develop {
+  //   &:after {
+  //     content: 'Development Service';
+  //   }
+  // }
 
   .view-design,
   .view-develop {
@@ -320,24 +325,25 @@ $padding: 200px;
 
   .view-design {
     left: -80px;
-
-    &:hover + .view-develop + ul {
-      li.develop {
-        color: rgba(color(greyscale, black), 0.9);
-        &:after {
-          margin: 0;
-          top: 0;
-          height: 28px;
-          left: 0;
-          background-color: rgba(color(greyscale, black), 0.9);
+    @include breakpoint(min-width breakpoint-value(sm)) {
+      &:hover + .view-develop + ul {
+        li.develop {
+          color: rgba(color(greyscale, black), 0.9);
+          &:after {
+            margin: 0;
+            top: 0;
+            height: 28px;
+            left: 0;
+            background-color: rgba(color(greyscale, black), 0.9);
+          }
         }
-      }
 
-      li.design {
-        &:after {
-          top: 6px;
-          background-color: transparent;
-          color: color(brand, danger);
+        li.design {
+          &:after {
+            top: 6px;
+            background-color: transparent;
+            color: color(brand, danger);
+          }
         }
       }
     }
@@ -345,27 +351,29 @@ $padding: 200px;
   .view-develop {
     right: -15px;
 
-    &:hover + ul {
-      li.design {
-        color: rgba(color(greyscale, black), 1);
-        &:after {
-          margin: 0;
-          top: 0;
-          height: 28px;
-          left: 0;
-          background-color: rgba(color(greyscale, black), 1);
+    @include breakpoint(min-width breakpoint-value(sm)) {
+      &:hover + ul {
+        li.design {
+          color: rgba(color(greyscale, black), 1);
+          &:after {
+            margin: 0;
+            top: 0;
+            height: 28px;
+            left: 0;
+            background-color: rgba(color(greyscale, black), 1);
+          }
         }
-      }
 
-    li.develop {
-      &:after {
-      top: 6px;
-      background-color: transparent;
-      color: color(brand, danger);
+        li.develop {
+          &:after {
+          top: 6px;
+          background-color: transparent;
+          color: color(brand, danger);
+          }
+        }
       }
     }
   }
-}
 }
 
 .sample-portfolio {

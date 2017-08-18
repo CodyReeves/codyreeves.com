@@ -68,13 +68,13 @@
 
 @include normalize();
 
-::-moz-selection { 
+::-moz-selection {
    color: color(greyscale, dark-grey);
-  background: rgba(color(greyscale, grey), 0.8); 
+  background: rgba(color(greyscale, grey), 0.8);
 }
-::selection { 
+::selection {
   color: color(greyscale, dark-grey);
-  background: rgba(color(greyscale, grey), 0.8); 
+  background: rgba(color(greyscale, grey), 0.8);
 }
 
 
@@ -121,6 +121,10 @@
   }
 }
 
+.App {
+  overflow: hidden;
+}
+
 body {
   min-height: 100vh;
   height: 100vh;
@@ -150,7 +154,7 @@ hr {
   background-color: color(greyscale, white);
 }
 
-// Images 
+// Images
 .img-responsive {
   display: block;
   max-width: 100%;
@@ -213,7 +217,7 @@ hr {
   @include infra-position();
 }
 
-// Vars for setup of grid system 
+// Vars for setup of grid system
 $col-size: map-keys(get('grid, setup, breakpoints')) !default;
 $grid-columns: get('grid, grid-columns');
 

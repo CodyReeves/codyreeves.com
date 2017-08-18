@@ -25,13 +25,26 @@
 .case-item {
 
   .set-background {
-     color: color(greyscale, white);
+    color: color(greyscale, white);
+
+    div {
+      position: relative;
+      z-index: 5;
+    }
   }
+
 
   &.bg-white {
     .set-background {
       background-color: color(greyscale, white);
       color: color(greyscale, dark-grey);
+    }
+
+    .contents-wrapper {
+      &:before,
+      &:after {
+        opacity: 0.3;
+      }
     }
   }
 
@@ -46,7 +59,7 @@
 
     &:before,
     &:after {
-      opacity: 0.2;
+      opacity: 1;
       z-index: 3;
     }
 
@@ -167,12 +180,14 @@
 
 .image-300 {
   img {
+    width: 100%;
     max-width: 300px;
   }
 }
 
 .image-500 {
   img {
+    width: 100%;
     max-width: 500px;
   }
 }

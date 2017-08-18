@@ -16,7 +16,7 @@ $colors: (
       default: #5bc0de,
       success:  #5cb85c,
       warning: #f0ad4e,
-      info: #e86800,
+      info: #f8f8f8,
       danger: #e50000
     ),
     cta: (
@@ -32,8 +32,8 @@ $colors: (
       'black': #141414
     ),
     link: (
-      link: #e86800,
-      link-secondary: darken(#e86800, 15%),
+      link: #e50000,
+      link-secondary: darken(#e50000, 15%),
     ),
     social: (
       facebook: #3b5998,
