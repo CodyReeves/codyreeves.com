@@ -89,7 +89,7 @@ export function getContact() {
       followText: 'Let\'s Work Together',
       heading: '',
       subHeading: '',
-      email: 'codreev@gmail.com',
+      email: 'hello@codyreeves.design',
       location: 'Kelowna, BC, Canada',
       content:[
         {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Banner from '../components/Banner'
-import ContactPage from './Contact'
+import ContactFormWrapper from '../components/ContactFormWrapper'
 import BannerImageUrl from '../images/bg.jpg'
 import BannerVidMp from '../images/home.mp4'
 import BannerVidWeb from '../images/home.webm'
@@ -138,7 +138,7 @@ class HomePage extends Component {
 				</Banner>
 				{homeSections}
 				<SideProjectButton />
-				<ContactPage />
+				<ContactFormWrapper />
 			</div>
 		);
 

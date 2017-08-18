@@ -2,7 +2,7 @@ export function getSideProjectPage() {
   return {
     classname: 'sideproject-page',
     titleLarge: 'Projects',
-    titleSmall: 'Side projects covering web development, design and everything else!',
+    titleSmall: 'Side projects covering web development, design to everything else!',
     titleSmallClass: 'bump-up',
     text: 'A small collection of side projects that Cody is actively working on.',
   }
