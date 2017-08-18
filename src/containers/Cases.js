@@ -125,7 +125,10 @@ class Case extends Component {
       <div className="cases-wrapper">
 				<Helmet>
 					<title>{titleLarge} | Cody Reeves</title>
-				<meta name="description" content={`${titleLarge} - ${titleSmall}`} />
+					<meta name="description" content={`${titleLarge} - ${titleSmall}`} />
+					<meta property="og:title" content={titleLarge}/>
+					<meta property="og:description" content={`${titleLarge} - ${titleSmall}`}/>
+					<meta property="og:url" content={`http://codyreeves.com/${titleLarge}`}/>
 				</Helmet>
 				<PageSection
 					type="special"

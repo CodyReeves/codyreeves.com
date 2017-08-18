@@ -122,6 +122,9 @@ class HomePage extends Component {
 				<Helmet>
 					<title>Cody Reeves | Digital Design & Development</title>
 					<meta name="description" content="I'm Cody Reeves, a full time designer/developer and a part time entrepreneur. I have 4+ years of experience, working on wide variety of projects from designing company brands to developing enterprise software." />
+					<meta property="og:title" content="Cody Reeves | Digital Design & Development"/>
+					<meta property="og:description" content="I'm Cody Reeves, a full time designer/developer and a part time entrepreneur. I have 4+ years of experience, working on wide variety of projects from designing company brands to developing enterprise software."/>
+					<meta property="og:url" content={`http://codyreeves.com/`}/>
 				</Helmet>
 				<Banner imageUrl={BannerImageUrl}>
 					<h1 className="heading-special"><span className="">{bannerTitle}</span></h1>

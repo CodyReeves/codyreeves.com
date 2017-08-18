@@ -64,7 +64,10 @@ class SideProject extends Component {
       <div className="posts">
         <Helmet>
           <title>Side Projects | Cody Reeves</title>
+          <meta property="og:title" content="Side Projects"/>
           <meta name="description" content={`A small collection of side projects that Cody is actively working on. ${titleSmall}`} />
+          <meta property="og:description" content={`A small collection of side projects that Cody is actively working on. ${titleSmall}`}/>
+          <meta property="og:url" content={`http://codyreeves.com/side-projects`}/>
           </Helmet>
         <PageSection
           type="special"
