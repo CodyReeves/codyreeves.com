@@ -7,10 +7,10 @@ import { Helmet } from 'react-helmet';
 // TODO:: Remove/move this
 const services = {
   classname: 'services-page',
-  titleLarge: 'Skills',
-  titleSmall: 'Design & Development',
-  followText: 'Skills',
-  title: 'Material Design Lite',
+  titleLarge: 'Process',
+  titleSmall: 'The methods I use when designing and developing my projects.',
+  followText: 'The Process',
+  title: 'UI/UX',
   article: 'lets you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible. Get started now.',
   article1: 'lets you add a Material Design look and feel to your websites. It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible. Get started now.',
 }
@@ -33,7 +33,7 @@ class ServicesPage extends Component {
       <div>
         <Helmet>
           <title>{titleLarge} | Cody Reeves</title>
-        <meta name="description" content={`${followText} - ${titleSmall}`} />
+          <meta name="description" content={`${followText} - ${titleSmall}`} />
         </Helmet>
         <div className="services-page-wrapper">
           <PageSection

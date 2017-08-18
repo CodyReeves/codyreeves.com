@@ -12,7 +12,7 @@ const routes = (
 		<IndexRoute component={HomePage}/>
 		<Route path="home" component={HomePage}/>
 		<Route path="contact" component={ContactPage} />
-		<Route path="skills" component={ServicesPage} />
+		<Route path="design-process" component={ServicesPage} />
 		<Route path="side-projects" component={SideProject} />
 		<Route path="cases" component={CasesPage} />
 	</Route>

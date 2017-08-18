@@ -1,4 +1,6 @@
 A portfoilo site created with React/Redux
+![alt text](./public/img/codyreeves-site.png)
+
 
 ### Runs the app in development mode:
 
@@ -29,7 +31,7 @@ Your app is ready to be deployed!
 ### Deploys the production to github.io page:
 
 Changes package.json
- 
+
 ```
 "homepage": "http://{account_name}.github.io/{project_name}",
 ```
