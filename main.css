@@ -270,6 +270,9 @@ template {
 * ::-webkit-scrollbar-corner {
   background: transparent; }
 
+.App {
+  overflow: hidden; }
+
 body {
   min-height: 100vh;
   height: 100vh;
@@ -459,14 +462,14 @@ p {
 a {
   display: inline-block;
   text-transform: initial;
-  color: #e86800;
+  color: #e50000;
   -webkit-transition: 0.3s ease all;
   -moz-transition: 0.3s ease all;
   -ms-transition: 0.3s ease all;
   -o-transition: 0.3s ease all;
   transition: 0.3s ease all; }
   a:focus, a:active, a:hover {
-    color: #823a00;
+    color: #7f0000;
     outline: 0; }
 
 h1,
@@ -2917,10 +2920,16 @@ blockquote {
 
 .case-item .set-background {
   color: #fff; }
+  .case-item .set-background div {
+    position: relative;
+    z-index: 5; }
 
 .case-item.bg-white .set-background {
   background-color: #fff;
   color: #303030; }
+
+.case-item.bg-white .contents-wrapper:before, .case-item.bg-white .contents-wrapper:after {
+  opacity: 0.3; }
 
 .case-item .contents-wrapper {
   position: relative;
@@ -2941,7 +2950,7 @@ blockquote {
     .case-item .contents-wrapper {
       padding-left: 45px; } }
   .case-item .contents-wrapper:before, .case-item .contents-wrapper:after {
-    opacity: 0.2;
+    opacity: 1;
     z-index: 3; }
   .case-item .contents-wrapper.container {
     max-width: 960px; }
@@ -3026,9 +3035,11 @@ blockquote {
   margin: 0 auto; }
 
 .image-300 img {
+  width: 100%;
   max-width: 300px; }
 
 .image-500 img {
+  width: 100%;
   max-width: 500px; }
 
 .image-uli img {
@@ -3050,7 +3061,8 @@ blockquote {
       top: 70px;
       line-height: 1; }
     .home-page .banner h4 {
-      top: 85px !important; } }
+      top: 85px !important;
+      color: #bdbdbd; } }
 
 @media all and (max-width: 767px) {
   .home-page .about {
@@ -3229,6 +3241,9 @@ blockquote {
       margin-left: 5px;
       z-index: 1;
       background-color: rgba(229, 0, 0, 0.7); }
+      @media all and (max-width: 767px) {
+        .special ul li:after {
+          display: none; } }
   .special .extra {
     position: relative;
     padding-left: 40px;
@@ -3273,12 +3288,6 @@ blockquote {
   font-size: 12px;
   font-size: 0.75rem; }
 
-.services .design:after {
-  content: 'Design Service'; }
-
-.services .develop:after {
-  content: 'Development Service'; }
-
 .services .view-design,
 .services .view-develop {
   position: absolute;
@@ -3302,33 +3311,35 @@ blockquote {
 
 .services .view-design {
   left: -80px; }
-  .services .view-design:hover + .view-develop + ul li.develop {
-    color: rgba(20, 20, 20, 0.9); }
-    .services .view-design:hover + .view-develop + ul li.develop:after {
-      margin: 0;
-      top: 0;
-      height: 28px;
-      left: 0;
-      background-color: rgba(20, 20, 20, 0.9); }
-  .services .view-design:hover + .view-develop + ul li.design:after {
-    top: 6px;
-    background-color: transparent;
-    color: #e50000; }
+  @media all and (min-width: 768px) {
+    .services .view-design:hover + .view-develop + ul li.develop {
+      color: rgba(20, 20, 20, 0.9); }
+      .services .view-design:hover + .view-develop + ul li.develop:after {
+        margin: 0;
+        top: 0;
+        height: 28px;
+        left: 0;
+        background-color: rgba(20, 20, 20, 0.9); }
+    .services .view-design:hover + .view-develop + ul li.design:after {
+      top: 6px;
+      background-color: transparent;
+      color: #e50000; } }
 
 .services .view-develop {
   right: -15px; }
-  .services .view-develop:hover + ul li.design {
-    color: #141414; }
-    .services .view-develop:hover + ul li.design:after {
-      margin: 0;
-      top: 0;
-      height: 28px;
-      left: 0;
-      background-color: #141414; }
-  .services .view-develop:hover + ul li.develop:after {
-    top: 6px;
-    background-color: transparent;
-    color: #e50000; }
+  @media all and (min-width: 768px) {
+    .services .view-develop:hover + ul li.design {
+      color: #141414; }
+      .services .view-develop:hover + ul li.design:after {
+        margin: 0;
+        top: 0;
+        height: 28px;
+        left: 0;
+        background-color: #141414; }
+    .services .view-develop:hover + ul li.develop:after {
+      top: 6px;
+      background-color: transparent;
+      color: #e50000; } }
 
 .sample-portfolio {
   background-color: #232323; }
