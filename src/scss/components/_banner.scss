@@ -78,7 +78,6 @@
       max-height: 440px;
       overflow: hidden;
       @extend .transition;
-      animation: videoStart 2s forwards;
       @include shadow(1, light);
 
       @include filter(blur(1px) contrast(110%) brightness(110%) saturate(130%));
@@ -91,7 +90,7 @@
         height: 440px;
         max-height: 440px;
         max-width: 100%;
-        opacity: 0.5;
+        opacity: 0;
 
         video {
           top: -50px !important;
@@ -105,11 +104,17 @@
           right: 0 !important;
           width: 150% !important;
         }
+
+        @include breakpoint(min-width breakpoint-value(sm)) {
+          animation: videoStart 2s forwards;
+        }
       }
 
       &:hover {
         animation: videoHover 2s infinite !important;
-
+        @include breakpoint(max-breakpoint breakpoint-value(sm)) {
+          animation: none !important;
+        }
         video {
          // animation: videoHover 2s infinite !important;
           perspective: 250px;
@@ -135,8 +140,11 @@
         position: relative;
         top: -68px;
         right: 223px;
-        animation: videoStart 2s forwards;
         @extend .transition;
+
+        @include breakpoint(min-width breakpoint-value(sm)) {
+          animation: videoStart 2s forwards;
+        }
       }
     }
 
@@ -151,6 +159,8 @@
       @include font-size(84px);
 
       & + .heading-top {
+        margin: 0 auto;
+        max-width: 80%;
         font-weight: 700;
         font-family: font-family(brand);
         @include calc(top, 50%, '50% + 2px');

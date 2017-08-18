@@ -17,7 +17,7 @@
 .home-page {
   .banner {
     @include breakpoint(max-width breakpoint-value(sm)) {
-      max-height: 430px;
+      max-height: 475px;
 
       h1 {
         top: 70px;
@@ -65,8 +65,8 @@ $padding: 200px;
 
   &:before,
   &:after {
-    opacity: 0.2;
-    z-index: 3;
+    opacity: 0.4;
+    z-index: 1;
   }
 
   &:hover {
