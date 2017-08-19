@@ -1,4 +1,5 @@
-A portfoilo site created with React/Redux
+## Cody Reeves Personal portfoilo created with React with Redux
+
 ![alt text](./public/img/codyreeves-site.png)
 
 
