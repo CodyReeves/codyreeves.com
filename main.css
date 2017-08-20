@@ -362,7 +362,7 @@ form input[type="submit"] {
 .text-capitalize {
   text-transform: capitalize; }
 
-.text-center {
+.text-center, .logo-archive .heading {
   text-align: center; }
 
 .text-left {
@@ -3005,6 +3005,19 @@ blockquote {
       .case-item .case-detail-wrapper .about {
         padding-top: 10px; } }
 
+.logo-archive .banner {
+  background-color: #e50000; }
+
+.logo-archive .case-detail-wrapper {
+  padding-bottom: 75px; }
+
+.logo-archive .heading {
+  color: #bdbdbd; }
+
+.logo-archive .image {
+  padding-bottom: 50px;
+  border-bottom: 2px dashed #bdbdbd; }
+
 .image-shadow img {
   border-radius: 7px;
   -webkit-filter: drop-shadow(0px 7px 14px rgba(14, 14, 14, 0.1));
@@ -3671,7 +3684,12 @@ form input[type="submit"] {
   top: -40px; }
 
 .sideproject-page {
-  min-height: 600px; }
+  min-height: 600px;
+  padding-top: 70px;
+  box-sizing: border-box; }
+  @media all and (max-width: 767px) {
+    .sideproject-page {
+      padding-top: 15px; } }
   @media all and (min-width: 768px) {
     .sideproject-page:hover .text {
       margin-top: 50px !important; } }
