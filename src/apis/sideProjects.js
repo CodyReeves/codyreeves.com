@@ -51,6 +51,19 @@ export function getSideProject() {
       content: ''
     },
     {
+      link: 'https://github.com/CodyReeves/children.scss',
+      title: 'Children.Scss',
+      classname: 'sp-children',
+      imageUrl: '../img/bg.jpg',
+      roles: [
+        {
+          title: '',
+          skills: 'Development - CSS, SCSS, JS'
+        }
+      ],
+      content: ''
+    },
+    {
       link: 'https://github.com/CodyReeves/codyreeves.com',
       title: 'Cody Reeves Personal Site',
       classname: 'sp-personal-site',
@@ -64,7 +77,7 @@ export function getSideProject() {
       content: ''
     },
     {
-      link: 'https://github.com/CodyReeves/codyreeves.com',
+      link: 'https://codepen.io/CR-Design/',
       title: 'Codepen',
       classname: 'sp-codepen',
       imageUrl: '../img/side-projects/codepen.png',
