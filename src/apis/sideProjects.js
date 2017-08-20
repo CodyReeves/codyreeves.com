@@ -76,19 +76,19 @@ export function getSideProject() {
       ],
       content: ''
     },
-    {
-      link: 'https://ux.stackexchange.com/users/102413/cody-reeves?tab=profile',
-      title: 'UX Stackexchange',
-      classname: 'sp-exchange',
-      imageUrl: '../img/side-projects/ux-exchange.png',
-      roles: [
-        {
-          title: '',
-          skills: 'Design - Ui, Ux'
-        }
-      ],
-      content: ''
-    },
+    // {
+    //   link: 'https://ux.stackexchange.com/users/102413/cody-reeves?tab=profile',
+    //   title: 'UX Stackexchange',
+    //   classname: 'sp-exchange',
+    //   imageUrl: '../img/side-projects/ux-exchange.png',
+    //   roles: [
+    //     {
+    //       title: '',
+    //       skills: 'Design - Ui, Ux'
+    //     }
+    //   ],
+    //   content: ''
+    // },
     {
       link: 'https://www.behance.net/codyreeves',
       title: 'Behance Design Portfolio',

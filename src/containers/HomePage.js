@@ -103,7 +103,7 @@ class HomePage extends Component {
 							<span className="btn view-design">Design</span>
 							<span className="btn view-develop">Development</span>
 							<ListServices />
-							<Link className="btn-cta pull-right mar-top-15" to="/design-process">Learn about the design & development process</Link>
+							{/* <Link className="btn-cta pull-right mar-top-15" to="/design-process">Learn about the design & development process</Link> */}
 						</div>}
 
 					{key === 'cases' &&
