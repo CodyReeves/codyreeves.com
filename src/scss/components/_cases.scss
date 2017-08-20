@@ -153,6 +153,25 @@
   }
 }
 
+.logo-archive {
+  .banner {
+    background-color: color(brand, danger);
+  }
+  .case-detail-wrapper {
+    padding-bottom: 75px;
+  }
+
+  .heading {
+    color: color(greyscale, grey);
+    @extend .text-center;
+  }
+
+  .image {
+    padding-bottom: 50px;
+    border-bottom: 2px dashed color(greyscale, grey);
+  }
+}
+
 .image-shadow {
   img {
     border-radius: 7px;

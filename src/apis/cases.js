@@ -227,6 +227,87 @@ export function getCases() {
       align: '5',
       link: '',
       github: '',
+      title: 'Logo Archive',
+      classname: 'logo-archive bg-white',
+      tags: ['Branding ', 'Graphic ', 'Design'],
+      bannerImg: '../img/logo-archive/logo-archive-bg.jpg',
+      roles: [
+        {
+          title: 'Designer',
+          skills: 'Adobe CC',
+          task: 'Mutiple brands that I have created for a variety of clients.',
+          complete: '2015 - Early 2017'
+        }
+      ],
+      contents: [
+        {
+          align: '1',
+          classname: 'image-shadow image-500 image-center',
+          image: '../img/logo-archive/zoo-exhibit.png',
+          heading: 'Zoo Exhibit',
+          text: ''
+        },
+        {
+          align: '2',
+          classname: 'image-shadow image-500 image-center',
+          image: '../img/logo-archive/cac-logo.png',
+          heading: 'Interior Design Co.',
+          text: ''
+        },
+        {
+          align: '3',
+          classname: 'image-shadow image-500 image-center',
+          image: '../img/logo-archive/g-coffee.png',
+          heading: 'Street Coffee Cart Business',
+          text: ''
+        },
+        {
+          align: '4',
+          classname: 'image-shadow image-500 image-center',
+          image: '../img/logo-archive/golden-rivers.jpg',
+          heading: 'Craft Brewery',
+          text: ''
+        },
+        {
+          align: '5',
+          classname: 'image-shadow image-500 image-center',
+          image: '../img/logo-archive/peach-slice.png',
+          heading: 'A Peach & Apple Orchard'
+        },
+        {
+          align: '6',
+          classname: 'image-shadow image-500 image-center',
+          image: '../img/logo-archive/tasties.png',
+          heading: 'Food Service',
+          text: ''
+        },
+        {
+          align: '7',
+          classname: 'image-shadow image-500 image-center',
+          image: '../img/logo-archive/news-today.png',
+          heading: 'Online News Website',
+          text: ''
+        },
+        {
+          align: '8',
+          classname: 'image-shadow image-500 image-center',
+          image: '../img/logo-archive/cca.png',
+          heading: 'Information',
+          text: ''
+        },
+        {
+          align: '9',
+          classname: 'image-shadow image-500 image-center',
+          image: '../img/logo-archive/pro-logo.png',
+          heading: 'CPG',
+          text: ''
+        }
+      ]
+    },
+    {
+      align: '6',
+      link: '',
+      github: '',
       title: 'Print Work',
       classname: 'print-work bg-white',
       tags: ['print ', 'Graphic', 'Design'],
