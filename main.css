@@ -3414,7 +3414,7 @@ blockquote {
       width: 100%;
       margin-top: 5px;
       text-overflow: ellipsis;
-      -webkit-line-clamp: 7;
+      -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
       font-size: 11px;
       font-size: 0.6875rem; }
