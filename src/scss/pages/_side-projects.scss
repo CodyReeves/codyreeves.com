@@ -1,5 +1,11 @@
 .sideproject-page {
   min-height: 600px;
+  padding-top: 70px;
+  box-sizing: border-box;
+
+  @include breakpoint(max-width breakpoint-value(sm)) {
+    padding-top: 15px;
+  }
 
   &:hover {
     @include breakpoint(sm) {
