@@ -2912,7 +2912,8 @@ blockquote {
       min-height: 400px; } }
 
 .cases-wrapper .case-item .image {
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  pointer-events: none; }
 
 .case-item .set-background {
   color: #fff; }
