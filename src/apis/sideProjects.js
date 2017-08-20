@@ -123,7 +123,7 @@ export function getSideProject() {
       roles: [
         {
           title: '',
-          skills: 'Freelance & Consulting - Personal Business'
+          skills: 'Personal Business'
         }
       ],
       content: ''
