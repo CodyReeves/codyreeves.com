@@ -138,7 +138,7 @@ class HomePage extends Component {
 					</div>
 					<div className="more">
 						Show More
-				</div>
+					</div>
 				</Banner>
 				{homeSections}
 				<SideProjectButton />

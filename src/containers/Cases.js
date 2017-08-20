@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Banner from '../components/Banner';
 import { getCases, getCaseIntro } from '../apis/cases';
-import PageSection from '../components/PageSection.js';
+import PageSection from '../components/PageSection';
+import PageContent from '../components/PageContent';
 import { Helmet } from 'react-helmet';
 
 class Case extends Component {
@@ -54,25 +55,19 @@ class Case extends Component {
 			const image = content.image;
 			const text = content.text;
 			const quote = content.quote;
-
+			const linkUrl = content.linkUrl;
+			const linkTitle = content.linkTitle;
 			return (
-				<div key={align} id={align} className={`${className} content-wrapper clearfix`}>
-					{heading &&
-						<div className="heading">
-							<h3>{heading}</h3>
-						</div>}
-					{image &&
-						<div className="image">
-							<img className="img-responsive" src={image} role="presentation"/>
-						</div>}
-					{text &&
-						<div className="text">
-							<p>{text}</p>
-						</div>}
-					{quote &&
-						<div className="quote">
-							<blockquote>{quote}</blockquote>
-						</div>}
+				<div key={align} id={align}>
+					<PageContent
+						className={className}
+						heading={heading}
+						image={image}
+						text={text}
+						quote={quote}
+						linkUrl={linkUrl}
+						linkTitle={linkTitle}
+					/>
 				</div>
 			)
 		});

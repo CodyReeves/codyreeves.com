@@ -31,7 +31,7 @@ export function getCases() {
           align: '1',
           classname: '',
           heading: 'Part One: Branding',
-          text: 'Client requested the perfered colors green. Ideally in a shape of a badge that colud be used on a variety of products. The feeling of organic, healthy living, treat body right, rustic/roots forming.'
+          text: 'In regards to the logo the client requested natural, fresh colors and a design of a badge style logo. The feeling the brand should portay is organic, fresh, vibrant, healthy living, treat body right, rustic/roots forming.'
         },
         {
           align: '2',
@@ -62,7 +62,7 @@ export function getCases() {
         {
           align: '7',
           classname: 'tasties-web',
-          text: 'Built on wordpress with Woocommerce and Stripe Initgration. Client Wanted a landing style home page for the service they provide, a way for users to create orders for the biweekly or monthly food subscription, a weekly updated page for the menu, A mission page, blog page, and a contact page. Clean look easy to read.',
+          text: 'Built on wordpress with Woocommerce and Stripe Initgration. Client request the site have a home page that had a "landing page style" of design for the service they provide, include a way for users to create orders for the biweekly or monthly subscriptions, a page for the weekly menu, a mission page, a blog page, and a contact page.',
           heading: 'Part Two: Web Development',
         },
         {
@@ -94,7 +94,7 @@ export function getCases() {
         {
           title: 'Designer & Front End Developer',
           skills: 'Adobe CC, SCSS, PHP, JS',
-          task: 'This project was split into two parts. Part One: design of the company brand which included a logo, label, and stationary. Part Two: Design and develop a sales funnel that had the ability to take payments. The criteria included: Pages be complient with ad networks (facebook, adwords), Pages meed to showcase the product.',
+          task: 'This project was split into two parts. Part One: design of the company brand which included a logo, label, and stationary. Part Two: Design and develop a sales funnel that had the ability to take payments. The criteria included: pages be complient with ad networks like facebook and adwords, pages need to showcase the product and pages need to be eye catching.',
           complete: 'Early 2017'
         }
       ],
@@ -103,7 +103,7 @@ export function getCases() {
           align: '1',
           classname: '',
           heading: 'Branding',
-          text: 'React, Backbone, D3'
+          text: ''
         },
         {
           align: '2',
@@ -130,7 +130,7 @@ export function getCases() {
           align: '6',
           classname: 'probiotic-webinfo',
           heading: 'Web Development',
-          text: 'React, Backbone, D3'
+          text: ''
         },
         {
           align: '7',
@@ -169,12 +169,12 @@ export function getCases() {
         }
       ],
       contents: [
-        {
-          align: '1',
-          classname: '',
-          heading: 'Project Overview',
-          text: 'React, Backbone, D3'
-        },
+        // {
+        //   align: '1',
+        //   classname: '',
+        //   heading: 'Project Overview',
+        //   text: ''
+        // },
         {
           align: '2',
           classname: 'image-shadow',
@@ -209,7 +209,7 @@ export function getCases() {
         {
           title: 'UI/UX Designer',
           skills: 'Adobe CC',
-          task: 'To design a concept application for iPhone and Android devices.',
+          task: 'To design a application with a compnay brand trageting iPhone and Android devices. The market that the app would be targeting is the wrist watch community & enthusiasts. It was a criteria of the app to include a way to make watch backgrounds, brand colors include the color blue, and the logo to be typographic rather than a symbol or shape.',
           complete: 'Late 2016'
         }
       ],

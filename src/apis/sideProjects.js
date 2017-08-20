@@ -4,7 +4,7 @@ export function getSideProjectPage() {
     titleLarge: 'Projects',
     titleSmall: 'Side projects covering web development, design to everything else!',
     titleSmallClass: 'bump-up',
-    text: 'A small collection of side projects that Cody is actively working on.',
+    text: 'A small collection of side projects that I actively work on.',
   }
 }
 
@@ -14,7 +14,7 @@ export function getSideProject() {
     {
       link: 'https://github.com/CodyReeves/flexible-breakpoints',
       title: 'Flexible Breakpoints',
-      classname: 'sp-flextible-breakpoin',
+      classname: 'sp-flexible-breakpoin',
       imageUrl: '../img/bg.jpg',
       roles: [
         {
