@@ -14,8 +14,13 @@ const services = {
   contents: [
     {
       align: '1',
-      classname: '',
+      classname: 'bg-white',
       heading: 'Part One: Branding',
+      text: 'Client requested the perfered colors green. Ideally in a shape of a badge that colud be used on a variety of products. The feeling of organic, healthy living, treat body right, rustic/roots forming.'
+    },
+    {
+      align: '2',
+      classname: '',
       text: 'Client requested the perfered colors green. Ideally in a shape of a badge that colud be used on a variety of products. The feeling of organic, healthy living, treat body right, rustic/roots forming.'
     }
   ]
