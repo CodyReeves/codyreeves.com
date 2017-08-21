@@ -12,6 +12,7 @@ const plumberNotifier = require('gulp-plumber-notifier');
 const stripCSSComments = require('gulp-strip-css-comments');
 const cleanCSS = require('gulp-clean-css');
 const runSequence = require('run-sequence');
+const image = require('gulp-image');
 
 /*---------------------------------------------------------
  Required paths for Gulp
@@ -93,4 +94,24 @@ gulp.task('live', (callback) => {
     'minify-css',
     callback
   );
+});
+
+/* Images
+----------------------------------*/
+
+gulp.task('image', function () {
+  gulp.src('./src/images/*/*')
+    .pipe(image({
+      pngquant: true,
+      optipng: false,
+      zopflipng: true,
+      jpegRecompress: false,
+      jpegoptim: true,
+      mozjpeg: true,
+      guetzli: false,
+      gifsicle: true,
+      svgo: true,
+      concurrent: 10
+    }))
+    .pipe(gulp.dest('./public/img/'));
 });
