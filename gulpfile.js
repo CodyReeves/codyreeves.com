@@ -13,6 +13,7 @@ const stripCSSComments = require('gulp-strip-css-comments');
 const cleanCSS = require('gulp-clean-css');
 const runSequence = require('run-sequence');
 const image = require('gulp-image');
+var cssmin = require('gulp-cssmin');
 
 /*---------------------------------------------------------
  Required paths for Gulp
@@ -82,6 +83,7 @@ gulp.task('live-sass', () => {
 gulp.task('minify-css', () => {
   return gulp.src(paths.css.src)
     .pipe(cleanCSS({ compatibility: 'ie8' }))
+    .pipe(cssmin())
     .pipe(gulp.dest(paths.css.dest));
 });
 
