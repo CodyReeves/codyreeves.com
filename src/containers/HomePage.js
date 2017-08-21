@@ -130,8 +130,8 @@ class HomePage extends Component {
 				<Banner imageUrl={BannerImageUrl}>
 					<h1 className="heading-special"><span className="">{bannerTitle}</span></h1>
 					<h4 className="heading-top"><span className="">{bannerSub}</span></h4>
-					<div className="video">
-						<video poster="" id="bgvid" playsInline autoPlay muted loop>
+				<div className="video hidden-xs hidden-sm visible-md">
+						<video className="hidden-xs hidden-sm visible-md" poster="./img/codyreeves-site.png" id="bgvid" playsInline autoPlay muted loop>
 							<source src={BannerVidWeb} type="video/webm" />
 							<source src={BannerVidMp} type="video/mp4" />
 						</video>
