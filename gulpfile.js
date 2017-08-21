@@ -13,7 +13,7 @@ const stripCSSComments = require('gulp-strip-css-comments');
 const cleanCSS = require('gulp-clean-css');
 const runSequence = require('run-sequence');
 const image = require('gulp-image');
-var cssmin = require('gulp-cssmin');
+const cssmin = require('gulp-cssmin');
 
 /*---------------------------------------------------------
  Required paths for Gulp
