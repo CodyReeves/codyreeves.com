@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Image from './Image'
 
 const defaultProps = {
   className: '',
@@ -22,7 +23,10 @@ class PageContent extends Component {
           </div>}
         {image &&
           <div className="image">
-            <img className="img-responsive" src={image} role="presentation"/>
+            {/* <img className="img-responsive" src={image} role="presentation"/> */}
+            <Image
+              image={image}
+            />
           </div>}
         {text &&
           <div className="text">
