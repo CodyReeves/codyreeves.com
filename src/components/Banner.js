@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ProgressiveImage from 'react-progressive-bg-image';
 
 const defaultProps = {
   contentPlacemnet: 'center',
@@ -10,8 +11,10 @@ class Banner extends Component {
     const { imageUrl, imageSize, contentPlacemnet, children } = this.props;
 
     return (
-      <div className={`banner ${imageSize} banner-${contentPlacemnet}`} style={{ backgroundImage: 'url(' + imageUrl + ')' }} >
-        {children}
+      <div className={`banner ${imageSize} banner-${contentPlacemnet}`}>
+        <ProgressiveImage src={imageUrl} style={{ 'background-size': 'cover', 'background-position': 'top center' }}>
+          {children}
+        </ProgressiveImage>
       </div>
     )
   }

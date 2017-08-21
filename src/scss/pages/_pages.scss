@@ -1,3 +1,13 @@
 @import 'home';
 @import 'services';
 @import 'side-projects';
+
+@include create-keyframe(fadeInUp);
+
+.main-content {
+  > div {
+    &:first-child {
+      animation: fadeInUp .75s forwards ease-in-out;
+    }
+  }
+}
