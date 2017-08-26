@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import Banner from '../components/Banner';
 import { getCases, getCaseIntro } from '../apis/cases';
 import PageSection from '../components/PageSection';
 import PageContent from '../components/PageContent';
-import { Helmet } from 'react-helmet';
+
 
 class Case extends Component {
 	componentDidMount () {
-		window.scrollTo(0, 0)
+	  window.scrollTo(0, 0)
 	}
 
   render() {
