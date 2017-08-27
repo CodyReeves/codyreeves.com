@@ -13,6 +13,10 @@ const defaultProps = {
 };
 
 class Sidebar extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const { className } = this.props;
     function toggle() {
@@ -37,7 +41,9 @@ class Sidebar extends Component {
           Menu
         </label>
         <header className={`sidebar ${className}`}>
-          <a className="header-email" href="maltio:hello@codyreeves.design">hello@codyreeves.design</a>
+          <a className="header-email" href="maltio:hello@codyreeves.design">
+            hello@codyreeves.design
+          </a>
           <Link className="logo" to="/">
             <img
               src={logo}

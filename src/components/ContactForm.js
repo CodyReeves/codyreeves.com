@@ -71,12 +71,27 @@ class ContactForm extends Component {
         <div className="filter">
           <form className="form" onSubmit={this._handleSubmit} id="formContact">
             <div className="input-wrapper">
-              <label>Email</label>
-              <input id="formEmail" type="email" name="formEmail" value={this.state.contactEmail} onChange={this._handleChange} required />
+              <label htmlFor="formEmail">Email</label>
+              <input
+                id="formEmail"
+                type="email"
+                name="formEmail"
+                value={this.state.contactEmail}
+                onChange={this._handleChange}
+                required
+              />
             </div>
             <div className="input-wrapper">
-              <label>Message</label>
-              <textarea id="formMsg" name="formMsg" rows="8" cols="40" value={this.state.contactMessage} onChange={this._handleChangeMsg} required />
+              <label htmlFor="formMsg">Message</label>
+              <textarea
+                id="formMsg"
+                name="formMsg"
+                rows="8"
+                cols="40"
+                value={this.state.contactMessage}
+                onChange={this._handleChangeMsg}
+                required
+              />
             </div>
             <small>Please Note: It may take a up to two days to recieve a reply.</small>
             <input className="btn-submit" type="submit" value="Submit" id="btn-submit" />

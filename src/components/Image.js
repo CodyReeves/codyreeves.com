@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ProgressiveImage from 'react-progressive-image';
 import PropTypes from 'prop-types';
 
@@ -14,20 +14,16 @@ const defaultProps = {
   imageSmall: './img/loading-image.gif',
 };
 
-class ImageWrapper extends Component {
-
-  render() {
-    const { image, imageSmall, alt } = this.props;
-
-    return (
-      <div>
-        <ProgressiveImage src={image} placeholder={imageSmall}>
-          {image => <img className="img-responsive" src={image} alt={alt} />}
-        </ProgressiveImage>
-      </div>
-    );
-  }
+function ImageWrapper({ image, imageSmall, alt }) {
+  return (
+    <div>
+      <ProgressiveImage src={image} placeholder={imageSmall}>
+        {image => <img className="img-responsive" src={image} alt={alt} />}
+      </ProgressiveImage>
+    </div>
+  );
 }
+
 
 ImageWrapper.PropTypes = propTypes;
 ImageWrapper.defaultProps = defaultProps;

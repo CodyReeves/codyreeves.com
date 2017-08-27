@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 
@@ -14,26 +14,22 @@ const defaultProps = {
   url: 'http://codyreeves.com/',
 };
 
-class PageHead extends Component {
-  render() {
-    const {
-      title,
-      description,
-      url,
-    } = this.props;
-
-    return (
-      <div>
-        <Helmet>
-          <title>{title}</title>
-          <meta property="og:title" content={title} />
-          <meta name="description" content={description} />
-          <meta property="og:description" content={description} />
-          <meta property="og:url" content={url} />
-        </Helmet>
-      </div>
-    );
-  }
+function PageHead({
+    title,
+    description,
+    url,
+  }) {
+  return (
+    <div>
+      <Helmet>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta name="description" content={description} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+      </Helmet>
+    </div>
+  );
 }
 
 PageHead.PropTypes = propTypes;
