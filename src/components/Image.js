@@ -1,6 +1,7 @@
 import React from 'react';
 import ProgressiveImage from 'react-progressive-image';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazyload';
 
 const propTypes = {
   image: PropTypes.string,
@@ -17,9 +18,11 @@ const defaultProps = {
 function ImageWrapper({ image, imageSmall, alt }) {
   return (
     <div>
-      <ProgressiveImage src={image} placeholder={imageSmall}>
-        {image => <img className="img-responsive" src={image} alt={alt} />}
-      </ProgressiveImage>
+      <LazyLoad>
+        <ProgressiveImage src={image} placeholder={imageSmall}>
+          {image => <img className="img-responsive" src={image} alt={alt} />}
+        </ProgressiveImage>
+      </LazyLoad>
     </div>
   );
 }

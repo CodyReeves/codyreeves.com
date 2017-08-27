@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import LazyLoad from 'react-lazyload';
 import Banner from '../components/Banner';
 import ContactFormWrapper from '../components/ContactFormWrapper';
 import BannerImageUrl from '../images/bg.jpg';
@@ -43,19 +44,21 @@ class HomePageContainer extends Component {
 
         return (
           <div key={sampleKey}>
-            <CaseSample
-              imageUrl={`/img/${sampleImage}`}
-              imagePlacement={sampleImagePlacment}
-              titleLarge={sampleTitleLarge}
-              titleSmall={sampleTitleSmall}
-              titleSmallClass={sampleTitleSmallClass}
-              titleLargeClass={sampleTitleLargeClass}
-            >
-              <strong>{sampleStrongText}</strong><br />
-              <span>{sampleSpanText}</span><br />
-              <span>{sampleTags}</span><br />
-              <p>{sampleText}</p>
-            </CaseSample>
+            <LazyLoad>
+              <CaseSample
+                imageUrl={`/img/${sampleImage}`}
+                imagePlacement={sampleImagePlacment}
+                titleLarge={sampleTitleLarge}
+                titleSmall={sampleTitleSmall}
+                titleSmallClass={sampleTitleSmallClass}
+                titleLargeClass={sampleTitleLargeClass}
+              >
+                <strong>{sampleStrongText}</strong><br />
+                <span>{sampleSpanText}</span><br />
+                <span>{sampleTags}</span><br />
+                <p>{sampleText}</p>
+              </CaseSample>
+            </LazyLoad>
           </div>
         );
       });
@@ -123,10 +126,12 @@ class HomePageContainer extends Component {
           <h1 className="heading-special"><span className="">{bannerTitle}</span></h1>
           <h4 className="heading-top"><span className="">{bannerSub}</span></h4>
           <div className="video hidden-xs hidden-sm visible-md">
-            <video className="hidden-xs hidden-sm visible-md" poster="./img/codyreeves-site.png" id="bgvid" playsInline autoPlay muted loop>
-              <source src={BannerVidWeb} type="video/webm" />
-              <source src={BannerVidMp} type="video/mp4" />
-            </video>
+            <LazyLoad>
+              <video className="hidden-xs hidden-sm visible-md" poster="./img/codyreeves-site.png" id="bgvid" playsInline autoPlay muted loop>
+                <source src={BannerVidWeb} type="video/webm" />
+                <source src={BannerVidMp} type="video/mp4" />
+              </video>
+            </LazyLoad>
           </div>
           <div className="more">
             Show More

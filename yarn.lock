@@ -304,7 +304,7 @@ babel-code-frame@^6.11.0, babel-code-frame@^6.26.0, babel-code-frame@^6.8.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
-babel-core@6.14.0, babel-core@^6.0.0, babel-core@^6.14.0:
+babel-core@6.14.0, babel-core@^6.0.0:
   version "6.14.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.14.0.tgz#c9e13ed4e2f97329215496fd9fb48f2b3bcb9b42"
   dependencies:
@@ -330,7 +330,7 @@ babel-core@6.14.0, babel-core@^6.0.0, babel-core@^6.14.0:
     slash "^1.0.0"
     source-map "^0.5.0"
 
-babel-core@^6.11.4, babel-core@^6.26.0:
+babel-core@^6.11.4, babel-core@^6.14.0, babel-core@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.26.0.tgz#af32f78b31a6fcef119c87b0fd8d9753f03a0bb8"
   dependencies:
@@ -6254,6 +6254,12 @@ react-imation@^0.5.3:
   resolved "https://registry.yarnpkg.com/react-imation/-/react-imation-0.5.3.tgz#61478ae167812849ae3bf91ed72e24d4970e0c15"
   dependencies:
     raf "^3.1.0"
+
+react-lazyload@^2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-2.2.7.tgz#6adf0713f32240a21c630ab5d1e8cf62d0c264af"
+  dependencies:
+    prop-types "^15.5.6"
 
 react-motion@^0.4.8:
   version "0.4.8"
