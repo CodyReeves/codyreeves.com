@@ -11,9 +11,9 @@ Github Pages routed through CloudFlare to domain provider.
 
 **Frameworks & Tools Used**
 
-PWA Google ready.
-React
-Redux
-React Router
-Static Content
-Mixin It - Scss Framework V1.0.0
+- PWA Google ready.
+- React
+- Redux
+- React Router
+- Static Content
+- Mixin It - Scss Framework V1.0.0
