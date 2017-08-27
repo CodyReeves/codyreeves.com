@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getSideProject, getSideProjectPage } from '../apis/sideProjects';
 import PageSection from '../components/PageSection';
 import PageHead from '../components/Head';
+import Image from '../components/Image';
 
 class SideProjectPage extends Component {
   componentDidMount() {
@@ -42,9 +43,8 @@ class SideProjectPage extends Component {
         <div key={title} className={rowClassName}>
           <div className="main-wrapper">
             <div className="image" style={{ backgroundImage: `url(${imageUrl})` }}>
-              <img
-                src={imageUrl}
-                className="img-responsive"
+              <Image
+                image={imageUrl}
                 alt={titleLarge}
               />
               {icon &&
