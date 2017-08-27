@@ -12,7 +12,7 @@ export function getCases() {
   return [
     {
       align: '1',
-      link: 'https://tasties.ca',
+      link: 'https://www.tasties.ca/',
       github: '',
       title: 'Tasties Kitchen',
       classname: 'tasties-case bg-white',

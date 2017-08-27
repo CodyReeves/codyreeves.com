@@ -1,74 +1,59 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+function contentClass(isShow) {
+  if (isShow) {
+    return 'open';
+  }
+  return 'collapse';
+}
+
 const propTypes = {
-  text: PropTypes.string,
+  btnTextOpen: PropTypes.string.isRequired,
+  btnTextClose: PropTypes.string.isRequired,
+  btnClass: PropTypes.string,
+  contentClassName: PropTypes.string,
   className: PropTypes.string,
-  children: PropTypes.element,
+  children: PropTypes.element.isRequired,
 };
 
 const defaultProps = {
   className: '',
   children: '',
-  text: 'toggle',
+  btnTextOpen: 'toggle',
+  btnTextClose: 'toggle',
+  contentClassName: '',
+  btnClass: 'btn-cta',
 };
 
 class Toggle extends Component {
   constructor(props) {
     super(props);
-    this.addActiveClass = this.addActiveClass.bind(this);
-    this.state = {
-      active: false,
-    };
+    this.state = { isShow: false };
+    this.handleClick = this.handleClick.bind(this);
   }
-  toggleClass() {
-    const currentState = this.state.active;
-    this.setState({ active: !currentState });
+
+  handleClick() {
+    this.setState(prevState => {
+      return { isShow: !prevState.isShow };
+    });
   }
 
   render() {
-    const { children, className, text } = this.props;
+    const { children, className, btnClass, contentClassName, btnTextOpen, btnTextClose } = this.props;
+
     return (
-      <div className={className}>
-        <button
-          className="toggle"
-          onClick={this.toggleClass}
-        >
-          <p>{text}</p>
+      <div className={`toggle-wrapper ${className}`}>
+        <button className={`toggle ${btnClass} toggle-${contentClass(this.state.isShow)}`} onClick={this.handleClick} >
+          <span data-open={btnTextOpen} data-close={btnTextClose} />
         </button>
-        <div className={this.state.active ? 'active' : null} >
+        <div className={`${contentClass(this.state.isShow)} ${contentClassName}`} >
           {children}
         </div>
       </div>
     );
   }
 }
-
-constructor(props){
-    super(props);
-}
-
-getInitialState(){
-  return {"showHideSidenav":"hidden"};
-}
-
-// render() {
-//     return (
-//         <div className="header">
-//             <i className="border hide-on-small-and-down"></i>
-//             <div className="container">
-//                 <a ref="btn" onClick={this.toggleSidenav.bind(this)} href="#" className="btn-menu show-on-small"><i></i></a>
-//                 <Menu className="menu hide-on-small-and-down"/>
-//                 <Sidenav className={this.props.showHideSidenav}/>
-//             </div>
-//         </div>
-//     )
-// }
-//
-// toggleSidenav() {
-//     var css = (this.props.showHideSidenav === "hidden") ? "show" : "hidden";
-//     this.setState({"showHideSidenav":css});
-// }
 
 Toggle.PropTypes = propTypes;
 Toggle.defaultProps = defaultProps;

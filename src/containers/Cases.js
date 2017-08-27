@@ -111,7 +111,7 @@ class Case extends Component {
                   </a>}
                 <span className="tags">{tags}</span>
                 {/* <button
-                  className="center btn btn-primary"
+                  className=""
                   onClick=""
                 >
                   Show More
@@ -120,16 +120,16 @@ class Case extends Component {
             </Banner>
             <Toggle
               className="content"
-              text="yoggle"
+              btnTextClose="+ Open Case Study"
+              btnTextOpen="- Close Case Study"
+              contentClassName="container contents-wrapper"
+              btnClass="center btn"
             >
-                open
-              </Toggle>
-            <div className="container contents-wrapper">
               <div className="set-background">
                 {RoleRows(roles)}
                 {ContentRows(content)}
               </div>
-            </div>
+            </Toggle>
           </div>
         </div>
       );

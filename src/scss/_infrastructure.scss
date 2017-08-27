@@ -254,3 +254,7 @@ blockquote {
 .row {
   @extend .transition;
 }
+
+.toggle-wrapper {
+  position: relative;
+}
