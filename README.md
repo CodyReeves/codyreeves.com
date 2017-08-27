@@ -5,10 +5,11 @@ The design, site, all assets are created for Codyreeves.com portfolio and will o
 
 ### Specs:
 
-** Hosting & Domain **
+**Hosting & Domain**
+
 Github Pages routed through CloudFlare to domain provider.
 
-** Frameworks & Tools Used **
+**Frameworks & Tools Used**
 
 PWA Google ready.
 React
