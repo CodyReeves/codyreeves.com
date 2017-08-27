@@ -12,9 +12,6 @@
     <link rel="apple-touch-icon" href="/img/touch/homescreen192.png">
     <meta name="msapplication-square310x310logo" content="/img/touch/homescreen192.png">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display:400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="%PUBLIC_URL%/main.css">
     <title>Cody Reeves | Digital Design & Development</title>
@@ -56,8 +53,9 @@
   </head>
   <body>
     <div id="root"></div>
-    <div style="display: none">Site designed by: Cody Reeves - Digital Design & Development</div>
-    <script>
+    <div style="display: none">Site designed by: Cody Reeves Digital Design & Development</div>
+    <div style="display: none">© 2017 by Cody Reeves. All rights reserved.</div>
+    <script defer>
        if ('serviceWorker' in navigator) {
          window.addEventListener('load', function() {
            navigator.serviceWorker.register('service-worker.js').then(function(registration) {
@@ -75,6 +73,8 @@
        }
      </script>
   </body>
+  <link href="https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

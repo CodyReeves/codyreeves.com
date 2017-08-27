@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Track, TrackDocument } from 'react-track';
 import { tween } from 'react-imation';
+import LazyLoad from 'react-lazyload';
 import {
   topTop,
   topBottom,
@@ -85,44 +86,46 @@ function PageSection({
               [posBottomTop - 500, { opacity: 0 }],
                   ])}
                 >
-                  {type === 'default' &&
-                  <section className={`${className} content-block`}>
-                    <div className={container ? 'container' : ''}>
-                      <div className="row no-margin">
+                  <LazyLoad>
+                    {type === 'default' &&
+                    <section className={`${className} content-block`}>
+                      <div className={container ? 'container' : ''}>
+                        <div className="row no-margin">
+                          {imageUrl &&
+                          <div className={`image-block ${imagePosition}-sm col-xs col-sm`}>
+                            <img
+                              src={`/img/${imageUrl}`}
+                              className="img-responsive"
+                              alt=""
+                            />
+                          </div>}
+                          <div className={`text-block col-xs-${colSize} col-sm-${colSize}`}>
+                            {children}
+                          </div>
+                        </div>
+                      </div>
+                    </section>}
+                    {type === 'special' &&
+                    <section className={`${className} special`}>
+                      {textFollow &&
+                      <div className="section-title"><span>{textFollow}</span></div>}
+                      <div className={container ? 'container' : ''}>
+                        {titleLarge &&
+                        <h2 className={`back ${titleLargeClass}`}>{titleLarge}</h2>}
+                        {titleSmall &&
+                        <h3 className={`sub ${titleSmallClass}`}>{titleSmall}</h3>}
                         {imageUrl &&
-                        <div className={`image-block ${imagePosition}-sm col-xs col-sm`}>
-                          <img
-                            src={`/img/${imageUrl}`}
-                            className="img-responsive"
-                            alt=""
-                          />
-                        </div>}
-                        <div className={`text-block col-xs-${colSize} col-sm-${colSize}`}>
+                        <img
+                          src={imageUrl}
+                          className="img-responsive img-float"
+                          alt=""
+                        />}
+                        <div className="row">
                           {children}
                         </div>
                       </div>
-                    </div>
-                  </section>}
-                  {type === 'special' &&
-                  <section className={`${className} special`}>
-                    {textFollow &&
-                    <div className="section-title"><span>{textFollow}</span></div>}
-                    <div className={container ? 'container' : ''}>
-                      {titleLarge &&
-                      <h2 className={`back ${titleLargeClass}`}>{titleLarge}</h2>}
-                      {titleSmall &&
-                      <h3 className={`sub ${titleSmallClass}`}>{titleSmall}</h3>}
-                      {imageUrl &&
-                      <img
-                        src={imageUrl}
-                        className="img-responsive img-float"
-                        alt=""
-                      />}
-                      <div className="row">
-                        {children}
-                      </div>
-                    </div>
-                  </section>}
+                    </section>}
+                  </LazyLoad>
                 </Div>
             }</Track>
         }</TrackDocument>

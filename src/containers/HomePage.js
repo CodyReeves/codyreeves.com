@@ -21,7 +21,8 @@ class HomePageContainer extends Component {
   render() {
     // Get data for page
     const HomePage = getHome();
-
+    // const isMobile = window.innerWidth <= 500;
+    const isTab = window.innerWidth <= 992;
     // Set up for banner content
     const bannerSub = HomePage.banner.subHeading;
     const bannerTitle = HomePage.banner.heading;
@@ -127,10 +128,11 @@ class HomePageContainer extends Component {
           <h4 className="heading-top"><span className="">{bannerSub}</span></h4>
           <div className="video hidden-xs hidden-sm visible-md">
             <LazyLoad>
-              <video className="hidden-xs hidden-sm visible-md" poster="./img/codyreeves-site.png" id="bgvid" playsInline autoPlay muted loop>
-                <source src={BannerVidWeb} type="video/webm" />
-                <source src={BannerVidMp} type="video/mp4" />
-              </video>
+              {!isTab &&
+                <video className="hidden-xs hidden-sm visible-md" poster="./img/codyreeves-site.png" id="bgvid" playsInline autoPlay muted loop>
+                  <source src={BannerVidWeb} type="video/webm" />
+                  <source src={BannerVidMp} type="video/mp4" />
+                </video>}
             </LazyLoad>
           </div>
           <div className="more">
