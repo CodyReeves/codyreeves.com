@@ -5,7 +5,7 @@ export function getSideProjectPage() {
     titleSmall: 'Side projects covering web development, design to everything else!',
     titleSmallClass: 'bump-up',
     text: 'A small collection of side projects that I actively work on.',
-  }
+  };
 }
 
 
@@ -19,10 +19,10 @@ export function getSideProject() {
       roles: [
         {
           title: '',
-          skills: 'Development - CSS, SCSS, JS'
-        }
+          skills: 'Development - CSS, SCSS, JS',
+        },
       ],
-      content: ''
+      content: '',
     },
     {
       link: 'https://github.com/CodyReeves/mixin-it/',
@@ -32,10 +32,10 @@ export function getSideProject() {
       roles: [
         {
           title: '',
-          skills: 'Development - CSS, SCSS, JS'
+          skills: 'Development - CSS, SCSS, JS',
         },
       ],
-      content: ''
+      content: '',
     },
     {
       link: 'https://github.com/CodyReeves/css-grid-system-library',
@@ -45,10 +45,10 @@ export function getSideProject() {
       roles: [
         {
           title: '',
-          skills: 'Development - CSS, SCSS, JS'
-        }
+          skills: 'Development - CSS, SCSS, JS',
+        },
       ],
-      content: ''
+      content: '',
     },
     {
       link: 'https://github.com/CodyReeves/children.scss',
@@ -58,10 +58,10 @@ export function getSideProject() {
       roles: [
         {
           title: '',
-          skills: 'Development - CSS, SCSS, JS'
-        }
+          skills: 'Development - CSS, SCSS, JS',
+        },
       ],
-      content: ''
+      content: '',
     },
     {
       link: 'https://github.com/CodyReeves/codyreeves.com',
@@ -71,10 +71,10 @@ export function getSideProject() {
       roles: [
         {
           title: '',
-          skills: 'React, Redux, Scss'
-        }
+          skills: 'React, Redux, Scss',
+        },
       ],
-      content: ''
+      content: '',
     },
     {
       link: 'https://codepen.io/CR-Design/',
@@ -84,10 +84,10 @@ export function getSideProject() {
       roles: [
         {
           title: '',
-          skills: 'Development - JS, Scss, Html'
-        }
+          skills: 'Development - JS, Scss, Html',
+        },
       ],
-      content: ''
+      content: '',
     },
     // {
     //   link: 'https://ux.stackexchange.com/users/102413/cody-reeves?tab=profile',
@@ -110,10 +110,10 @@ export function getSideProject() {
       roles: [
         {
           title: '',
-          skills: 'Design - Ui, Ux, Graphic Design, Branding'
-        }
+          skills: 'Design - Ui, Ux, Graphic Design, Branding',
+        },
       ],
-      content: ''
+      content: '',
     },
     {
       link: 'http://withdesign.ca',
@@ -123,10 +123,10 @@ export function getSideProject() {
       roles: [
         {
           title: '',
-          skills: 'Personal Business'
-        }
+          skills: 'Personal Business',
+        },
       ],
-      content: ''
-    }
-  ]
+      content: '',
+    },
+  ];
 }
