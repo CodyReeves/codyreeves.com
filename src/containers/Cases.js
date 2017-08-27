@@ -4,6 +4,7 @@ import { getCases, getCaseIntro } from '../apis/cases';
 import PageSection from '../components/PageSection';
 import PageContent from '../components/PageContent';
 import PageHead from '../components/Head';
+import Toggle from '../components/Toggle';
 
 class Case extends Component {
   componentDidMount() {
@@ -117,6 +118,12 @@ class Case extends Component {
                 </button> */}
               </div>
             </Banner>
+            <Toggle
+              className="content"
+              text="yoggle"
+            >
+                open
+              </Toggle>
             <div className="container contents-wrapper">
               <div className="set-background">
                 {RoleRows(roles)}

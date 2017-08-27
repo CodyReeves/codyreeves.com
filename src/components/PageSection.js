@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Track, TrackDocument } from 'react-track';
 import { tween } from 'react-imation';
@@ -122,9 +122,7 @@ function PageSection({
                         {children}
                       </div>
                     </div>
-                  </section>
-
-                }
+                  </section>}
                 </Div>
             }</Track>
         }</TrackDocument>
