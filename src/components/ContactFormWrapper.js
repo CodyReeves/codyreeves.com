@@ -56,7 +56,7 @@ class ContactFormWrapper extends Component {
             </div>
             <div className="col-xs-12 col-sm-8">
               <div className="pad-30-top pad-30-bottom">
-                <span className="email"><a href={`maltio:${email}`}>{email}</a></span><br />
+                <span className="email"><a href={`mailto:${email}`}>{email}</a></span><br />
                 <span className="location">{location}</span>
                 {heading &&
                 <h5>{heading}</h5>}

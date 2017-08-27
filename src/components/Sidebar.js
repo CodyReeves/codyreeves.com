@@ -41,7 +41,7 @@ class Sidebar extends Component {
           Menu
         </label>
         <header className={`sidebar ${className}`}>
-          <a className="header-email" href="maltio:hello@codyreeves.design">
+          <a className="header-email" href="mailto:hello@codyreeves.design">
             hello@codyreeves.design
           </a>
           <Link className="logo" to="/">
