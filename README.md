@@ -1,45 +1,18 @@
-## Cody Reeves Personal portfoilo created with React with Redux
+## Cody Reeves Personal Portfoilo
+The design, site, all assets are created for Codyreeves.com portfolio and will only be used and/or modified with Cody Reeves permission.
 
 ![alt text](./public/img/codyreeves-site.png)
 
+### Specs:
 
-### Runs the app in development mode:
+** Hosting & Domain **
+Github Pages routed through CloudFlare to domain provider.
 
-```
-npm start
-```
+** Frameworks & Tools Used **
 
-Open http://localhost:3000 to view it in the browser.
-
-### Runs the test watcher in an interactive mode:
-
-```
-npm test
-```
-
-By default, runs tests related to files changes since the last commit.
-
-### Builds the app for production to the build folder:
-
-```
-npm run build
-```
-
-It correctly bundles React in production mode and optimizes the build for the best performance.
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
-
-### Deploys the production to github.io page:
-
-Changes package.json
-
-```
-"homepage": "http://{account_name}.github.io/{project_name}",
-```
-
-And runs
-
-```
-npm run build
-npm run deploy
-```
+PWA Google ready.
+React
+Redux
+React Router
+Static Content
+Mixin It - Scss Framework V1.0.0
