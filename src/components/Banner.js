@@ -13,7 +13,7 @@ const propTypes = {
 const defaultProps = {
   contentPlacement: 'center',
   imageSize: 'full',
-  placeholder: 'Cody Reeves Digital Design & Development',
+  placeholder: './img/loading-image.gif',
   children: '',
   imageUrl: '',
 };

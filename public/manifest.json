@@ -1,9 +1,8 @@
 {
   "name": "CodyReevesPortfolioApp",
-  "short_name": "CrPortfolio",
+  "short_name": "CRPortfolio",
   "lang": "en-US",
   ​​"orientation": "portrait-primary",
-  "start_url": ".",
   "display": "standalone",
   "background_color": "#e50000",
   "description": "Cody Reeves Portfolio, a full time designer/developer and a part time entrepreneur. I have 4+ years of experience, working on wide variety of projects from designing company brands to developing enterprise software.",
