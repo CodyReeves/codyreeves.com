@@ -1,5 +1,16 @@
-import React, { Component } from 'react'
-import Image from './Image'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Image from './Image';
+
+const propTypes = {
+  className: PropTypes.string,
+  heading: PropTypes.string,
+  image: PropTypes.string,
+  text: PropTypes.string,
+  quote: PropTypes.string,
+  linkUrl: PropTypes.string,
+  linkTitle: PropTypes.string,
+};
 
 const defaultProps = {
   className: '',
@@ -8,8 +19,8 @@ const defaultProps = {
   text: '',
   quote: '',
   linkUrl: '',
-  linkTitle: ''
-}
+  linkTitle: '',
+};
 
 class PageContent extends Component {
   render() {
@@ -41,10 +52,11 @@ class PageContent extends Component {
             <a href={linkUrl} title={linkTitle}>{linkTitle}</a>
           </div>}
       </div>
-    )
+    );
   }
 }
 
+PageContent.PropsTypes = propTypes;
 PageContent.defaultProps = defaultProps;
 
 export default PageContent;

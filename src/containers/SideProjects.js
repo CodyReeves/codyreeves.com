@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { getSideProject, getSideProjectPage } from '../apis/sideProjects';
-import PageSection from '../components/PageSection.js';
-import { Helmet } from 'react-helmet';
+import PageSection from '../components/PageSection';
+import PageHead from '../components/Head';
 
-class SideProject extends Component {
-  componentDidMount () {
-		window.scrollTo(0, 0)
-	}
+class SideProjectPage extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
   render() {
     const SideProject = getSideProject();
@@ -18,19 +18,19 @@ class SideProject extends Component {
     const titleSmallClass = Intro.titleSmallClass;
     const text2 = Intro.text;
 
-    const RoleRows = (roles) => {
-      return roles.map((role) => {
+    const RoleRows = roles => {
+      return roles.map(role => {
         return (
           <div key={role.title} className="wrapper clearfix">
             <p className="title">{role.title}
               <span className="skills">{role.skills}</span></p>
           </div>
-        )
+        );
       });
-    }
+    };
 
-    const SideProjectRows = SideProject.map((row) => {
-      const classname = 'project clearfix col-xs-12 col-sm-4';
+    const SideProjectRows = SideProject.map(row => {
+      const rowClassName = 'project clearfix col-xs-12 col-sm-4';
       const imageUrl = row.imageUrl;
       const title = row.title;
       const roles = row.roles;
@@ -39,36 +39,34 @@ class SideProject extends Component {
       const icon = row.icon;
 
       return (
-        <div key={title} className={classname}>
+        <div key={title} className={rowClassName}>
           <div className="main-wrapper">
-             <div className="image" style={{ backgroundImage: 'url(' + imageUrl + ')' }}>
+            <div className="image" style={{ backgroundImage: `url(${imageUrl})` }}>
               <img
                 src={imageUrl}
                 className="img-responsive"
                 alt={titleLarge}
               />
               {icon &&
-                <i className={`fa fa-${icon}`} />
+              <i className={`fa fa-${icon}`} />
               }
               <h2>{title}</h2>
-              <a className="btn btn-cta" href={link} target="_blank" rel="noopener">View Project</a>
+              <a className="btn btn-cta" href={link} target="_blank" rel="noopener noreferrer">View Project</a>
               {RoleRows(roles)}
               <p className="over-right">{content}</p>
             </div>
           </div>
         </div>
-      )
+      );
     });
 
     return (
       <div className="posts">
-        <Helmet>
-          <title>Side Projects | Cody Reeves</title>
-          <meta property="og:title" content="Side Projects"/>
-          <meta name="description" content={`A small collection of side projects that Cody is actively working on. ${titleSmall}`} />
-          <meta property="og:description" content={`A small collection of side projects that Cody is actively working on. ${titleSmall}`}/>
-          <meta property="og:url" content={`http://codyreeves.com/side-projects`}/>
-          </Helmet>
+        <PageHead
+          title="Side Projects | Cody Reeves"
+          description={`A small collection of side projects that Cody is actively working on. ${titleSmall}`}
+          url="http://codyreeves.com/side-projects"
+        />
         <PageSection
           type="special"
           container="true"
@@ -86,13 +84,13 @@ class SideProject extends Component {
           </div>
         </PageSection>
         <div className="container">
-         <div className="row">
+          <div className="row">
             {SideProjectRows}
-         </div>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default SideProject;
+export default SideProjectPage;
