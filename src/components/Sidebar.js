@@ -13,10 +13,6 @@ const defaultProps = {
 };
 
 class Sidebar extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { className } = this.props;
     function toggle() {
