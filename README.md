@@ -11,7 +11,6 @@ Github Pages routed through CloudFlare to domain provider.
 
 **Frameworks & Tools Used**
 
-- PWA Google ready.
 - React
 - Redux
 - React Router
@@ -23,5 +22,5 @@ Github Pages routed through CloudFlare to domain provider.
 **PWA Compliant - Google Standards from Lighthouse**
 ![alt text](./public/img/repo/pwa-stats.png)
 
-**Preformance**
+**Preformance from Pingdom**
 ![alt text](./public/img/repo/speed-stats.png)
