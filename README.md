@@ -17,3 +17,11 @@ Github Pages routed through CloudFlare to domain provider.
 - React Router
 - Static Content
 - Mixin It - Scss Framework V1.0.0
+
+### Current Site Stats:
+
+**PWA Compliant - Google Standards from Lighthouse**
+![alt text](./public/img/repo/pwa-stat.png)
+
+**Preformance**
+![alt text](./public/img/repo/speed-stat.png)
