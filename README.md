@@ -21,7 +21,7 @@ Github Pages routed through CloudFlare to domain provider.
 ### Current Site Stats:
 
 **PWA Compliant - Google Standards from Lighthouse**
-![alt text](./public/img/repo/pwa-stat.png)
+![alt text](./public/img/repo/pwa-stats.png)
 
 **Preformance**
-![alt text](./public/img/repo/speed-stat.png)
+![alt text](./public/img/repo/speed-stats.png)
