@@ -14,6 +14,7 @@ const cleanCSS = require('gulp-clean-css');
 const runSequence = require('run-sequence');
 const image = require('gulp-image');
 const cssmin = require('gulp-cssmin');
+const webp = require('gulp-webp');
 
 /*---------------------------------------------------------
  Required paths for Gulp
@@ -116,4 +117,10 @@ gulp.task('image', function () {
       concurrent: 10
     }))
     .pipe(gulp.dest('./public/img/'));
+});
+
+gulp.task('image-webp', function () {
+  return gulp.src('./src/images/*')
+    .pipe(webp())
+    .pipe(gulp.dest('./public/img/webp/'));
 });

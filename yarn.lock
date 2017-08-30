@@ -1049,7 +1049,7 @@ bin-version@^1.0.0:
   dependencies:
     find-versions "^1.0.0"
 
-bin-wrapper@^3.0.0, bin-wrapper@^3.0.2:
+bin-wrapper@^3.0.0, bin-wrapper@^3.0.1, bin-wrapper@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/bin-wrapper/-/bin-wrapper-3.0.2.tgz#67d3306262e4b1a5f2f88ee23464f6a655677aeb"
   dependencies:
@@ -1821,6 +1821,14 @@ currently-unhandled@^0.4.1:
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
   dependencies:
     array-find-index "^1.0.1"
+
+cwebp-bin@^3.1.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/cwebp-bin/-/cwebp-bin-3.2.0.tgz#ae02df453d8c15341b1d8d499a5226bcf3bf4a6f"
+  dependencies:
+    bin-build "^2.0.0"
+    bin-wrapper "^3.0.1"
+    logalot "^2.0.0"
 
 d@1:
   version "1.0.0"
@@ -3436,6 +3444,14 @@ gulp-util@~2.2.0, gulp-util@~2.2.14:
     through2 "^0.5.0"
     vinyl "^0.2.1"
 
+gulp-webp@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gulp-webp/-/gulp-webp-2.3.0.tgz#c5137fa207525d19ed9cf5d0c4808996072c2ed1"
+  dependencies:
+    gulp-util "^3.0.0"
+    imagemin-webp "^3.0.1"
+    modify-error-event "^1.0.0"
+
 gulp@^3.9.1:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/gulp/-/gulp-3.9.1.tgz#571ce45928dd40af6514fc4011866016c13845b4"
@@ -3691,6 +3707,15 @@ ignore@^3.1.5:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.4.tgz#85ab6d0a9ca8b27b31604c09efe1c14dc21ab872"
 
+imagemin-webp@^3.0.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/imagemin-webp/-/imagemin-webp-3.1.1.tgz#6b7a5fe06f0c786b9ac5754036c060c09f997ad7"
+  dependencies:
+    cwebp-bin "^3.1.0"
+    is-cwebp-readable "^1.0.0"
+    replace-ext "^0.0.1"
+    through2 "^2.0.0"
+
 imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
@@ -3834,6 +3859,12 @@ is-bzip2@^1.0.0:
 is-callable@^1.0.4, is-callable@^1.1.1, is-callable@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.1.3.tgz#86eb75392805ddc33af71c92a0eedf74ee7604b2"
+
+is-cwebp-readable@^1.0.0:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/is-cwebp-readable/-/is-cwebp-readable-1.0.3.tgz#9a8fde2bed77f3417ae9371258c58e2ec3285118"
+  dependencies:
+    file-type "^3.1.0"
 
 is-date-object@^1.0.1:
   version "1.0.1"
@@ -5200,6 +5231,16 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   dependencies:
     minimist "0.0.8"
 
+modify-error-event@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/modify-error-event/-/modify-error-event-1.0.0.tgz#3677c76a77164b9d81502180d5f5f9db262f1c7e"
+  dependencies:
+    modify-event "^1.0.0"
+
+modify-event@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/modify-event/-/modify-event-1.0.1.tgz#ea1314e13ff6e79389f20ad74192f621de658ad6"
+
 mozjpeg@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/mozjpeg/-/mozjpeg-4.1.1.tgz#859030b24f689a53db9b40f0160d89195b88fd50"
@@ -6263,6 +6304,12 @@ react-helmet@^5.1.3:
     prop-types "^15.5.4"
     react-side-effect "^1.1.0"
 
+react-image-webp@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-image-webp/-/react-image-webp-0.2.0.tgz#eff9278c9c50585907e6226b54ca86cc5fde693a"
+  dependencies:
+    react "^15.5.4"
+
 react-imation@^0.5.3:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/react-imation/-/react-imation-0.5.3.tgz#61478ae167812849ae3bf91ed72e24d4970e0c15"
@@ -6438,7 +6485,7 @@ react@^0.14.0:
     envify "^3.0.0"
     fbjs "^0.6.1"
 
-react@^15.3.2:
+react@^15.3.2, react@^15.5.4:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
   dependencies:
@@ -6676,7 +6723,7 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-replace-ext@0.0.1:
+replace-ext@0.0.1, replace-ext@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/replace-ext/-/replace-ext-0.0.1.tgz#29bbd92078a739f0bcce2b4ee41e837953522924"
 
