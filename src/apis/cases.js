@@ -4,15 +4,15 @@ export function getCaseIntro() {
     titleLarge: 'Cases',
     titleSmall: 'Opportunities I have had to positively impact people on a broad scale.',
     titleSmallClass: 'bump-up',
-    classname: 'sample-portfolio'
-  }
+    classname: 'sample-portfolio',
+  };
 }
 
 export function getCases() {
   return [
     {
       align: '1',
-      link: 'https://tasties.ca',
+      link: 'https://www.tasties.ca/',
       github: '',
       title: 'Tasties Kitchen',
       classname: 'tasties-case bg-white',
@@ -23,15 +23,15 @@ export function getCases() {
           title: 'Designer & Front End Developer',
           skills: 'Adobe CC, SCSS, PHP, JS, Wordpress, Woocommerce',
           task: 'This project was split into two parts. Part One: design of the company brand which included a logo, label, and stationary. Part Two: Design and develop a site for Tasties Kitchen"s new brand, there products and a portal for customers to pay and sign up for a monthly food subscription.',
-          complete: 'Early 2017'
-        }
+          complete: 'Early 2017',
+        },
       ],
       contents: [
         {
           align: '1',
           classname: '',
           heading: 'Part One: Branding',
-          text: 'In regards to the logo the client requested natural, fresh colors and a design of a badge style logo. The feeling the brand should portay is organic, fresh, vibrant, healthy living, treat body right, rustic/roots forming.'
+          text: 'In regards to the logo the client requested natural, fresh colors and a design of a badge style logo. The feeling the brand should portay is organic, fresh, vibrant, healthy living, treat body right, rustic/roots forming.',
         },
         {
           align: '2',
@@ -57,7 +57,7 @@ export function getCases() {
           align: '6',
           classname: 'tasties-jars image-shadow',
           image: '../img/tasties/tasties-jars.png',
-          heading: 'Label usage on product.'
+          heading: 'Label usage on product.',
         },
         {
           align: '7',
@@ -78,9 +78,9 @@ export function getCases() {
         {
           align: '10',
           classname: 'tasties-product-single image-shadow',
-          image: '../img/tasties/tasties-product-single.png'
-        }
-      ]
+          image: '../img/tasties/tasties-product-single.png',
+        },
+      ],
     },
     {
       align: '2',
@@ -95,15 +95,15 @@ export function getCases() {
           title: 'Designer & Front End Developer',
           skills: 'Adobe CC, SCSS, PHP, JS',
           task: 'This project was split into two parts. Part One: design of the company brand which included a logo, label, and stationary. Part Two: Design and develop a sales funnel that had the ability to take payments. The criteria included: pages be complient with ad networks like facebook and adwords, pages need to showcase the product and pages need to be eye catching.',
-          complete: 'Early 2017'
-        }
+          complete: 'Early 2017',
+        },
       ],
       contents: [
         {
           align: '1',
           classname: '',
           heading: 'Branding',
-          text: ''
+          text: '',
         },
         {
           align: '2',
@@ -130,27 +130,27 @@ export function getCases() {
           align: '6',
           classname: 'probiotic-webinfo',
           heading: 'Web Development',
-          text: ''
+          text: '',
         },
         {
           align: '7',
           classname: 'probiotic-vsl image-shadow-d',
           image: '../img/probiotic/vsl.png',
-          text: 'VSL: Video Sales Landing Page'
+          text: 'VSL: Video Sales Landing Page',
         },
         {
           align: '8',
           classname: 'probiotic-presell image-shadow-d',
           image: '../img/probiotic/presell.png',
-          text: 'Presell: A information page about a product.'
+          text: 'Presell: A information page about a product.',
         },
         {
           align: '9',
           classname: 'probiotic-cart image-shadow-d',
           image: '../img/probiotic/cart.png',
-          text: 'Cart'
-        }
-      ]
+          text: 'Cart',
+        },
+      ],
     },
     {
       align: '3',
@@ -165,8 +165,8 @@ export function getCases() {
           title: 'Front End Developer',
           skills: 'Adobe CC, SCSS, HTML, JS',
           task: 'To design and develop a new company website for High Mountain Ventures. The websites criteria included a service area map widget, a contact form, package list and a home page.',
-          complete: 'Early 2016'
-        }
+          complete: 'Early 2016',
+        },
       ],
       contents: [
         // {
@@ -194,8 +194,8 @@ export function getCases() {
           align: '5',
           classname: 'image-shadow',
           image: '../img/hmv/ventures-area.png',
-        }
-      ]
+        },
+      ],
     },
     {
       align: '4',
@@ -210,8 +210,8 @@ export function getCases() {
           title: 'UI/UX Designer',
           skills: 'Adobe CC',
           task: 'To design a application with a compnay brand trageting iPhone and Android devices. The market that the app would be targeting is the wrist watch community & enthusiasts. It was a criteria of the app to include a way to make watch backgrounds, brand colors include the color blue, and the logo to be typographic rather than a symbol or shape.',
-          complete: 'Late 2016'
-        }
+          complete: 'Late 2016',
+        },
       ],
       contents: [
         {
@@ -219,9 +219,9 @@ export function getCases() {
           classname: 'image-shadow-d',
           image: '../img/watchit-case.png',
           heading: '',
-          text: ''
-        }
-      ]
+          text: '',
+        },
+      ],
     },
     {
       align: '5',
@@ -236,8 +236,8 @@ export function getCases() {
           title: 'Designer',
           skills: 'Adobe CC',
           task: 'Mutiple brands that I have created for a variety of clients.',
-          complete: '2015 - Early 2017'
-        }
+          complete: '2015 - Early 2017',
+        },
       ],
       contents: [
         {
@@ -245,64 +245,64 @@ export function getCases() {
           classname: 'image-shadow image-500 image-center',
           image: '../img/logo-archive/zoo-exhibit.png',
           heading: 'Zoo Exhibit',
-          text: ''
+          text: '',
         },
         {
           align: '2',
           classname: 'image-shadow image-500 image-center',
           image: '../img/logo-archive/cac-logo.png',
           heading: 'Interior Design Co.',
-          text: ''
+          text: '',
         },
         {
           align: '3',
           classname: 'image-shadow image-500 image-center',
           image: '../img/logo-archive/g-coffee.png',
           heading: 'Street Coffee Cart Business',
-          text: ''
+          text: '',
         },
         {
           align: '4',
           classname: 'image-shadow image-500 image-center',
           image: '../img/logo-archive/golden-rivers.jpg',
           heading: 'Craft Brewery',
-          text: ''
+          text: '',
         },
         {
           align: '5',
           classname: 'image-shadow image-500 image-center',
           image: '../img/logo-archive/peach-slice.png',
-          heading: 'A Peach & Apple Orchard'
+          heading: 'A Peach & Apple Orchard',
         },
         {
           align: '6',
           classname: 'image-shadow image-500 image-center',
           image: '../img/logo-archive/tasties.png',
           heading: 'Food Service',
-          text: ''
+          text: '',
         },
         {
           align: '7',
           classname: 'image-shadow image-500 image-center',
           image: '../img/logo-archive/news-today.png',
           heading: 'Online News Website',
-          text: ''
+          text: '',
         },
         {
           align: '8',
           classname: 'image-shadow image-500 image-center',
           image: '../img/logo-archive/cca.png',
           heading: 'Information',
-          text: ''
+          text: '',
         },
         {
           align: '9',
           classname: 'image-shadow image-500 image-center',
           image: '../img/logo-archive/pro-logo.png',
           heading: 'CPG',
-          text: ''
-        }
-      ]
+          text: '',
+        },
+      ],
     },
     {
       align: '6',
@@ -317,44 +317,44 @@ export function getCases() {
           title: 'Graphic Designer',
           skills: 'Design, Print Pre-process',
           task: 'Mutiple pieces of print work that I have created for a variety of clients.',
-          complete: '2014 - Early 2017'
-        }
+          complete: '2014 - Early 2017',
+        },
       ],
       contents: [
         {
           align: '1',
           classname: '',
           heading: 'Human Rights Activist Series',
-          text: 'This series was created to help spread awarness of human rights in our society today. The approch that was taken in creating this poster was to use a very minimalistic theme. The design is suppose to be understood by all from the very iconic images used in the design.'
+          text: 'This series was created to help spread awarness of human rights in our society today. The approch that was taken in creating this poster was to use a very minimalistic theme. The design is suppose to be understood by all from the very iconic images used in the design.',
         },
         {
           align: '2',
           classname: 'image-shadow image-uli',
           image: '../img/Human-Rights/Human-Rights-Spread.jpg',
           heading: '',
-          text: ''
+          text: '',
         },
         {
           align: '3',
           classname: '',
           heading: 'Bauhaus Design Case Study',
-          text: 'The case studies the main task was to research and create a two panel design incorporating a design style or era and type specimen poster. The posters display the beginnings of typographic design of the font “Futura”, its development and its relationship to the Bauhaus design era. The posters were created utilizing the design style of Bauhaus and the font “Futura” as the type specimen for the poster.'
+          text: 'The case studies the main task was to research and create a two panel design incorporating a design style or era and type specimen poster. The posters display the beginnings of typographic design of the font “Futura”, its development and its relationship to the Bauhaus design era. The posters were created utilizing the design style of Bauhaus and the font “Futura” as the type specimen for the poster.',
         },
         {
           align: '4',
           classname: 'image-shadow image-uli',
           image: '../img/Bauhaus/Bauhaus-double.jpg',
           heading: '',
-          text: ''
+          text: '',
         },
         {
           align: '5',
           classname: 'image-shadow image-uli',
           heading: 'Audatious Album Design',
           image: '../img/Audatious/Audatious-spread.jpg',
-          text: ''
-        }
-      ]
-    }
-  ]
+          text: '',
+        },
+      ],
+    },
+  ];
 }

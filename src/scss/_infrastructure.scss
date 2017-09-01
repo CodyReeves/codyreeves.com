@@ -254,3 +254,89 @@ blockquote {
 .row {
   @extend .transition;
 }
+
+.toggle-wrapper {
+  position: relative;
+}
+
+.toggle-open {
+  span {
+    &::before {
+      content: attr(data-open);
+    }
+  }
+}
+
+.toggle-collapse {
+  span {
+    &::before {
+      content: attr(data-close);
+    }
+  }
+}
+
+.collapse {
+  padding: 0 !important;
+  animation: fadeOutUp .5s ease-in-out forwards;
+}
+
+.open {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+}
+
+.toggle {
+  background-color: color(brand, danger);
+  color: color(greyscale, white);
+  outline: 0;
+  border: 3px solid color(brand, danger) {
+    radius: 4px;
+  }
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: font-family(heading);
+  cursor: pointer;
+  @include font-size(24px);
+
+  span {
+    position: relative;
+    display: inline-block;
+    @include shadow((
+      type: dark,
+      level: 2,
+      text: text,
+    )...);
+    @extend .transition;
+
+    &:before {
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
+.services {
+
+  p {
+    position: relative;
+    z-index: 100;
+  }
+
+  .toggle {
+    position: relative;
+    top: 32px;
+  }
+
+  &.special {
+    .container {
+      padding: 140px 0 100px;
+    }
+  }
+}
+
+.pad-30 {
+  padding: 30px
+}
+
+.mar-30 {
+  margin: 30px
+}

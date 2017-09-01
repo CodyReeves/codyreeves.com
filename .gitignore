@@ -1,4 +1,4 @@
-ee http://help.github.com/ignore-files/ for more about ignoring files.
+# http://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
 node_modules
@@ -11,6 +11,7 @@ build
 
 #CSS
 public/*.css
+public/maps/
 
 # misc
 .DS_Store
@@ -18,4 +19,4 @@ public/*.css
 
 npm-debug.log
 .idea
-
+yarn-error.log
