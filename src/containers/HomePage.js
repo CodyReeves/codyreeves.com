@@ -10,6 +10,7 @@ import { getHome } from '../apis/siteContent';
 import PageSection from '../components/PageSection';
 import ListServices from '../components/ListServices';
 import CaseSample from '../components/CaseSample';
+import Toggle from '../components/Toggle';
 import SideProjectButton from '../components/SideProjectButton';
 import PageHead from '../components/Head';
 
@@ -100,12 +101,20 @@ class HomePageContainer extends Component {
 
             {key === 'services' &&
             <div className="col-xs-12 col-sm-12 pos-rel">
-              <p className="text-center">Here are a few of my skills!</p>
+              <p className="text-center mar-30 pad-30">From developing companies brands and user experieces with very unique criterias. To developing a variety of websites on e-commerce's platforms, that then bridged me into designing and developing enterprise software.</p>
               <span className="btn view-design">Design</span>
               <span className="btn view-develop">Development</span>
               <ListServices />
               {/* <Link className="btn-cta pull-right mar-top-15" to="/design-process">
                   Learn about the design & development process</Link> */}
+              {/* <Toggle
+                className="content"
+                btnTextClose="+ View Skills"
+                btnTextOpen="- Close Skills"
+                contentClassName="container contents-wrapper"
+                btnClass="center btn pad-10"
+              >
+              </Toggle> */}
             </div>}
 
             {key === 'cases' &&

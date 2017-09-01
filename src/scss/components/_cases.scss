@@ -1,4 +1,6 @@
 .cases-wrapper {
+  animation: none !important;
+
   .more {
     bottom: -17vh;
 
@@ -88,17 +90,6 @@
     z-index: 2;
     max-height: 10vh;
     margin: 0 15px;
-    background-color: color(brand, danger);
-    color: color(greyscale, white);
-    outline: 0;
-    border: 3px solid color(brand, danger) {
-      radius: 4px;
-    }
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: font-family(heading);
-    cursor: pointer;
-    @include font-size(24px);
     @include calc(width, 100%, '100% - 30px');
     @include calc(padding-top, 45%, '5vh - 12px');
     @include calc(padding-bottom, 45%, '5vh - 12px');
@@ -118,38 +109,6 @@
       background-color: color(brand, danger);
       @include transform(translateY(5px));
       @include shadow(1, light);
-    }
-
-    &.toggle-open {
-      span {
-        &::before {
-          content: attr(data-open);
-        }
-      }
-    }
-
-    &.toggle-collapse {
-      span {
-        &::before {
-          content: attr(data-close);
-        }
-      }
-    }
-
-    span {
-      position: relative;
-      display: inline-block;
-      @include shadow((
-        type: dark,
-        level: 2,
-        text: text,
-      )...);
-      @extend .transition;
-
-      &:before {
-        position: relative;
-        width: 100%;
-      }
     }
   }
 

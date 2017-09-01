@@ -70,6 +70,20 @@ export function getServices() {
         type: 'develop',
         content: 'Basic DevOps',
       },
+      {
+        key: 9,
+        image: '',
+        title: '',
+        type: 'design develop',
+        content: 'Marketing & Advertising',
+      },
+      {
+        key: 10,
+        image: '',
+        title: '',
+        type: 'develop',
+        content: 'Product Development',
+      },
     ],
     content: [
       {

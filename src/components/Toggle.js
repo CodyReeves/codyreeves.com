@@ -34,21 +34,24 @@ class Toggle extends Component {
   }
 
   handleClick() {
-    this.setState(prevState => {
-      return { isShow: !prevState.isShow };
-    });
+    this.setState({ isShow: !this.state.isShow });
   }
 
   render() {
     const { children, className, btnClass, contentClassName, btnTextOpen, btnTextClose } = this.props;
 
+    const { isShow } = this.state;
+
     return (
       <div className={`toggle-wrapper ${className}`}>
-        <button className={`toggle ${btnClass} toggle-${contentClass(this.state.isShow)}`} onClick={this.handleClick} >
+        <button className={`toggle ${btnClass} toggle-${contentClass(isShow)}`} onClick={this.handleClick} >
           <span data-open={btnTextOpen} data-close={btnTextClose} />
         </button>
-        <div className={`${contentClass(this.state.isShow)} ${contentClassName}`} >
-          {children}
+        <div className={`${contentClass(isShow)} ${contentClassName}`} >
+          {isShow &&
+            <div>
+              {children}
+            </div>}
         </div>
       </div>
     );
