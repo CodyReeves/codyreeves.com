@@ -9,25 +9,25 @@ class ContactForm extends Component {
       contactMessage: '',
     };
 
-    this._handleSubmit = this._handleSubmit.bind(this);
-    this._handleChange = this._handleChange.bind(this);
-    this._handleChangeMsg = this._handleChangeMsg.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleChangeMsg = this.handleChangeMsg.bind(this);
   }
 
   // Change state of input field so text is updated while typing
-  _handleChange(e) {
+  handleChange(e) {
     this.setState({
       contactEmail: e.target.value,
     });
   }
   // Change state of input field so text is updated while typing
-  _handleChangeMsg(e) {
+  handleChangeMsg(e) {
     this.setState({
       contactMessage: e.target.value,
     });
   }
 
-  _handleSubmit(e) {
+  handleSubmit(e) {
     e.preventDefault();
     this.setState({
       contactEmail: '',

@@ -4,18 +4,6 @@ import PropTypes from 'prop-types';
 import LazyLoad from 'react-lazyload';
 import ImageType from 'react-image-webp';
 
-const propTypes = {
-  image: PropTypes.string,
-  imageSmall: PropTypes.string,
-  alt: PropTypes.string,
-};
-
-const defaultProps = {
-  image: '',
-  alt: 'Cody Reeves Digital Design & Development',
-  imageSmall: './img/loading-image.gif',
-};
-
 function convertWebp(imageUrl) {
   // Remove file types
   // TODO:: this is gross make better
@@ -28,6 +16,18 @@ function convertWebp(imageUrl) {
   const webpUrl = '../img/webp/' + name + '.webp';
   return webpUrl;
 }
+
+const propTypes = {
+  image: PropTypes.string,
+  imageSmall: PropTypes.string,
+  alt: PropTypes.string,
+};
+
+const defaultProps = {
+  image: '',
+  alt: 'Cody Reeves Digital Design & Development',
+  imageSmall: './img/loading-image.gif',
+};
 
 function ImageWrapper({ image, imageSmall, alt }) {
 

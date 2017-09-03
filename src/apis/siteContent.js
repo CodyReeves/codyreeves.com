@@ -68,7 +68,7 @@ export function getServices() {
         image: '',
         title: '',
         type: 'develop',
-        content: 'Basic DevOps',
+        content: 'DevOps',
       },
       {
         key: 9,

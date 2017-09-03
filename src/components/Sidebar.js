@@ -13,8 +13,20 @@ const defaultProps = {
 };
 
 class Sidebar extends Component {
+  // TODO:: Switch toggle to state instead of input click
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { isShow: false };
+  //   this.handleClick = this.handleClick.bind(this);
+  // }
+  //
+  // handleClick() {
+  //   this.setState({ isShow: !this.state.isShow });
+  // }
+
   render() {
     const { className } = this.props;
+
     function toggle() {
       function clickOut() {
         const element = document.getElementById('sidebarToggle');
