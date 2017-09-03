@@ -20,12 +20,11 @@ class BlogPage extends Component {
           spinner={<div className="loading-spinner" />}
         >
           <div>
-            This content will be rendered once the data has been fetched from the spreadsheet.
-            
+            <GoogleTable sheetName="Posts" />
           </div>
         </ReactGoogleSheetConnector>
       </div>
-    )
+    );
   }
 }
 
