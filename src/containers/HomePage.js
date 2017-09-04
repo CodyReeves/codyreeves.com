@@ -6,17 +6,10 @@ import BannerImageUrl from '../images/bg.jpg';
 import BannerVidMp from '../images/home.mp4';
 import BannerVidWeb from '../images/home.webm';
 import { getHome } from '../apis/siteContent';
-<<<<<<< HEAD
-import PageSection from '../components/PageSection';
-import ListServices from '../components/ListServices';
-import CaseSample from '../components/CaseSample';
-import SideProjectButton from '../components/SideProjectButton';
-=======
 import PageSection from '../components/Content/PageSection';
 import ListServices from '../components/Content/ListServices';
 import CaseSample from '../components/Cases/CaseSample';
 import SideProjectButton from '../components/Content/SideProjectButton';
->>>>>>> production
 import PageHead from '../components/Head';
 import BannerVideo from '../components/Banner/BannerVideo';
 
