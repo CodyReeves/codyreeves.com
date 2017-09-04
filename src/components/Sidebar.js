@@ -13,7 +13,7 @@ const defaultProps = {
 };
 
 class Sidebar extends Component {
-  // TODO:: Switch toggle to state instead of input click
+  // TODO:: Switch toggle of state instead of input click
   // constructor(props) {
   //   super(props);
   //   this.state = { isShow: false };

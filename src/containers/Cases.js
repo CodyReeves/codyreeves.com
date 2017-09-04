@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { getCases, getCaseIntro } from '../apis/cases';
-import PageSection from '../components/PageSection';
-import PageContent from '../components/PageContent';
-import CaseIntro from '../components/CaseIntro';
+import PageSection from '../components/Content/PageSection';
+import PageContent from '../components/Content/PageContent';
+import CaseIntro from '../components/Cases/CaseIntro';
 import PageHead from '../components/Head';
-import BannerCollapse from '../components/BannerPageSectionCollapse';
+import BannerCollapse from '../components/Banner/BannerPageSectionCollapse';
 
 class Case extends Component {
   componentDidMount() {

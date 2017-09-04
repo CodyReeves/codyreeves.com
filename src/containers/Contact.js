@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContactFormWrapper from '../components/ContactFormWrapper';
+import ContactFormWrapper from '../components/Contact/ContactFormWrapper';
 import PageHead from '../components/Head';
 
 class ContactPage extends Component {

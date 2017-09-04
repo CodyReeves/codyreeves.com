@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Toggle from './Toggle';
+import Toggle from './../Toggle';
 import Banner from './Banner';
 
 const propTypes = {

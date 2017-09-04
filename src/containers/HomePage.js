@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import LazyLoad from 'react-lazyload';
-import ContactFormWrapper from '../components/ContactFormWrapper';
+import ContactFormWrapper from '../components/Contact/ContactFormWrapper';
 import BannerImageUrl from '../images/bg.jpg';
 import BannerVidMp from '../images/home.mp4';
 import BannerVidWeb from '../images/home.webm';
 import { getHome } from '../apis/siteContent';
-import PageSection from '../components/PageSection';
-import ListServices from '../components/ListServices';
-import CaseSample from '../components/CaseSample';
-import SideProjectButton from '../components/SideProjectButton';
+import PageSection from '../components/Content/PageSection';
+import ListServices from '../components/Content/ListServices';
+import CaseSample from '../components/Cases/CaseSample';
+import SideProjectButton from '../components/Content/SideProjectButton';
 import PageHead from '../components/Head';
-import BannerVideo from '../components/BannerVideo';
+import BannerVideo from '../components/Banner/BannerVideo';
 
 class HomePageContainer extends Component {
   componentDidMount() {

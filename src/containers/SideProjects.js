@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { getSideProject, getSideProjectPage } from '../apis/sideProjects';
-import PageSection from '../components/PageSection';
+import PageSection from '../components/Content/PageSection';
 import PageHead from '../components/Head';
-import Image from '../components/Image';
-import LinkCard from '../components/LinkCard';
+import LinkCard from '../components/Content/LinkCard';
 
 class SideProjectPage extends Component {
   componentDidMount() {

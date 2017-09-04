@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import PageSection from '../components/PageSection';
-import ContactForm from '../components/ContactForm';
-import { getContact } from '../apis/siteContent';
+import PageSection from '../Content/PageSection';
+import ContactForm from './ContactForm';
+import { getContact } from '../../apis/siteContent';
 
 class ContactFormWrapper extends Component {
 
