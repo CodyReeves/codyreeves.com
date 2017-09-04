@@ -12,6 +12,32 @@ export function getSideProjectPage() {
 export function getSideProject() {
   return [
     {
+      link: 'https://www.behance.net/codyreeves',
+      title: 'Behance Design Portfolio',
+      classname: 'sp-portfolio',
+      imageUrl: '../img/side-projects/behance.png',
+      roles: [
+        {
+          title: '',
+          skills: 'Design - Ui, Ux, Graphic Design, Branding',
+        },
+      ],
+      content: '',
+    },
+    {
+      link: 'http://withdesign.ca',
+      title: 'With Design',
+      classname: 'sp-withdesign',
+      imageUrl: '../img/bg.jpg',
+      roles: [
+        {
+          title: '',
+          skills: 'Personal Business',
+        },
+      ],
+      content: '',
+    },
+    {
       link: 'https://github.com/CodyReeves/flexible-breakpoints',
       title: 'Flexible Breakpoints',
       classname: 'sp-flexible-breakpoin',
@@ -102,31 +128,5 @@ export function getSideProject() {
     //   ],
     //   content: ''
     // },
-    {
-      link: 'https://www.behance.net/codyreeves',
-      title: 'Behance Design Portfolio',
-      classname: 'sp-portfolio',
-      imageUrl: '../img/side-projects/behance.png',
-      roles: [
-        {
-          title: '',
-          skills: 'Design - Ui, Ux, Graphic Design, Branding',
-        },
-      ],
-      content: '',
-    },
-    {
-      link: 'http://withdesign.ca',
-      title: 'With Design',
-      classname: 'sp-withdesign',
-      imageUrl: '../img/bg.jpg',
-      roles: [
-        {
-          title: '',
-          skills: 'Personal Business',
-        },
-      ],
-      content: '',
-    },
   ];
 }

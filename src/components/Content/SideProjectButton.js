@@ -16,7 +16,7 @@ function SideProjectButton({ className, buttonClassName }) {
   return (
     <div className={`side-project-button-wrapper pad-10 bg-white text-center ${className}`}>
       <hr />
-      <p>Browse my personal "for fun" web development and design projects.</p>
+      <p>Browse my personal web development and design projects.</p>
       <Link className={buttonClassName} to="side-projects">View Side Projects</Link>
       <hr />
     </div>

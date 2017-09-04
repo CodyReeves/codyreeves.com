@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getServices } from '../apis/siteContent';
+import { getServices } from '../../apis/siteContent';
 
 class ListServices extends Component {
 

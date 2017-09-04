@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Banner from '../components/Banner';
 import { getCases, getCaseIntro } from '../apis/cases';
-import PageSection from '../components/PageSection';
-import PageContent from '../components/PageContent';
+import PageSection from '../components/Content/PageSection';
+import PageContent from '../components/Content/PageContent';
+import CaseIntro from '../components/Cases/CaseIntro';
 import PageHead from '../components/Head';
-import Toggle from '../components/Toggle';
+import BannerCollapse from '../components/Banner/BannerPageSectionCollapse';
 
 class Case extends Component {
   componentDidMount() {
@@ -31,17 +31,15 @@ class Case extends Component {
         const complete = role.complete;
 
         return (
-          <div key={title} className="case-detail-wrapper clearfix row">
-            <div className="task col-xs-12 col-sm-7">
-              <h3>The Task</h3>
-              <p>{task}</p>
-            </div>
-            <div className="about col-xs-12 col-sm-5">
-              <p className="title"><strong>Role:</strong> {title}</p>
-              <p><strong>Skills & Tools:</strong> {tech}
-                <span className="skills">{skills}</span></p>
-              <p className="completed"><strong>Completed:</strong> {complete}</p>
-            </div>
+          <div key={title}>
+            <CaseIntro
+
+              title={title}
+              skills={skills}
+              task={task}
+              tech={tech}
+              complete={complete}
+            />
           </div>
         );
       });
@@ -75,7 +73,6 @@ class Case extends Component {
 
     const CaseRows = cases.map(row => {
       const align = row.align;
-      const classNameSet = 'case-item clearfix';
       const rowClassName = row.classname;
       const title = row.title;
       const bannerImage = row.bannerImg;
@@ -84,53 +81,24 @@ class Case extends Component {
       const tags = row.tags;
       const roles = row.roles;
       const content = row.contents;
+      const id = row.id;
 
       return (
-        <div key={align} id={align} className={`${classNameSet} ${rowClassName}`}>
-          <div>
-            <Banner
-              imageSize="full" imageUrl={bannerImage}
-            >
-              <h2>{title}</h2>
-              <div className="details text-center">
-                {link &&
-                  <a
-                    className="btn btn-cta"
-                    href={link}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >Visit site</a>}
-                {github &&
-                  <a
-                    className="btn-cta github"
-                    href={github}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i className="fa fa-github" />
-                  </a>}
-                <span className="tags">{tags}</span>
-                {/* <button
-                  className=""
-                  onClick=""
-                >
-                  Show More
-                </button> */}
-              </div>
-            </Banner>
-            <Toggle
-              className="content"
-              btnTextClose="+ Open Case Study"
-              btnTextOpen="- Close Case Study"
-              contentClassName="container contents-wrapper"
-              btnClass="center btn"
-            >
-              <div className="set-background">
-                {RoleRows(roles)}
-                {ContentRows(content)}
-              </div>
-            </Toggle>
-          </div>
+        <div key={align}>
+          <BannerCollapse
+            id={id}
+            className={rowClassName}
+            title={title}
+            bannerImage={bannerImage}
+            link={link}
+            github={github}
+            tags={tags}
+            btnOpen="+ Open Case Study"
+            btnClose="- Close Case Study"
+          >
+            {RoleRows(roles)}
+            {ContentRows(content)}
+          </BannerCollapse>
         </div>
       );
     });

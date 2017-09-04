@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import LazyLoad from 'react-lazyload';
-import Banner from '../components/Banner';
-import ContactFormWrapper from '../components/ContactFormWrapper';
+import ContactFormWrapper from '../components/Contact/ContactFormWrapper';
 import BannerImageUrl from '../images/bg.jpg';
 import BannerVidMp from '../images/home.mp4';
 import BannerVidWeb from '../images/home.webm';
 import { getHome } from '../apis/siteContent';
+<<<<<<< HEAD
 import PageSection from '../components/PageSection';
 import ListServices from '../components/ListServices';
 import CaseSample from '../components/CaseSample';
 import SideProjectButton from '../components/SideProjectButton';
+=======
+import PageSection from '../components/Content/PageSection';
+import ListServices from '../components/Content/ListServices';
+import CaseSample from '../components/Cases/CaseSample';
+import SideProjectButton from '../components/Content/SideProjectButton';
+>>>>>>> production
 import PageHead from '../components/Head';
+import BannerVideo from '../components/Banner/BannerVideo';
 
 class HomePageContainer extends Component {
   componentDidMount() {
@@ -42,6 +49,7 @@ class HomePageContainer extends Component {
         const sampleSpanText = sample.span;
         const sampleTags = sample.tags;
         const sampleText = sample.text;
+        const link = sample.link;
 
         return (
           <div key={sampleKey}>
@@ -53,6 +61,7 @@ class HomePageContainer extends Component {
                 titleSmall={sampleTitleSmall}
                 titleSmallClass={sampleTitleSmallClass}
                 titleLargeClass={sampleTitleLargeClass}
+                link={link}
               >
                 <strong>{sampleStrongText}</strong><br />
                 <span>{sampleSpanText}</span><br />
@@ -100,20 +109,14 @@ class HomePageContainer extends Component {
 
             {key === 'services' &&
             <div className="col-xs-12 col-sm-12 pos-rel">
-              <p className="text-center mar-30 pad-30">From developing companies brands and user experieces with very unique criterias. To developing a variety of websites on e-commerce's platforms, that then bridged me into designing and developing enterprise software.</p>
+              <p className="text-center mar-30 pad-30 no-mar-bottom">
+                From web, digital branding to startup products, I focus on online customer experiences & brand development, combining digital craftsmanship with innovative thinking to deliver user-first digital solutions. <br /><br /><small>Here are some of the skills I can provide.</small>
+              </p>
               <span className="btn view-design">Design</span>
               <span className="btn view-develop">Development</span>
               <ListServices />
               {/* <Link className="btn-cta pull-right mar-top-15" to="/design-process">
                   Learn about the design & development process</Link> */}
-              {/* <Toggle
-                className="content"
-                btnTextClose="+ View Skills"
-                btnTextOpen="- Close Skills"
-                contentClassName="container contents-wrapper"
-                btnClass="center btn pad-10"
-              >
-              </Toggle> */}
             </div>}
 
             {key === 'cases' &&
@@ -131,22 +134,14 @@ class HomePageContainer extends Component {
     return (
       <div className="home-page">
         <PageHead />
-        <Banner imageUrl={BannerImageUrl}>
-          <h1 className="heading-special"><span className="">{bannerTitle}</span></h1>
-          <h4 className="heading-top"><span className="">{bannerSub}</span></h4>
-          <div className="video hidden-xs hidden-sm visible-md">
-            <LazyLoad>
-              {!isTab &&
-                <video className="hidden-xs hidden-sm visible-md" poster="./img/codyreeves-site.png" id="bgvid" playsInline autoPlay muted loop>
-                  <source src={BannerVidWeb} type="video/webm" />
-                  <source src={BannerVidMp} type="video/mp4" />
-                </video>}
-            </LazyLoad>
-          </div>
-          <div className="more">
-            Show More
-          </div>
-        </Banner>
+        <BannerVideo
+          imageUrl={BannerImageUrl}
+          title={bannerTitle}
+          subTitle={bannerSub}
+          videoMp4={BannerVidMp}
+          videoWeb={BannerVidWeb}
+          isTab={isTab}
+        />
         {homeSections}
         <SideProjectButton />
         <ContactFormWrapper />

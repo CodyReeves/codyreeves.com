@@ -340,3 +340,9 @@ blockquote {
 .mar-30 {
   margin: 30px
 }
+
+.no-pad-md {
+  @include breakpoint(sm) {
+    padding: 0;
+  }
+}
