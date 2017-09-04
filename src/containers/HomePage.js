@@ -42,6 +42,7 @@ class HomePageContainer extends Component {
         const sampleSpanText = sample.span;
         const sampleTags = sample.tags;
         const sampleText = sample.text;
+        const link = sample.link;
 
         return (
           <div key={sampleKey}>
@@ -53,6 +54,7 @@ class HomePageContainer extends Component {
                 titleSmall={sampleTitleSmall}
                 titleSmallClass={sampleTitleSmallClass}
                 titleLargeClass={sampleTitleLargeClass}
+                link={link}
               >
                 <strong>{sampleStrongText}</strong><br />
                 <span>{sampleSpanText}</span><br />
@@ -101,7 +103,7 @@ class HomePageContainer extends Component {
             {key === 'services' &&
             <div className="col-xs-12 col-sm-12 pos-rel">
               <p className="text-center mar-30 pad-30 no-mar-bottom">
-                From web, digital branding to startup products, I specialise in online customer experiences & brand development, combining digital craftsmanship with innovative thinking to deliver user-first digital solutions. <br /><br /><small>Here are some of the skills I can provide.</small>
+                From web, digital branding to startup products, I focus on online customer experiences & brand development, combining digital craftsmanship with innovative thinking to deliver user-first digital solutions. <br /><br /><small>Here are some of the skills I can provide.</small>
               </p>
               <span className="btn view-design">Design</span>
               <span className="btn view-develop">Development</span>

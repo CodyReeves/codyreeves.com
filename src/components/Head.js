@@ -40,6 +40,9 @@ function PageHead({
         <meta name="twitter:image" content={image} />
         <meta name="twitter:site" content={twitterUser} />
         <meta name="twitter:creator" content={twitterUser} />
+        <meta itemProp="name" content={title} />
+        <meta itemProp="description" content={description} />
+        <meta itemProp="image" content={image} />
       </Helmet>
     </div>
   );

@@ -81,10 +81,12 @@ class Case extends Component {
       const tags = row.tags;
       const roles = row.roles;
       const content = row.contents;
+      const id = row.id;
 
       return (
         <div key={align}>
           <BannerCollapse
+            id={id}
             className={rowClassName}
             title={title}
             bannerImage={bannerImage}

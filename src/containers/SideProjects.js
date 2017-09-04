@@ -3,6 +3,7 @@ import { getSideProject, getSideProjectPage } from '../apis/sideProjects';
 import PageSection from '../components/PageSection';
 import PageHead from '../components/Head';
 import Image from '../components/Image';
+import LinkCard from '../components/LinkCard';
 
 class SideProjectPage extends Component {
   componentDidMount() {
@@ -19,43 +20,26 @@ class SideProjectPage extends Component {
     const titleSmallClass = Intro.titleSmallClass;
     const text2 = Intro.text;
 
-    const RoleRows = roles => {
-      return roles.map(role => {
-        return (
-          <div key={role.title} className="wrapper clearfix">
-            <p className="title">{role.title}
-              <span className="skills">{role.skills}</span></p>
-          </div>
-        );
-      });
-    };
-
     const SideProjectRows = SideProject.map(row => {
-      const rowClassName = 'project clearfix col-xs-12 col-sm-4';
       const imageUrl = row.imageUrl;
       const title = row.title;
       const roles = row.roles;
       const content = row.content;
       const link = row.link;
       const icon = row.icon;
+      const className = row.className;
 
       return (
-        <div key={title} className={rowClassName}>
-          <div className="main-wrapper">
-            <div className="image" style={{ backgroundImage: `url(${imageUrl})` }}>
-              <Image
-                image={imageUrl}
-                alt={titleLarge}
-              />
-              {icon &&
-              <i className={`fa fa-${icon}`} />
-              }
-              <h2>{title}</h2>
-              <a className="btn btn-cta" href={link} target="_blank" rel="noopener noreferrer">View Project</a>
-              {RoleRows(roles)}
-              <p className="over-right">{content}</p>
-            </div>
-          </div>
+        <div key={title} className="col-xs-12 col-sm-4 no-pad-md">
+          <LinkCard
+            className={className}
+            imageUrl={imageUrl}
+            title={title}
+            roles={roles}
+            content={content}
+            link={link}
+            icon={icon}
+          />
         </div>
       );
     });

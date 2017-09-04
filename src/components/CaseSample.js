@@ -7,6 +7,7 @@ const propTypes = {
   imagePlacement: PropTypes.string,
   titleLarge: PropTypes.string,
   titleSmall: PropTypes.string,
+  link: PropTypes.string,
 };
 
 const defaultProps = {
@@ -14,6 +15,7 @@ const defaultProps = {
   imagePlacement: '',
   titleLarge: '',
   titleSmall: '',
+  link: '',
 };
 
 function CaseSample({
@@ -21,13 +23,14 @@ function CaseSample({
   imagePlacement,
   titleLarge,
   titleSmall,
+  link,
   children,
 }) {
   return (
     <div className={`sample ${imagePlacement}`}>
       <div className="row">
         <div className="col-xs-12 col-sm card">
-          <Link to="/cases">
+          <Link to={link}>
             <h3>{titleSmall}</h3>
             <div className="image-wrapper">
               <img
@@ -43,7 +46,7 @@ function CaseSample({
         <div className="col-xs-12 col-sm-3 details">
           <div className="details-wrapper">
             {children}
-            <Link className="btn-more" to="/cases">See More</Link>
+            <Link className="btn-more" to={link}>See More</Link>
           </div>
         </div>
       </div>
