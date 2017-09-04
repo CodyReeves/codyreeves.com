@@ -14,7 +14,7 @@
   }
 
   // Set the recipient email address.
-  $recipient = "";
+  $recipient = "hello@codyreeves.design";
   // Set the email subject.
   $subject = "Message to  from: $email";
 
