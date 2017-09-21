@@ -13,8 +13,20 @@ const defaultProps = {
 };
 
 class Sidebar extends Component {
+  // TODO:: Switch toggle of state instead of input click
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { isShow: false };
+  //   this.handleClick = this.handleClick.bind(this);
+  // }
+  //
+  // handleClick() {
+  //   this.setState({ isShow: !this.state.isShow });
+  // }
+
   render() {
     const { className } = this.props;
+
     function toggle() {
       function clickOut() {
         const element = document.getElementById('sidebarToggle');
@@ -37,7 +49,9 @@ class Sidebar extends Component {
           Menu
         </label>
         <header className={`sidebar ${className}`}>
-          <a className="header-email" href="maltio:hello@codyreeves.design">hello@codyreeves.design</a>
+          <a className="header-email" href="mailto:hello@codyreeves.design">
+            hello@codyreeves.design
+          </a>
           <Link className="logo" to="/">
             <img
               src={logo}

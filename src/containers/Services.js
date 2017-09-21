@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import PageSection from '../components/PageSection';
-import PageContent from '../components/PageContent';
+import PageSection from '../components/Content/PageSection';
+import PageContent from '../components/Content/PageContent';
 import PageHead from '../components/Head';
 
 // TODO:: Remove/move this

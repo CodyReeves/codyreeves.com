@@ -1,4 +1,6 @@
 .cases-wrapper {
+  animation: none !important;
+
   .more {
     bottom: -17vh;
 
@@ -23,7 +25,92 @@
   }
 }
 
+@include create-keyframe(fadeInDown);
+@include keyframes(fadeOutUp) {
+	0% {
+		opacity: 1;
+    height: 100%;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+    height: 0;
+		transform: translateY(-20px);
+	}
+}
+
 .case-item {
+  border-bottom: 15px solid color(greyscale, dark-grey);
+
+  .btn-cta {
+    background-color: rgba(color(greyscale, white), 0.4);
+    border: 1px solid color(brand, danger) {
+      radius: 4px;
+    }
+    color: color(brand, danger);
+
+    &:hover {
+      color: color(brand, danger);
+      background-color: rgba(color(greyscale, white), 1);
+      border: 1px solid color(greyscale, white);
+    }
+  }
+
+  .collapse {
+    animation: fadeOutUp .5s ease-in-out forwards;
+    margin: {
+      top:  0 !important;
+      bottom: 0 !important;
+    }
+    padding: {
+      top:  0 !important;
+      bottom: 0 !important;
+    }
+
+    div {
+      margin: {
+        top:  0 !important;
+        bottom: 0 !important;
+      }
+      padding: {
+        top:  0 !important;
+        bottom: 0 !important;
+      }
+    }
+  }
+
+  .open {
+    animation: fadeInUp 0.3s ease-in-out forwards;
+  }
+
+  .toggle {
+    position: absolute;
+    top: -85px;
+    z-index: 2;
+    max-height: 10vh;
+    margin: 0 15px;
+    @include calc(width, 100%, '100% - 30px');
+    @include calc(padding-top, 45%, '5vh - 12px');
+    @include calc(padding-bottom, 45%, '5vh - 12px');
+    @include shadow(3, light);
+    @extend .transition;
+
+    @include breakpoint(max-width breakpoint-value(sm)) {
+      margin-left: 45px;
+      @include font-size(18px);
+      @include calc(width, 100%, '100% - 60px');
+      @include calc(padding-top, 45%, '5vh - 9px');
+      @include calc(padding-bottom, 45%, '5vh - 9px');
+    }
+
+    &:hover {
+      color: color(greyscale, white);
+      background-color: color(brand, danger);
+      @include transform(translateY(5px));
+      @include shadow(1, light);
+    }
+  }
 
   .set-background {
     color: color(greyscale, white);
@@ -42,6 +129,7 @@
     }
 
     .contents-wrapper {
+      @extend .transition;
       &:before,
       &:after {
         opacity: 0.3;
@@ -70,6 +158,9 @@
   }
 
   .banner {
+    max-height: 90vh;
+    min-height: 550px;
+
     h2 {
       color: color(greyscale, white);
       @include shadow((
@@ -78,26 +169,41 @@
         text: text,
       )...);
       @include breakpoint(max-width breakpoint-value(sm)) {
+        margin: 0 auto;
         line-height: .9;
         @include font-size(34px);
+        margin-left: 45px;
+        margin-right: 10px;
+        @include calc(top, 50%, '50% - 50px');
+        @include calc(width, 100%, '100% - 55px');
       }
     }
 
     .details {
       position: absolute;
-      bottom: 50px;
-      width: 150px;
+      bottom: 150px;
       margin: 0 auto;
-      @include calc(left, 50%, '50% - 75px');
+
+      @include breakpoint(max-width breakpoint-value(sm)) {
+        margin-left: 45px;
+        margin-right: 10px;
+        @include calc(width, 100%, '100% - 55px');
+      }
+
+      @include breakpoint(min-width breakpoint-value(sm)) {
+        width: 200px;
+        @include calc(left, 50%, '50% - 75px');
+      }
 
       .tags {
         font-weight: 600;
         line-height: 3;
         text-transform: uppercase;
-        color: color(brand, danger);
+        color: color(greyscale, white);
         word-spacing: 10px;
         font-family: font-family(heading);
         @include font-size(12px);
+        @extend %text-shadow;
       }
 
       .github {
@@ -109,7 +215,7 @@
 
       .btn {
         max-width: 100px;
-        display: inline-block;
+        display: block;
         margin: 0 auto;
       }
     }

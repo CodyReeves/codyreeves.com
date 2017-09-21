@@ -68,7 +68,21 @@ export function getServices() {
         image: '',
         title: '',
         type: 'develop',
-        content: 'Basic DevOps',
+        content: 'DevOps',
+      },
+      {
+        key: 9,
+        image: '',
+        title: '',
+        type: 'design develop',
+        content: 'Marketing & Advertising',
+      },
+      {
+        key: 10,
+        image: '',
+        title: '',
+        type: 'develop',
+        content: 'Product Development',
       },
     ],
     content: [
@@ -111,13 +125,13 @@ export function getHome() {
         titleSmall: 'Designer, Developer, Entrepreneur',
         followText: 'Adout Cody Reeves',
         classname: 'about',
-        aboutText: 'I design and build digital products—from high-level UX & Interaction flows to crafting the nitty-gritty UI details and writing code to bring the styles and interactions to life. Currently lead design at Strawhouse, and Owner of With Design in Kelowna, Canada.',
-        aboutQuote: 'I have 4+ years of experience, working on wide variety of projects from designing company brands to developing enterprise software.',
+        aboutText: 'I specialize in designing and building digital products—from high-level UX & Interaction flows to crafting the nitty-gritty UI details and writing code to bring the styles and interactions to life. Currently I am the Lead Designer at Strawhouse, and Owner of With Design head office in Kelowna, Canada.',
+        aboutQuote: 'I have 5+ years of experience, working on wide variety of projects from designing company brands to developing enterprise software.',
       },
       {
         key: 'services',
         titleLarge: 'Skills',
-        titleSmall: 'From high-level UX to print and everything inbetween.',
+        titleSmall: 'Flexible abilities from high-level UX & development to print.',
         titleSmallClass: 'bump-up',
         followText: ' Skills I Can Provide',
         classname: 'services',
@@ -141,6 +155,7 @@ export function getHome() {
         strong: 'Tools:',
         span: 'Adobe CC, SCSS, PHP, JS, Wordpress, Woocommerce',
         text: 'THE PROJECT DETAILS: Branding & web development for Tasties Kitchen. Tasties is a food service that creates seasonally inspired meals using locally sourced ingredients and devivers the meal to your door.',
+        link: '/cases#tasties',
       },
       {
         key: '2',
@@ -151,6 +166,7 @@ export function getHome() {
         strong: 'Tools:',
         span: 'Adobe CC, CSS, JS, HTML',
         text: 'THE PROJECT DETAILS: Branding & web development for High Mountain Vantures Snow Rmoval.',
+        link: '/cases#mountain',
       },
       {
         key: '3',
@@ -161,6 +177,7 @@ export function getHome() {
         strong: 'Tools:',
         span: 'Adobe CC, SCSS, PHP, JS',
         text: 'THE PROJECT DETAILS: Branding & web development for Probiotic MD. Work including logo, stationary, labels for the product, and to create a sales funnel.',
+        link: '/cases#probiotic',
       },
     ],
     banner: {

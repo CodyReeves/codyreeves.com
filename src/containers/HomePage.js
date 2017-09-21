@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import Banner from '../components/Banner';
-import ContactFormWrapper from '../components/ContactFormWrapper';
+import LazyLoad from 'react-lazyload';
+import ContactFormWrapper from '../components/Contact/ContactFormWrapper';
 import BannerImageUrl from '../images/banner-video.gif';
-// import BannerVidMp from '../images/home.mp4';
-// import BannerVidWeb from '../images/home.webm';
 import { getHome } from '../apis/siteContent';
-import PageSection from '../components/PageSection';
-import ListServices from '../components/ListServices';
-import CaseSample from '../components/CaseSample';
-import SideProjectButton from '../components/SideProjectButton';
+import PageSection from '../components/Content/PageSection';
+import ListServices from '../components/Content/ListServices';
+import CaseSample from '../components/Cases/CaseSample';
+import SideProjectButton from '../components/Content/SideProjectButton';
 import PageHead from '../components/Head';
-
+import Banner from '../components/Banner/Banner'
 class HomePageContainer extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -20,7 +18,8 @@ class HomePageContainer extends Component {
   render() {
     // Get data for page
     const HomePage = getHome();
-
+    // const isMobile = window.innerWidth <= 500;
+    const isTab = window.innerWidth <= 992;
     // Set up for banner content
     const bannerSub = HomePage.banner.subHeading;
     const bannerTitle = HomePage.banner.heading;
@@ -40,22 +39,26 @@ class HomePageContainer extends Component {
         const sampleSpanText = sample.span;
         const sampleTags = sample.tags;
         const sampleText = sample.text;
+        const link = sample.link;
 
         return (
           <div key={sampleKey}>
-            <CaseSample
-              imageUrl={`/img/${sampleImage}`}
-              imagePlacement={sampleImagePlacment}
-              titleLarge={sampleTitleLarge}
-              titleSmall={sampleTitleSmall}
-              titleSmallClass={sampleTitleSmallClass}
-              titleLargeClass={sampleTitleLargeClass}
-            >
-              <strong>{sampleStrongText}</strong><br />
-              <span>{sampleSpanText}</span><br />
-              <span>{sampleTags}</span><br />
-              <p>{sampleText}</p>
-            </CaseSample>
+            <LazyLoad>
+              <CaseSample
+                imageUrl={`/img/${sampleImage}`}
+                imagePlacement={sampleImagePlacment}
+                titleLarge={sampleTitleLarge}
+                titleSmall={sampleTitleSmall}
+                titleSmallClass={sampleTitleSmallClass}
+                titleLargeClass={sampleTitleLargeClass}
+                link={link}
+              >
+                <strong>{sampleStrongText}</strong><br />
+                <span>{sampleSpanText}</span><br />
+                <span>{sampleTags}</span><br />
+                <p>{sampleText}</p>
+              </CaseSample>
+            </LazyLoad>
           </div>
         );
       });
@@ -96,7 +99,9 @@ class HomePageContainer extends Component {
 
             {key === 'services' &&
             <div className="col-xs-12 col-sm-12 pos-rel">
-              <p className="text-center">Here are a few of my skills!</p>
+              <p className="text-center mar-30 pad-30 no-mar-bottom">
+                From web, digital branding to startup products, I focus on online customer experiences & brand development, combining digital craftsmanship with innovative thinking to deliver user-first digital solutions. <br /><br /><small>Here are some of the skills I can provide.</small>
+              </p>
               <span className="btn view-design">Design</span>
               <span className="btn view-develop">Development</span>
               <ListServices />
@@ -122,13 +127,15 @@ class HomePageContainer extends Component {
         <Banner imageUrl={BannerImageUrl}>
           <h1 className="heading-special"><span className="">{bannerTitle}</span></h1>
           <h4 className="heading-top"><span className="">{bannerSub}</span></h4>
-          {/* <div className="video hidden-xs hidden-sm visible-md">
-            <video className="hidden-xs hidden-sm visible-md" poster="./img/codyreeves-site.png" id="bgvid" playsInline autoPlay muted loop>
-              <source src={BannerVidWeb} type="video/webm" />
-              <source src={BannerVidMp} type="video/mp4" />
-            </video>
-          </div> */}
-          <div className="more">
+          {/* <BannerVideo
+             imageUrl={BannerImageUrl}
+             title={bannerTitle}
+             subTitle={bannerSub}
+             videoMp4={BannerVidMp}
+             videoWeb={BannerVidWeb}
+             isTab={isTab}
+           /> */}
+          <div className="morex">
             Show More
           </div>
         </Banner>

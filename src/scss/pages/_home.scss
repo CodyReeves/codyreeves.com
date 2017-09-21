@@ -91,13 +91,13 @@ $padding: 200px;
   &:hover {
     @include breakpoint(sm){
       .sub {
-        @include transform(translateY(-25px));
+        @include transform(translateY(-60px));
         @include text-shadow-3;
       }
 
       .text,
       blockquote {
-        margin-top: 100px;
+        margin-top: 130px;
         @include text-shadow-3;
       }
     }
