@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import Banner from '../components/Banner';
 import ContactFormWrapper from '../components/ContactFormWrapper';
-import BannerImageUrl from '../images/bg.jpg';
-import BannerVidMp from '../images/home.mp4';
-import BannerVidWeb from '../images/home.webm';
+import BannerImageUrl from '../images/banner-video.gif';
+// import BannerVidMp from '../images/home.mp4';
+// import BannerVidWeb from '../images/home.webm';
 import { getHome } from '../apis/siteContent';
 import PageSection from '../components/PageSection';
 import ListServices from '../components/ListServices';
@@ -122,12 +122,12 @@ class HomePageContainer extends Component {
         <Banner imageUrl={BannerImageUrl}>
           <h1 className="heading-special"><span className="">{bannerTitle}</span></h1>
           <h4 className="heading-top"><span className="">{bannerSub}</span></h4>
-          <div className="video hidden-xs hidden-sm visible-md">
+          {/* <div className="video hidden-xs hidden-sm visible-md">
             <video className="hidden-xs hidden-sm visible-md" poster="./img/codyreeves-site.png" id="bgvid" playsInline autoPlay muted loop>
               <source src={BannerVidWeb} type="video/webm" />
               <source src={BannerVidMp} type="video/mp4" />
             </video>
-          </div>
+          </div> */}
           <div className="more">
             Show More
           </div>

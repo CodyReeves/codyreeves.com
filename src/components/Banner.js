@@ -20,7 +20,7 @@ class Banner extends Component {
 
     return (
       <div className={`banner ${imageSize} banner-${contentPlacement}`}>
-        <ProgressiveImage placeholder={placeholder} src={imageUrl} style={{ backgroundSize: 'cover', backgroundPosition: 'top center' }}>
+        <ProgressiveImage placeholder={placeholder} src={imageUrl} style={{ backgroundSize: 'cover', backgroundPosition: 'center center' }}>
           {children}
         </ProgressiveImage>
       </div>

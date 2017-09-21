@@ -16,6 +16,24 @@
 
 .home-page {
   .banner {
+
+    h1,
+    h4 {
+      margin: 0 auto;
+      max-width: 80%;
+      text-align: left !important;
+
+      @include shadow((
+        type: light,
+        level: 4,
+        text: text,
+      )...);
+    }
+
+    h4 {
+      color: color(greyscale, white);
+    }
+
     @include breakpoint(max-width breakpoint-value(sm)) {
       max-height: 475px;
 
@@ -26,7 +44,7 @@
 
       h4 {
         top: 85px !important;
-        color: color(greyscale, grey);
+        //color: color(greyscale, grey);
       }
     }
   }
