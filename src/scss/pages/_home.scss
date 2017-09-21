@@ -15,6 +15,18 @@
 }
 
 .home-page {
+
+  .services {
+    .sub {
+      top: 0px !important;
+
+      @include breakpoint(max-width breakpoint-value(md)) {
+        left: 67px;
+        max-width: 80%;
+      }
+    }
+  }
+
   .banner {
 
     h1,
