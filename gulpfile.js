@@ -103,7 +103,7 @@ gulp.task('live', (callback) => {
 ----------------------------------*/
 
 gulp.task('image', function () {
-  gulp.src('./src/images/*/*')
+  gulp.src('./src/images/*')
     .pipe(image({
       pngquant: true,
       optipng: false,

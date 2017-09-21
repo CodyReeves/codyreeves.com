@@ -2,17 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import LazyLoad from 'react-lazyload';
 import ContactFormWrapper from '../components/Contact/ContactFormWrapper';
-import BannerImageUrl from '../images/bg.jpg';
-import BannerVidMp from '../images/home.mp4';
-import BannerVidWeb from '../images/home.webm';
+import BannerImageUrl from '../images/banner-video.gif';
 import { getHome } from '../apis/siteContent';
 import PageSection from '../components/Content/PageSection';
 import ListServices from '../components/Content/ListServices';
 import CaseSample from '../components/Cases/CaseSample';
 import SideProjectButton from '../components/Content/SideProjectButton';
 import PageHead from '../components/Head';
-import BannerVideo from '../components/Banner/BannerVideo';
-
+import Banner from '../components/Banner/Banner'
 class HomePageContainer extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -102,7 +99,7 @@ class HomePageContainer extends Component {
 
             {key === 'services' &&
             <div className="col-xs-12 col-sm-12 pos-rel">
-              <p className="text-center mar-30 pad-30 no-mar-bottom">
+              <p className="text-center mar-30 pad-30 no-mar-bottom no-pad-top">
                 From web, digital branding to startup products, I focus on online customer experiences & brand development, combining digital craftsmanship with innovative thinking to deliver user-first digital solutions. <br /><br /><small>Here are some of the skills I can provide.</small>
               </p>
               <span className="btn view-design">Design</span>
@@ -127,14 +124,21 @@ class HomePageContainer extends Component {
     return (
       <div className="home-page">
         <PageHead />
-        <BannerVideo
-          imageUrl={BannerImageUrl}
-          title={bannerTitle}
-          subTitle={bannerSub}
-          videoMp4={BannerVidMp}
-          videoWeb={BannerVidWeb}
-          isTab={isTab}
-        />
+        <Banner imageUrl={BannerImageUrl}>
+          <h1 className="heading-special"><span className="">{bannerTitle}</span></h1>
+          <h4 className="heading-top"><span className="">{bannerSub}</span></h4>
+          {/* <BannerVideo
+             imageUrl={BannerImageUrl}
+             title={bannerTitle}
+             subTitle={bannerSub}
+             videoMp4={BannerVidMp}
+             videoWeb={BannerVidWeb}
+             isTab={isTab}
+           /> */}
+          <div className="more">
+            Show More
+          </div>
+        </Banner>
         {homeSections}
         <SideProjectButton />
         <ContactFormWrapper />

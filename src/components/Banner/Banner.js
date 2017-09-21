@@ -32,7 +32,7 @@ function Banner({
         src={imageUrl}
         style={{
           backgroundSize: 'cover',
-          backgroundPosition: 'top center',
+          backgroundPosition: 'center center',
         }}
       >
         {children}
