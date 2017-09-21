@@ -39,10 +39,10 @@ function PostPage({
           backgroundPosition: 'top center',
         }}
       />
-      {title}
-      {date}
-      {exerpt}
-      {category}
+      <h4>{title}</h4>
+      <span className="date">{date}</span>
+      <span className="category">{category}</span>
+      <p className="exerpt">{exerpt}</p>
     </div>
   );
 }

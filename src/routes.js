@@ -16,7 +16,7 @@ const routes = (
     <Route path="design-process" component={ServicesPage} />
     <Route path="side-projects" component={SideProject} />
     <Route path="cases" component={CasesPage} />
-    <Route path="blog" component={BlogPage} />
+    {/* <Route path="blog" component={BlogPage} /> */}
   </Route>
 );
 
