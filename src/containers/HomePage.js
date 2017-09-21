@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import LazyLoad from 'react-lazyload';
 import ContactFormWrapper from '../components/Contact/ContactFormWrapper';
 import BannerImageUrl from '../images/banner-video.gif';
+import BannerImageMobileUrl from '../images/bg.jpg';
 import { getHome } from '../apis/siteContent';
 import PageSection from '../components/Content/PageSection';
 import ListServices from '../components/Content/ListServices';
@@ -124,7 +125,7 @@ class HomePageContainer extends Component {
     return (
       <div className="home-page">
         <PageHead />
-        <Banner imageUrl={BannerImageUrl}>
+        <Banner imageUrl={BannerImageUrl} imageMobile={BannerImageMobileUrl}>
           <h1 className="heading-special"><span className="">{bannerTitle}</span></h1>
           <h4 className="heading-top"><span className="">{bannerSub}</span></h4>
           {/* <BannerVideo

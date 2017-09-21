@@ -8,6 +8,7 @@ const propTypes = {
   contentPlacement: PropTypes.string,
   imageSize: PropTypes.string,
   placeholder: PropTypes.string,
+  imageMobile: PropTypes.string,
 };
 
 const defaultProps = {
@@ -16,6 +17,7 @@ const defaultProps = {
   placeholder: './img/loading-image.gif',
   children: '',
   imageUrl: '',
+  imageMobile: '',
 };
 
 function Banner({
@@ -24,19 +26,33 @@ function Banner({
   contentPlacement,
   children,
   placeholder,
+  imageMobile,
 }) {
+  const isTab = window.innerWidth <= 992;
   return (
     <div className={`banner ${imageSize} banner-${contentPlacement}`}>
-      <ProgressiveImage
-        placeholder={placeholder}
-        src={imageUrl}
-        style={{
-          backgroundSize: 'cover',
-          backgroundPosition: 'center center',
-        }}
-      >
-        {children}
-      </ProgressiveImage>
+      {!isTab &&
+        <ProgressiveImage
+          placeholder={placeholder}
+          src={imageUrl}
+          style={{
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+          }}
+        >
+          {children}
+        </ProgressiveImage>}
+      {isTab &&
+        <ProgressiveImage
+          placeholder={placeholder}
+          src={imageMobile}
+          style={{
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+          }}
+        >
+          {children}
+        </ProgressiveImage>}
     </div>
   );
 }
