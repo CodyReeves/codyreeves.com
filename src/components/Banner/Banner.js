@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   children: PropTypes.element,
-  imageUrl: PropTypes.string,
+  imageUrl: PropTypes.string.isRequired,
   contentPlacement: PropTypes.string,
   imageSize: PropTypes.string,
   placeholder: PropTypes.string,
@@ -29,9 +29,13 @@ function Banner({
   imageMobile,
 }) {
   const isTab = window.innerWidth <= 992;
+  const isDesktop = !isTab;
+  const displayMobileImage = isTab && imageMobile;
+  const displayDesktopImage = (isDesktop && imageUrl) || (imageMobile === '');
+
   return (
     <div className={`banner ${imageSize} banner-${contentPlacement}`}>
-      {!isTab &&
+      {displayDesktopImage &&
         <ProgressiveImage
           placeholder={placeholder}
           src={imageUrl}
@@ -42,7 +46,7 @@ function Banner({
         >
           {children}
         </ProgressiveImage>}
-      {isTab &&
+      {displayMobileImage &&
         <ProgressiveImage
           placeholder={placeholder}
           src={imageMobile}
