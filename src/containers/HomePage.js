@@ -162,14 +162,6 @@ class HomePageContainer extends Component {
                 }}
               />
             </div>}
-          {/* <BannerVideo
-             imageUrl={BannerImageUrl}
-             title={bannerTitle}
-             subTitle={bannerSub}
-             videoMp4={BannerVidMp}
-             videoWeb={BannerVidWeb}
-             isTab={isTab}
-           /> */}
           <div className="more">
             Show More
           </div>
