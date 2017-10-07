@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import LazyLoad from 'react-lazyload';
+import VideoCover from 'react-video-cover';
 import ContactFormWrapper from '../components/Contact/ContactFormWrapper';
-import BannerImageUrl from '../images/banner-video.gif';
-import BannerImageMobileUrl from '../images/bg.jpg';
+import BannerVideo from '../video/home-banner-video.mp4';
+import BannerImageUrl from '../images/bg.jpg';
 import { getHome } from '../apis/siteContent';
 import PageSection from '../components/Content/PageSection';
 import ListServices from '../components/Content/ListServices';
 import CaseSample from '../components/Cases/CaseSample';
 import SideProjectButton from '../components/Content/SideProjectButton';
 import PageHead from '../components/Head';
-import Banner from '../components/Banner/Banner'
+import Banner from '../components/Banner/Banner';
+
 class HomePageContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { resizeNotifier: () => {} };
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0);
   }
@@ -24,6 +31,21 @@ class HomePageContainer extends Component {
     // Set up for banner content
     const bannerSub = HomePage.banner.subHeading;
     const bannerTitle = HomePage.banner.heading;
+
+    const videoOptions = {
+      src: BannerVideo,
+      autoPlay: true,
+      loop: true,
+    };
+
+    const videoWrapperStyle = {
+      overflow: 'hidden',
+      width: '100vw',
+      height: '100vh',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+    };
 
     // Loops through map with key of samples
     const CaseSamples = caseSampleMap => {
@@ -125,17 +147,21 @@ class HomePageContainer extends Component {
     return (
       <div className="home-page">
         <PageHead />
-        <Banner imageUrl={BannerImageUrl} imageMobile={BannerImageMobileUrl}>
+        <Banner imageUrl={BannerImageUrl}>
           <h1 className="heading-special"><span className="">{bannerTitle}</span></h1>
           <h4 className="heading-top"><span className="">{bannerSub}</span></h4>
-          {/* <BannerVideo
-             imageUrl={BannerImageUrl}
-             title={bannerTitle}
-             subTitle={bannerSub}
-             videoMp4={BannerVidMp}
-             videoWeb={BannerVidWeb}
-             isTab={isTab}
-           /> */}
+          {!isTab &&
+            <div style={videoWrapperStyle}>
+              <VideoCover
+                videoOptions={videoOptions}
+                remeasureOnWindowResize
+                getResizeNotifier={resizeNotifier => {
+                  this.setState({
+                    resizeNotifier,
+                  });
+                }}
+              />
+            </div>}
           <div className="more">
             Show More
           </div>
