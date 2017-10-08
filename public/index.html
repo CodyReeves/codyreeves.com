@@ -52,8 +52,10 @@
   </head>
   <body>
     <div id="root"></div>
-    <div style="display: none">Site designed by: Cody Reeves Digital Design & Development</div>
-    <div style="display: none">© 2017 by Cody Reeves. All rights reserved.</div>
+    <noscript>
+      <p>Please enable Javascript to view codyreeves.com</p>
+      <p>Site designed by: Cody Reeves Digital Design & Development<br/>© 2017 by Cody Reeves. All rights reserved.</p>
+    </noscript>
     <script defer>
        if ('serviceWorker' in navigator) {
          window.addEventListener('load', function() {
@@ -91,7 +93,6 @@
     if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
     else window.addEventListener('load', loadDeferredStyles);
   </script>
-
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
