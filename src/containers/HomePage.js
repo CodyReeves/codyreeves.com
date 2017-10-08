@@ -4,7 +4,7 @@ import LazyLoad from 'react-lazyload';
 import VideoCover from 'react-video-cover';
 import ContactFormWrapper from '../components/Contact/ContactFormWrapper';
 import BannerVideo from '../video/home-banner-video.mp4';
-import BannerImageUrl from '../images/bg.jpg';
+import BannerImageUrl from '../../public/img/bg.jpg';
 import { getHome } from '../apis/siteContent';
 import PageSection from '../components/Content/PageSection';
 import ListServices from '../components/Content/ListServices';
