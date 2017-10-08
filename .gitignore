@@ -10,7 +10,7 @@ coverage
 build
 
 #CSS
-public/*.css
+public/main.css
 public/maps/
 
 # misc
