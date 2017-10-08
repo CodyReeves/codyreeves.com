@@ -38,15 +38,6 @@ class HomePageContainer extends Component {
       loop: true,
     };
 
-    const videoWrapperStyle = {
-      overflow: 'hidden',
-      width: '100vw',
-      height: '100vh',
-      position: 'fixed',
-      top: 0,
-      left: 0,
-    };
-
     // Loops through map with key of samples
     const CaseSamples = caseSampleMap => {
       return caseSampleMap.samples.map(sample => {
@@ -151,7 +142,7 @@ class HomePageContainer extends Component {
           <h1 className="heading-special"><span className="">{bannerTitle}</span></h1>
           <h4 className="heading-top"><span className="">{bannerSub}</span></h4>
           {!isTab &&
-            <div style={videoWrapperStyle}>
+            <div className="video-wrapper">
               <VideoCover
                 videoOptions={videoOptions}
                 remeasureOnWindowResize
