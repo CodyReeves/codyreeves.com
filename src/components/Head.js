@@ -12,7 +12,7 @@ const propTypes = {
 
 const defaultProps = {
   title: 'Cody Reeves | Digital Design & Development',
-  description: 'Im Cody Reeves, a full time designer/developer and a part time entrepreneur. I have 4+ years of experience, working on wide variety of projects from designing company brands to developing enterprise software.',
+  description: 'Im Cody Reeves, a full time designer/developer and a part time entrepreneur. I have 5+ years of experience, working on wide variety of projects from designing company brands to developing enterprise software.',
   url: 'http://codyreeves.com/',
   image: 'http://codyreeves.com/img/codyreeves-site.png',
 };

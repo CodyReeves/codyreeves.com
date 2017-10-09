@@ -316,7 +316,7 @@ export function getCases() {
       github: '',
       title: 'Print Work',
       classname: 'print-work bg-white',
-      tags: ['print ', 'Graphic', 'Design'],
+      tags: ['print ', 'Graphic', ' Design'],
       bannerImg: '../img/screen-print-bg.jpg',
       roles: [
         {
