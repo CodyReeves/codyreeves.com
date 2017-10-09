@@ -125,8 +125,8 @@ export function getHome() {
         titleSmall: 'Designer, Developer, Entrepreneur',
         followText: 'Adout Cody Reeves',
         classname: 'about',
-        aboutText: 'I specialize in designing and building digital products—from high-level UX & Interaction flows to crafting the nitty-gritty UI details and writing code to bring the styles and interactions to life. Currently I am the Lead Designer at Strawhouse, and Owner of With Design head office in Kelowna, Canada.',
-        aboutQuote: 'I have 5+ years of experience, working on wide variety of projects from designing company brands to developing enterprise software.',
+        aboutText: 'I specialize in designing and building digital products—from high-level UX & interaction flows to crafting the nitty-gritty UI details and writing code to bring the styles and interactions to life. Currently I am the Lead designer at Strawhouse, and owner of With Design head office in Kelowna, Canada.',
+        aboutQuote: 'I have 5+ years of experience, working on a wide variety of projects from designing company brands to developing enterprise software.',
       },
       {
         key: 'services',

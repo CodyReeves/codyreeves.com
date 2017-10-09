@@ -69,7 +69,7 @@ class Sidebar extends Component {
           <div className="social">
             <ul className="list-inline">
               <li><a href="https://www.behance.net/codyreeves" target="_blank" rel="noopener noreferrer">Behance</a></li>
-              <li><a href="https://www.linkedin.com/in/cody-reeves-5a805459/" target="_blank" rel="noopener noreferrer">Linkdin</a></li>
+              <li><a href="https://www.linkedin.com/in/cody-reeves-5a805459/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               <li><a href="https://github.com/CodyReeves/" target="_blank" rel="noopener noreferrer">Github</a></li>
             </ul>
           </div>

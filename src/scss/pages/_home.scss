@@ -14,9 +14,25 @@
   )...);
 }
 
+@include create-keyframe(fadeIn);
+
 .home-page {
 
+  .video-wrapper {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fadeInUp 1s forwards ease-in-out;
+  }
+
   .services {
+    @include breakpoint(sm) {
+      max-height: 1650px
+    }
+
     .sub {
       top: 0px !important;
 
@@ -67,6 +83,10 @@
       min-height: 750px;
     }
 
+    @include breakpoint(sm) {
+      max-height: 1435px
+    }
+
     .text {
       max-width: 265px;
       @include breakpoint(max-width breakpoint-value(sm)) {
@@ -78,6 +98,8 @@
 
 .contact {
    @include breakpoint(sm){
+     max-height: 1435px;
+
       &:hover {
         .sub {
           transform: translateY(35px) !important;
