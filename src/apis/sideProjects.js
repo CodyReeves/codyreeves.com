@@ -25,6 +25,32 @@ export function getSideProject() {
       content: '',
     },
     {
+      link: 'https://logoswithdesign.com',
+      title: 'Logos With Design',
+      classname: 'sp-logoswith',
+      imageUrl: '../img/side-projects/logoswithdesign.png',
+      roles: [
+        {
+          title: '',
+          skills: 'Service - Graphic Design, Branding',
+        },
+      ],
+      content: '',
+    },
+    {
+      link: 'https://interfacewithdesign.com',
+      title: 'Interface With Design',
+      classname: 'sp-interfacewith',
+      imageUrl: '../img/side-projects/interfacewithdesign.png',
+      roles: [
+        {
+          title: '',
+          skills: 'Service - UI, UX, Branding, Graphic Design',
+        },
+      ],
+      content: '',
+    },
+    {
       link: 'http://withdesign.ca',
       title: 'With Design',
       classname: 'sp-withdesign',
@@ -102,19 +128,19 @@ export function getSideProject() {
       ],
       content: '',
     },
-    {
-      link: 'https://codepen.io/CR-Design/',
-      title: 'Codepen',
-      classname: 'sp-codepen',
-      imageUrl: '../img/side-projects/codepen.png',
-      roles: [
-        {
-          title: '',
-          skills: 'Development - JS, Scss, Html',
-        },
-      ],
-      content: '',
-    },
+    // {
+    //   link: 'https://codepen.io/CR-Design/',
+    //   title: 'Codepen',
+    //   classname: 'sp-codepen',
+    //   imageUrl: '../img/side-projects/codepen.png',
+    //   roles: [
+    //     {
+    //       title: '',
+    //       skills: 'Development - JS, Scss, Html',
+    //     },
+    //   ],
+    //   content: '',
+    // },
     // {
     //   link: 'https://ux.stackexchange.com/users/102413/cody-reeves?tab=profile',
     //   title: 'UX Stackexchange',

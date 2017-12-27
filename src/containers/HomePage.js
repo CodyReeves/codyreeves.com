@@ -114,7 +114,7 @@ class HomePageContainer extends Component {
             {key === 'services' &&
             <div className="col-xs-12 col-sm-12 pos-rel">
               <p className="text-center mar-30 pad-30 no-mar-bottom no-pad-top">
-                From web, digital branding to startup products, I focus on online customer experiences & brand development, combining digital craftsmanship with innovative thinking to deliver user-first digital solutions. <br /><br /><small>Here are some of the skills I can provide.</small>
+                From web, digital branding to startup products, I focus on online customer experiences & product development, combining digital craftsmanship with innovative thinking to deliver user-first digital solutions. <br /><br /><small>Here are some of the skills I can provide.</small>
               </p>
               <span className="btn view-design">Design</span>
               <span className="btn view-develop">Development</span>

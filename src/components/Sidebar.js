@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-import Navigation from './Navigation';
 import logo from '../images/logo.svg';
+
+function contentClass(isShow) {
+  if (isShow) {
+    return 'active';
+  }
+  return '';
+}
 
 const propTypes = {
   className: PropTypes.string,
@@ -14,43 +20,36 @@ const defaultProps = {
 
 class Sidebar extends Component {
   // TODO:: Switch toggle of state instead of input click
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { isShow: false };
-  //   this.handleClick = this.handleClick.bind(this);
-  // }
-  //
-  // handleClick() {
-  //   this.setState({ isShow: !this.state.isShow });
-  // }
+  constructor(props) {
+    super(props);
+    this.state = { isShow: false };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState({ isShow: !this.state.isShow });
+  }
 
   render() {
     const { className } = this.props;
 
-    function toggle() {
-      function clickOut() {
-        const element = document.getElementById('sidebarToggle');
-        if (element) element.checked = false;
-        delete document.onclick;
-      }
-      document.onclick = clickOut;
-    }
+    const { isShow } = this.state;
+
+    const buttonClassName = '';
 
     return (
       <div>
-        <input
-          type="checkbox"
-          name="sidebarToggle"
+        <button
           id="sidebarToggle"
-          className="sidebar-toggle-input"
-          onChange={toggle}
-        />
-        <label className="sidebar-toggle-label" htmlFor="sidebarToggle">
+          className={`sidebar-toggle-label ${contentClass(isShow)}`}
+          htmlFor="sidebarToggle"
+          onClick={this.handleClick}
+        >
           Menu
-        </label>
+        </button>
         <header className={`sidebar ${className}`}>
-          <a className="header-email" href="mailto:hello@codyreeves.design">
-            hello@codyreeves.design
+          <a className="header-email" href="mailto:cody@withdesign.ca">
+            Cody@withdesign.ca
           </a>
           <Link className="logo" to="/">
             <img
@@ -60,8 +59,51 @@ class Sidebar extends Component {
             />
           </Link>
           <div id="sidebarContent" className="sidebar-content">
-            <span className="sidebar-close" />
-            <Navigation />
+            <button
+              className="sidebar-close"
+              onClick={this.handleClick}
+            />
+            <nav className={`nav ${className}`}>
+              <ul className="list-plain no-pad no-mar">
+                <li>
+                  <Link
+                    className={buttonClassName}
+                    to="/"
+                    onClick={this.handleClick}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={buttonClassName}
+                    to="cases"
+                    onClick={this.handleClick}
+                  >
+                    Cases
+                  </Link>
+                </li>
+                {/* <li><Link className={buttonClassName} to="design-process">Design Process</Link></li> */}
+                <li>
+                  <Link
+                    className={buttonClassName}
+                    to="side-projects"
+                    onClick={this.handleClick}
+                  >
+                    Side Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={buttonClassName}
+                    to="contact"
+                    onClick={this.handleClick}
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </nav>
             <div className="copyright text-center">
               © 2017 by Cody Reeves. All rights reserved.
             </div>
