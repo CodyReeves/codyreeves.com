@@ -35,12 +35,13 @@ class ContactForm extends Component {
     });
 
     $.ajax({
-      url: process.env.NODE_ENV !== 'production' ? '/getMail' : './php/mailer.php',
-      type: 'POST',
+      url: 'https://formspree.io/codreev@gmail.com',
+      method: 'POST',
       data: {
         form_email: this.state.contactEmail,
         form_msg: this.state.contactMessage,
       },
+      dataType: 'json',
       cache: false,
       success: function (data) {
         // Success..
@@ -69,15 +70,15 @@ class ContactForm extends Component {
     return (
       <div className="contact-form" id="contact">
         <div className="filter">
-          <form className="form" onSubmit={this._handleSubmit} id="formContact">
+          <form className="form" action="https://formspree.io/cody@withdesign.ca" method="POST" id="formContact">
             <div className="input-wrapper">
               <label htmlFor="formEmail">Email</label>
               <input
                 id="formEmail"
                 type="email"
                 name="formEmail"
-                value={this.state.contactEmail}
-                onChange={this._handleChange}
+                // value={this.state.contactEmail}
+                // onChange={this._handleChange}
                 required
               />
             </div>
@@ -88,11 +89,13 @@ class ContactForm extends Component {
                 name="formMsg"
                 rows="8"
                 cols="40"
-                value={this.state.contactMessage}
-                onChange={this._handleChangeMsg}
+                // value={this.state.contactMessage}
+                // onChange={this._handleChangeMsg}
                 required
               />
             </div>
+            <input className="hidden" type="text" name="_gotcha" />
+            <input type="hidden" name="_next" value="https://codyreeves.com/thanks/" />
             <small>Please Note: It may take a up to two days to recieve a reply.</small>
             <input className="btn-submit" type="submit" value="Submit" id="btn-submit" />
           </form>

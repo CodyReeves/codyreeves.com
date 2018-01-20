@@ -1,0 +1,21 @@
+.thanks-wrapper {
+  text-align: center;
+
+  &:hover {
+    .sub {
+      @include transform(translateY(10px));
+    }
+  }
+
+  &.bump-up {
+    h3 {
+      top: 150px;
+    }
+  }
+
+  .info {
+    position: relative;
+    top: 175px;
+    width: 100%;
+  }
+}

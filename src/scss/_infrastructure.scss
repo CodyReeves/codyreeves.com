@@ -57,6 +57,71 @@
   overflow: hidden;
 }
 
+@include keyframes(load) {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+    visibility: none;
+    z-index: -1;
+  }
+}
+
+@include keyframes(loading) {
+  0% {
+    filter: drop-shadow(1px 1px 2px rgba(color(brand, secondary), 0.1));
+  }
+
+  50% {
+    filter: drop-shadow(16px 16px 20px rgba(color(brand, secondary), 0.7));
+  }
+
+  100% {
+    filter: drop-shadow(1px 1px 5px rgba(color(brand, secondary), 0.1));
+  }
+}
+
+.app-loading {
+  height: 100vh;
+  background-color: color(greyscale, black);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000000;
+  animation: 0.75s load forwards ease-in-out;
+  animation-delay: 5s;
+
+  .content {
+
+    img {
+      max-width: 800px;
+      width: 100%;
+      animation: 1s loading infinite ease-in-out;
+    }
+
+    span {
+      font-family: font-family(brand);
+      color: color(greyscale, white);
+      text-transform: uppercase;
+    }
+  }
+}
+
 body {
   min-height: 100vh;
   height: 100vh;

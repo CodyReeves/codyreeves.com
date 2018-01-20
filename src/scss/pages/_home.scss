@@ -30,7 +30,7 @@
 
   .services {
     @include breakpoint(sm) {
-      max-height: 1650px
+      max-height: 800px
     }
 
     .sub {
@@ -84,7 +84,7 @@
     }
 
     @include breakpoint(sm) {
-      max-height: 1435px
+      max-height: 775px
     }
 
     .text {
@@ -98,7 +98,7 @@
 
 .contact {
    @include breakpoint(sm){
-     max-height: 1435px;
+     max-height: 900px;
 
       &:hover {
         .sub {
@@ -752,5 +752,31 @@ form {
       outline: rgba(color(brand, success), 0.7);
       background: transparent;
     }
+  }
+}
+
+.iphone-size {
+  max-width: 336px;
+}
+
+.ui-samples {
+  .set-background {
+    @extend .row;
+
+    .case-intro-wrapper {
+      @extend .col-xs-12, .col-sm-12;
+    }
+  }
+
+  img {
+    background: #fff;
+  }
+
+  #p-0, #p-10, #p-20 {
+    @extend .col-sm-12;
+  }
+
+  [id*='p-'] {
+    @extend .col-xs-12, .col-sm-6;
   }
 }

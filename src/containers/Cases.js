@@ -31,7 +31,7 @@ class Case extends Component {
         const complete = role.complete;
 
         return (
-          <div key={title}>
+          <div key={title} className="case-intro-wrapper">
             <CaseIntro
 
               title={title}
@@ -56,7 +56,7 @@ class Case extends Component {
         const linkUrl = content.linkUrl;
         const linkTitle = content.linkTitle;
         return (
-          <div key={align} id={align}>
+          <div key={align} id={`p-${align}`}>
             <PageContent
               className={className}
               heading={heading}

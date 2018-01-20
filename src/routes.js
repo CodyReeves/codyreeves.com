@@ -6,6 +6,7 @@ import SideProject from './containers/SideProjects';
 import ContactPage from './containers/Contact';
 import CasesPage from './containers/Cases';
 import ServicesPage from './containers/Services';
+import ThanksPage from './containers/Thanks';
 
 const routes = (
   <Route onUpdate={() => window.scrollTo(0, 0)} path="/" component={App}>
@@ -15,6 +16,7 @@ const routes = (
     <Route path="design-process" component={ServicesPage} />
     <Route path="side-projects" component={SideProject} />
     <Route path="cases" component={CasesPage} />
+    <Route path="thanks" component={ThanksPage} />
   </Route>
 );
 
