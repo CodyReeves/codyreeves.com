@@ -131,7 +131,7 @@ body {
   font-family: font-family(primary);
   line-height: heading(default, line-height);
 
-  @include gridlines(150px, 150px, 2px, 0px);
+  //@include gridlines(150px, 150px, 2px, 0px);
   @include font-size(heading(default, font-size));
 }
 

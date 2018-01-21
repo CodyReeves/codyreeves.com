@@ -40,6 +40,10 @@
     text-decoration: none;
     z-index: 10000;
     @include font-size(14px);
+
+    &:hover {
+      color: rgba(color(greyscale, white), .5);
+    }
   }
 
   .sidebar-toggle-label {
@@ -147,6 +151,10 @@
        text-transform: uppercase;
        color: rgba(color(greyscale, white), 1);
        text-decoration: none;
+
+       &:hover {
+         color: rgba(color(greyscale, white), 0.5);
+       }
      }
   }
 

@@ -51,7 +51,7 @@ function BannerVideo({
           </LazyLoad>
         </div>
         <div className="more">
-          Show More
+          <a href="#about">Scroll</a>
         </div>
       </Banner>
     </div>

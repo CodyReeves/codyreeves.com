@@ -2,6 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Track, TrackDocument } from 'react-track';
 import { tween } from 'react-imation';
+import OnVisible, { setDefaultProps } from 'react-on-visible';
+
+
+setDefaultProps({
+    bounce: true,
+    percent: 70
+});
 
 import {
   topTop,
@@ -105,7 +112,7 @@ function PageSection({
                     </div>
                   </section>}
                   {type === 'special' &&
-                  <section className={`${className} special`}>
+                   <OnVisible className={`${className} special`}>
                     {textFollow &&
                     <div className="section-title"><span>{textFollow}</span></div>}
                     <div className={container ? 'container' : ''}>
@@ -123,7 +130,7 @@ function PageSection({
                         {children}
                       </div>
                     </div>
-                  </section>}
+                  </OnVisible>}
                 </Div>
             }</Track>
         }</TrackDocument>
